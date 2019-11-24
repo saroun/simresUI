@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="WINDOWS-1250" standalone="no"?>
+<jardesc>
+    <jar path="C:/Saroun/restrax_project/eclipse/simresGUI.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/simresGUI/description.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" mainClassHandleIdentifier="=simresGUI/src&lt;gui{SimresGUI.java[SimresGUI" manifestLocation="/simresGUI/simresGUI_manifest" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <file path="/simresGUI/.classpath"/>
+        <folder path="/simresGUI/.settings"/>
+        <file path="/simresGUI/restrax.xml"/>
+        <folder path="/simresGUI/images"/>
+        <file path="/simresGUI/big.xml"/>
+        <file path="/simresGUI/other.xml"/>
+        <file path="/simresGUI/different_type_of_cid.xml"/>
+        <file path="/simresGUI/.project"/>
+        <file path="/simresGUI/.cvsignore"/>
+        <file path="/simresGUI/bad.xml"/>
+        <file path="/simresGUI/crystal.lib"/>
+        <javaElement handleIdentifier="=simresGUI/src"/>
+        <file path="/simresGUI/restrax-change.xml"/>
+    </selectedElements>
+</jardesc>
