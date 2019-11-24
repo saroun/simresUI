@@ -1,0 +1,22 @@
+# generated binaries and temporary files
+*.dll
+*.lib
+*.exe
+*.o
+*.mod
+*.def
+*.a
+*.so
+*.log
+*.jar
+lib
+bin
+backup
+doc
+tmp*
+
+# Excluded projects
+Jama
+Java3D
+simresCON
+simresGUI
