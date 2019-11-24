@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--*** enum definition ***
+[shape]
+	(0) Elliptic/Circular
+	(1) Rectangular
+	(2) Ellipsoidal/Spheric
+	(3) Cylindric
+	(4) Box
+	(5) Disc
+
+[guide_type]
+	(-1) This guide is ignored
+	(0) Soller or course collimator
+	(1) Guide or bender
+	(2) Parabolic guide
+	(3) Parabolic guide with optimized wafer length
+	(4) Elliptic guide
+
+[osc_mode]
+	(0) Normal
+	(1) Oscilating
+
+[detector_type]
+	(0) Area
+	(1) Array
+	(2) Psd
+
+[direction]
+	(1) Counter clockwise direction
+	(-1) Clockwise direction
+
+[mode]
+	(0) Standard 3-axis spectrometer
+	(1) Flat-cone spectrometer
+
+[spin]
+	(0) All spin combinations
+	(1) Up-up spin combination
+	(2) Up-down spin combination
+	(3) Down-up spin combination
+	(4) Down-down spin combination
+
+[wave_vector_type]
+	(1) K_i
+	(2) K_f
+-->
+<TAS>
+	<ORDER>
+		<!-- In this place there are defined all spectrometer components saved in this xml file -->
+		<!-- included theirs order (order serves for runtime generating of config window).      -->
+		<COMPONENT id="SRC" />
+		<COMPONENT id="NGUIDE" />
+		<COMPONENT id="COL1" />
+		<COMPONENT id="MON" />
+		<COMPONENT id="COL2" />
+		<COMPONENT id="SAM" />
+		<COMPONENT id="COL3" />
+		<COMPONENT id="ANA" />
+		<COMPONENT id="COL4" />
+		<COMPONENT id="DET" />
+	</ORDER>
+	<TITLE>Defaults for restraxGUI</TITLE>
+	<SM enum="direction">1</SM>
+	<SS enum="direction">-1</SS>
+	<SA enum="direction">1</SA>
+	<FX enum="wave_vector_type">2</FX>
+	<KFIX units="A^-1">1.55</KFIX>
+	<QH units="rlu">0.3</QH>
+	<QK units="rlu">0.0</QK>
+	<QL units="rlu">3.0</QL>
+	<EN units="meV">1.4966</EN>
+	<DH units="rlu">0.0</DH>
+	<DK units="rlu">0.0</DK>
+	<DL units="rlu">0.0</DL>
+	<DE units="meV">0.0999</DE>
+	<DA3 units="deg">0.0</DA3>
+	<DA4 units="deg">0.0</DA4>
+	<MODE enum="mode">0</MODE>
+	<SPIN enum="spin">0</SPIN>
+	<FRAME type="SOURCE" id="SRC" name="Source">
+		<SHAPE enum="shape">1</SHAPE>
+		<AXI units="rad">0.0</AXI>
+		<AXV units="rad">0.0</AXV>
+		<DIST units="mm">0.0</DIST>
+		<SIZEX units="mm">5000.0</SIZEX>
+		<SIZEY units="mm">3000.0</SIZEY>
+		<SIZEZ units="mm">300.0</SIZEZ>
+		<STAX units="mm">0.0</STAX>
+		<STAY units="mm">0.0</STAY>
+		<STAZ units="mm">0.0</STAZ>
+		<GON1 units="rad">0.0</GON1>
+		<GON2 units="rad">0.0</GON2>
+		<GON3 units="rad">0.0</GON3>
+		<VELX units="m.s^-1">0.0</VELX>
+		<VELY units="m.s^-1">0.0</VELY>
+		<VELZ units="m.s^-1">0.0</VELZ>
+		<SPECIFIC>
+			<TEMP units="K">0.0</TEMP>
+			<FLUX units="10^14.s^-1.cm^-2">0.0</FLUX>
+			<LUT></LUT>
+		</SPECIFIC>
+	</FRAME>
+	<FRAME type="DETECTOR" id="DET" name="Detector">
+		<SHAPE enum="shape">1</SHAPE>
+		<AXI units="rad">0.0</AXI>
+		<AXV units="rad">0.0</AXV>
+		<DIST units="mm">700.0</DIST>
+		<SIZEX units="mm">30.0</SIZEX>
+		<SIZEY units="mm">50.0</SIZEY>
+		<SIZEZ units="mm">0.0</SIZEZ>
+		<STAX units="mm">0.0</STAX>
+		<STAY units="mm">0.0</STAY>
+		<STAZ units="mm">0.0</STAZ>
+		<GON1 units="rad">0.0</GON1>
+		<GON2 units="rad">0.0</GON2>
+		<GON3 units="rad">0.0</GON3>
+		<VELX units="m.s^-1">0.0</VELX>
+		<VELY units="m.s^-1">0.0</VELY>
+		<VELZ units="m.s^-1">0.0</VELZ>
+		<SPECIFIC>
+			<TYPE enum="detector_type">0</TYPE>
+		</SPECIFIC>
+	</FRAME>
+	<FRAME type="SAMPLE" id="SAM" name="Sample">
+		<SHAPE enum="shape">3</SHAPE>
+		<AXI units="rad">0.0</AXI>
+		<AXV units="rad">0.0</AXV>
+		<DIST units="mm">2100.0</DIST>
+		<SIZEX units="mm">10.0</SIZEX>
+		<SIZEY units="mm">10.0</SIZEY>
+		<SIZEZ units="mm">10.0</SIZEZ>
+		<STAX units="mm">0.0</STAX>
+		<STAY units="mm">0.0</STAY>
+		<STAZ units="mm">0.0</STAZ>
+		<GON1 units="rad">0.0</GON1>
+		<GON2 units="rad">0.0</GON2>
+		<GON3 units="rad">0.0</GON3>
+		<VELX units="m.s^-1">0.0</VELX>
+		<VELY units="m.s^-1">0.0</VELY>
+		<VELZ units="m.s^-1">0.0</VELZ>
+		<SPECIFIC>
+			<HMOS units="min">10.0</HMOS>
+			<GH units="rlu">0.0</GH>
+			<GK units="rlu">0.0</GK>
+			<GL units="rlu">1.0</GL>
+			<GMOD units="meV.rlu^-1">0.0</GMOD>
+			<AS units="A">3.65</AS>
+			<BS units="A">3.65</BS>
+			<CS units="A">11.669</CS>
+			<AA units="deg">90.0</AA>
+			<BB units="deg">90.0</BB>
+			<CC units="deg">120.0</CC>
+			<AX units="rlu">0.0</AX>
+			<AY units="rlu">0.0</AY>
+			<AZ units="rlu">1.0</AZ>
+			<BX units="rlu">1.0</BX>
+			<BY units="rlu">0.0</BY>
+			<BZ units="rlu">0.0</BZ>
+			<NX units="rlu">0.0</NX>
+			<NY units="rlu">0.0</NY>
+			<NZ units="rlu">0.0</NZ>
+			<EXCI>
+				<LIB></LIB>
+				<PAR></PAR>
+			</EXCI>
+		</SPECIFIC>
+	</FRAME>
+	<FRAME type="CRYSTAL" id="MON" name="Monochromator">
+		<SHAPE enum="shape">0</SHAPE>
+		<AXI units="rad">0.0</AXI>
+		<AXV units="rad">0.0</AXV>
+		<DIST units="mm">9000.0</DIST>
+		<SIZEX units="mm">100.0</SIZEX>
+		<SIZEY units="mm">120.0</SIZEY>
+		<SIZEZ units="mm">3.0</SIZEZ>
+		<STAX units="mm">0.0</STAX>
+		<STAY units="mm">0.0</STAY>
+		<STAZ units="mm">0.0</STAZ>
+		<GON1 units="rad">0.0</GON1>
+		<GON2 units="rad">0.0</GON2>
+		<GON3 units="rad">0.0</GON3>
+		<VELX units="m.s^-1">0.0</VELX>
+		<VELY units="m.s^-1">0.0</VELY>
+		<VELZ units="m.s^-1">0.0</VELZ>
+		<SPECIFIC>
+			<CHI units="deg">0.0</CHI>
+			<POI units="">0.3</POI>
+			<HMOS units="min">35.0</HMOS>
+			<VMOS units="min">35.0</VMOS>
+			<ROH units="m^-1">0.0</ROH>
+			<ROV units="m^-1">0.0</ROV>
+			<ROL units="m^-1">0.0</ROL>
+			<DH units="mm">0.0</DH>
+			<DV units="mm">0.0</DV>
+			<DL units="mm">0.0</DL>
+			<NH units="">1</NH>
+			<NV units="">3</NV>
+			<NL units="">0</NL>
+			<MAGX units="">0.0</MAGX>
+			<MAGY units="">0.0</MAGY>
+			<MAGZ units="">0.0</MAGZ>
+			<DHKL units="A">3.355</DHKL>
+			<DGR units="10^-3.cm^-1">0.0</DGR>
+			<DGA units="deg">0.0</DGA>
+			<DLAM units="micron">0.0</DLAM>
+			<EXT1 units="">0.0</EXT1>
+			<LUTNAME>Dumm</LUTNAME>
+		</SPECIFIC>
+	</FRAME>
+	<FRAME type="CRYSTAL" id="ANA" name="Analyzer">
+		<SHAPE enum="shape">0</SHAPE>
+		<AXI units="rad">0.0</AXI>
+		<AXV units="rad">0.0</AXV>
+		<DIST units="mm">1500.0</DIST>
+		<SIZEX units="mm">100.0</SIZEX>
+		<SIZEY units="mm">120.0</SIZEY>
+		<SIZEZ units="mm">3.0</SIZEZ>
+		<STAX units="mm">0.0</STAX>
+		<STAY units="mm">0.0</STAY>
+		<STAZ units="mm">0.0</STAZ>
+		<GON1 units="rad">0.0</GON1>
+		<GON2 units="rad">0.0</GON2>
+		<GON3 units="rad">0.0</GON3>
+		<VELX units="m.s^-1">0.0</VELX>
+		<VELY units="m.s^-1">0.0</VELY>
+		<VELZ units="m.s^-1">0.0</VELZ>
+		<SPECIFIC>
+			<CHI units="deg">0.0</CHI>
+			<POI units="">0.3</POI>
+			<HMOS units="min">35.0</HMOS>
+			<VMOS units="min">35.0</VMOS>
+			<ROH units="m^-1">0.0</ROH>
+			<ROV units="m^-1">0.0</ROV>
+			<ROL units="m^-1">0.0</ROL>
+			<DH units="mm">0.0</DH>
+			<DV units="mm">0.0</DV>
+			<DL units="mm">0.0</DL>
+			<NH units="">1</NH>
+			<NV units="">3</NV>
+			<NL units="">0</NL>
+			<MAGX units="">0.0</MAGX>
+			<MAGY units="">0.0</MAGY>
+			<MAGZ units="">0.0</MAGZ>
+			<DHKL units="A">3.355</DHKL>
+			<DGR units="10^-3.cm^-1">0.0</DGR>
+			<DGA units="deg">0.0</DGA>
+			<DLAM units="micron">0.0</DLAM>
+			<EXT1 units="">0.0</EXT1>
+			<LUTNAME>Dumm</LUTNAME>
+		</SPECIFIC>
+	</FRAME>
+	<FRAME type="GUIDE" id="NGUIDE" name="n-Guide">
+		<SHAPE enum="shape">0</SHAPE>
+		<AXI units="rad">0.0</AXI>
+		<AXV units="rad">0.0</AXV>
+		<DIST units="mm">0.0</DIST>
+		<SIZEX units="mm">25.0</SIZEX>
+		<SIZEY units="mm">150.0</SIZEY>
+		<SIZEZ units="mm">0.0</SIZEZ>
+		<STAX units="mm">0.0</STAX>
+		<STAY units="mm">0.0</STAY>
+		<STAZ units="mm">0.0</STAZ>
+		<GON1 units="rad">0.0</GON1>
+		<GON2 units="rad">0.0</GON2>
+		<GON3 units="rad">0.0</GON3>
+		<VELX units="m.s^-1">0.0</VELX>
+		<VELY units="m.s^-1">0.0</VELY>
+		<VELZ units="m.s^-1">0.0</VELZ>
+		<SPECIFIC>
+			<TYPE enum="guide_type">1</TYPE>
+			<EXITH units="mm">25.0</EXITH>
+			<EXITV units="mm">150.0</EXITV>
+			<ROH units="m^-1">0.0002</ROH>
+			<ROV units="m^-1">0.0</ROV>
+			<MHL units="Ni_nat">1.0</MHL>
+			<MHR units="Ni_nat">1.0</MHR>
+			<MVT units="Ni_nat">1.0</MVT>
+			<MVB units="Ni_nat">1.0</MVB>
+			<REFHL units="">1.0</REFHL>
+			<REFHR units="">1.0</REFHR>
+			<REFVT units="">1.0</REFVT>
+			<REFVB units="">1.0</REFVB>
+			<NLH units="">0</NLH>
+			<NLV units="">0</NLV>
+			<DLH units="mm">0.0</DLH>
+			<DLV units="mm">0.0</DLV>
+			<DIVH units="min">0.0</DIVH>
+			<DIVV units="min">0.0</DIVV>
+			<OSC enum="osc_mode">0</OSC>
+		</SPECIFIC>
+	</FRAME>
+	<FRAME type="GUIDE" id="COL1" name="1st collimator">
+		<SHAPE enum="shape">0</SHAPE>
+		<AXI units="rad">0.0</AXI>
+		<AXV units="rad">0.0</AXV>
+		<DIST units="mm">2360.0</DIST>
+		<SIZEX units="mm">80.5</SIZEX>
+		<SIZEY units="mm">90.5</SIZEY>
+		<SIZEZ units="mm">5340.0</SIZEZ>
+		<STAX units="mm">0.0</STAX>
+		<STAY units="mm">0.0</STAY>
+		<STAZ units="mm">0.0</STAZ>
+		<GON1 units="rad">0.0</GON1>
+		<GON2 units="rad">0.0</GON2>
+		<GON3 units="rad">0.0</GON3>
+		<VELX units="m.s^-1">0.0</VELX>
+		<VELY units="m.s^-1">0.0</VELY>
+		<VELZ units="m.s^-1">0.0</VELZ>
+		<SPECIFIC>
+			<TYPE enum="guide_type">0</TYPE>
+			<EXITH units="mm">50.0</EXITH>
+			<EXITV units="mm">110.0</EXITV>
+			<ROH units="m^-1">0.0</ROH>
+			<ROV units="m^-1">0.0</ROV>
+			<MHL units="Ni_nat">0.0</MHL>
+			<MHR units="Ni_nat">0.0</MHR>
+			<MVT units="Ni_nat">0.0</MVT>
+			<MVB units="Ni_nat">0.0</MVB>
+			<REFHL units="">1.0</REFHL>
+			<REFHR units="">1.0</REFHR>
+			<REFVT units="">1.0</REFVT>
+			<REFVB units="">1.0</REFVB>
+			<NLH units="">0</NLH>
+			<NLV units="">0</NLV>
+			<DLH units="mm">0.0</DLH>
+			<DLV units="mm">0.0</DLV>
+			<DIVH units="min">500.0</DIVH>
+			<DIVV units="min">500.0</DIVV>
+			<OSC enum="osc_mode">0</OSC>
+		</SPECIFIC>
+	</FRAME>
+	<FRAME type="GUIDE" id="COL2" name="2nd collimator">
+		<SHAPE enum="shape">0</SHAPE>
+		<AXI units="rad">0.0</AXI>
+		<AXV units="rad">0.0</AXV>
+		<DIST units="mm">870.0</DIST>
+		<SIZEX units="mm">40.0</SIZEX>
+		<SIZEY units="mm">70.0</SIZEY>
+		<SIZEZ units="mm">350.0</SIZEZ>
+		<STAX units="mm">0.0</STAX>
+		<STAY units="mm">0.0</STAY>
+		<STAZ units="mm">0.0</STAZ>
+		<GON1 units="rad">0.0</GON1>
+		<GON2 units="rad">0.0</GON2>
+		<GON3 units="rad">0.0</GON3>
+		<VELX units="m.s^-1">0.0</VELX>
+		<VELY units="m.s^-1">0.0</VELY>
+		<VELZ units="m.s^-1">0.0</VELZ>
+		<SPECIFIC>
+			<TYPE enum="guide_type">0</TYPE>
+			<EXITH units="mm">40.0</EXITH>
+			<EXITV units="mm">70.0</EXITV>
+			<ROH units="m^-1">0.0</ROH>
+			<ROV units="m^-1">0.0</ROV>
+			<MHL units="Ni_nat">0.0</MHL>
+			<MHR units="Ni_nat">0.0</MHR>
+			<MVT units="Ni_nat">0.0</MVT>
+			<MVB units="Ni_nat">0.0</MVB>
+			<REFHL units="">1.0</REFHL>
+			<REFHR units="">1.0</REFHR>
+			<REFVT units="">1.0</REFVT>
+			<REFVB units="">1.0</REFVB>
+			<NLH units="">0</NLH>
+			<NLV units="">0</NLV>
+			<DLH units="mm">0.0</DLH>
+			<DLV units="mm">0.0</DLV>
+			<DIVH units="min">43.0</DIVH>
+			<DIVV units="min">500.0</DIVV>
+			<OSC enum="osc_mode">0</OSC>
+		</SPECIFIC>
+	</FRAME>
+	<FRAME type="GUIDE" id="COL3" name="3rd collimator">
+		<SHAPE enum="shape">0</SHAPE>
+		<AXI units="rad">0.0</AXI>
+		<AXV units="rad">0.0</AXV>
+		<DIST units="mm">600.0</DIST>
+		<SIZEX units="mm">40.0</SIZEX>
+		<SIZEY units="mm">70.0</SIZEY>
+		<SIZEZ units="mm">350.0</SIZEZ>
+		<STAX units="mm">0.0</STAX>
+		<STAY units="mm">0.0</STAY>
+		<STAZ units="mm">0.0</STAZ>
+		<GON1 units="rad">0.0</GON1>
+		<GON2 units="rad">0.0</GON2>
+		<GON3 units="rad">0.0</GON3>
+		<VELX units="m.s^-1">0.0</VELX>
+		<VELY units="m.s^-1">0.0</VELY>
+		<VELZ units="m.s^-1">0.0</VELZ>
+		<SPECIFIC>
+			<TYPE enum="guide_type">0</TYPE>
+			<EXITH units="mm">40.0</EXITH>
+			<EXITV units="mm">70.0</EXITV>
+			<ROH units="m^-1">0.0</ROH>
+			<ROV units="m^-1">0.0</ROV>
+			<MHL units="Ni_nat">0.0</MHL>
+			<MHR units="Ni_nat">0.0</MHR>
+			<MVT units="Ni_nat">0.0</MVT>
+			<MVB units="Ni_nat">0.0</MVB>
+			<REFHL units="">1.0</REFHL>
+			<REFHR units="">1.0</REFHR>
+			<REFVT units="">1.0</REFVT>
+			<REFVB units="">1.0</REFVB>
+			<NLH units="">0</NLH>
+			<NLV units="">0</NLV>
+			<DLH units="mm">0.0</DLH>
+			<DLV units="mm">0.0</DLV>
+			<DIVH units="min">0.0</DIVH>
+			<DIVV units="min">500.0</DIVV>
+			<OSC enum="osc_mode">0</OSC>
+		</SPECIFIC>
+	</FRAME>
+	<FRAME type="GUIDE" id="COL4" name="4th collimator">
+		<SHAPE enum="shape">0</SHAPE>
+		<AXI units="rad">0.0</AXI>
+		<AXV units="rad">0.0</AXV>
+		<DIST units="mm">350.0</DIST>
+		<SIZEX units="mm">40.0</SIZEX>
+		<SIZEY units="mm">120.0</SIZEY>
+		<SIZEZ units="mm">200.0</SIZEZ>
+		<STAX units="mm">0.0</STAX>
+		<STAY units="mm">0.0</STAY>
+		<STAZ units="mm">0.0</STAZ>
+		<GON1 units="rad">0.0</GON1>
+		<GON2 units="rad">0.0</GON2>
+		<GON3 units="rad">0.0</GON3>
+		<VELX units="m.s^-1">0.0</VELX>
+		<VELY units="m.s^-1">0.0</VELY>
+		<VELZ units="m.s^-1">0.0</VELZ>
+		<SPECIFIC>
+			<TYPE enum="guide_type">0</TYPE>
+			<EXITH units="mm">40.0</EXITH>
+			<EXITV units="mm">120.0</EXITV>
+			<ROH units="m^-1">0.0</ROH>
+			<ROV units="m^-1">0.0</ROV>
+			<MHL units="Ni_nat">0.0</MHL>
+			<MHR units="Ni_nat">0.0</MHR>
+			<MVT units="Ni_nat">0.0</MVT>
+			<MVB units="Ni_nat">0.0</MVB>
+			<REFHL units="">1.0</REFHL>
+			<REFHR units="">1.0</REFHR>
+			<REFVT units="">1.0</REFVT>
+			<REFVB units="">1.0</REFVB>
+			<NLH units="">0</NLH>
+			<NLV units="">0</NLV>
+			<DLH units="mm">0.0</DLH>
+			<DLV units="mm">0.0</DLV>
+			<DIVH units="min">0.0</DIVH>
+			<DIVV units="min">500.0</DIVV>
+			<OSC enum="osc_mode">0</OSC>
+		</SPECIFIC>
+	</FRAME>
+</TAS>

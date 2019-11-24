@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SIMRES version="6.3.6">
+	<PROJECT system="yes" current="yes">
+		<CFGPATH>~INSTALL~/demo/STRESSSPEC</CFGPATH>
+		<CFGFILE>SSPEC_Fe.xml</CFGFILE>
+		<DESCR>Strain diffractometer, STRESSSPEC/FRMII</DESCR>
+	</PROJECT>
+	<PROJECT system="yes" current="no">
+		<CFGPATH>~INSTALL~/demo/BEER</CFGPATH>
+		<CFGFILE>BEER_primary.xml</CFGFILE>
+		<DESCR>ToF diffractometer, BEER/ESS</DESCR>
+	</PROJECT>
+	<PROJECT system="yes" current="no">
+		<CFGPATH>~INSTALL~/demo/ENGINX</CFGPATH>
+		<CFGFILE>engin-x-Fe.xml</CFGFILE>
+		<DESCR>ToF diffractometer, ENGINX/ISIS</DESCR>
+	</PROJECT>
+	<PROJECT system="yes" current="no">
+		<CFGPATH>~INSTALL~/demo/MEREDIT</CFGPATH>
+		<CFGFILE>MEREDIT.xml</CFGFILE>
+		<DESCR>Powder diffractometer, MEREDIT/NPI</DESCR>
+	</PROJECT>
+	<PROJECT system="yes" current="no">
+		<CFGPATH>~INSTALL~/demo/TAS</CFGPATH>
+		<CFGFILE>TAS_resol.xml</CFGFILE>
+		<DESCR>Three-axis spectrometer, resolution</DESCR>
+	</PROJECT>
+	<PROJECT system="yes" current="no">
+		<CFGPATH>~INSTALL~/demo/TAS</CFGPATH>
+		<CFGFILE>TAS_flatcone.xml</CFGFILE>
+		<DESCR>Three-axis spectrometer, flatcone analyzer</DESCR>
+	</PROJECT>
+	<PROJECT system="yes" current="no">
+		<CFGPATH>~INSTALL~/demo/simres_mcstas</CFGPATH>
+		<OUTPATH>~INSTALL~/demo/simres_mcstas/output</OUTPATH>
+		<CFGFILE>BEER_MCPL_PWD.xml</CFGFILE>
+		<DESCR>SIMRES and McStas binding, demo</DESCR>
+	</PROJECT>	
+	<PROJECT system="yes" current="no">
+		<CFGPATH>~INSTALL~/demo/multiple_reflections</CFGPATH>
+		<CFGFILE>multiref.xml</CFGFILE>
+		<DESCR>Multiple reflections in bent Si</DESCR>
+	</PROJECT>
+	<PROJECT system="yes" current="no">
+		<CFGPATH>~INSTALL~/demo/crystal_reflectivity</CFGPATH>
+		<CFGFILE>topography.xml</CFGFILE>
+		<DESCR>Crystal reflectivity, neutron topography</DESCR>
+	</PROJECT>
+	<PROJECT system="yes" current="no">
+		<CFGPATH>~INSTALL~/demo/crystal_reflectivity</CFGPATH>
+		<CFGFILE>rocking_curve.xml</CFGFILE>
+		<DESCR>Crystal reflectivity, rocking curves</DESCR>
+	</PROJECT>
+	<PROJECT system="yes" current="no">
+		<CFGPATH>~INSTALL~/demo/MAUD</CFGPATH>
+		<CFGFILE>DCSANS_nosample.xml</CFGFILE>
+		<DESCR>Double crystal SANS diffractometer (MAUD/NPI)</DESCR>
+	</PROJECT>
+</SIMRES>

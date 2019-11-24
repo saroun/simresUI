@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Main-Class: cz.restrax.sim.SimresCON
+Class-Path: JSUtils.jar lib/Jama-1.0.2.jar
+Name: cz/restrax/sim
+Specification-Title: MC simulation of neutron scattering instruments
+Specification-Version: 1.1.1
+Specification-Vendor: Nuclear Physics Institute, v.v.i., Rez
+Implementation-Title: cz/restrax
+Implementation-Version: build01
+Implementation-Vendor: Nuclear Physics Institute, v.v.i., Rez

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file contains initial values for all component types defined in RESTRAX.
+They are used only if corresponding entries are missing in the configuration file. This should happen only
+exceptionally, e.g. in the case an older file version is loaded.
+The file is read only once by GUI at startup.
+NOTE: id attributes MUST equal to the class attributes, otherwise they can't be recognized and used for initialization.
+-->
+<SIMRES version="6.3.4">
+<REPOSITORY>
+	<INITIALIZATION>
+		<SPECTROMETER class="SPECTROMETER" id="SPECTROMETER" name="basic instrument interface">
+			<INPSET name="input parameter set" value="0">diffraction</INPSET>
+			<FIX name="fixed K" value="1">Kf</FIX>
+			<KI name="Ki" units="A^-1">4.1</KI>
+			<KF name="Kf" units="A^-1">2.66</KF>
+			<Q0 name="Q" units="A^-1">3.5183</Q0>
+			<EN name="energy" units="meV">20.1706</EN>
+			<LAMBDA name="wavelength" units="A">1.5325</LAMBDA>
+			<THETA name="thetaS" units="deg">58.1593</THETA>
+			<SS name="sign of theta_S" value="1">+1</SS>
+			<PSI name="psi" units="deg">0.0</PSI>
+			<ADJ name="auto-adjust">yes</ADJ>
+			<ORISAM name="auto-orient sample">yes</ORISAM>
+			<KFMODE name="off-plane Kf mode" value="0">flat</KFMODE>
+			<QCONST name="Q constant">no</QCONST>
+			<OFFPL name="off-plane Kf" value="0">no</OFFPL>
+			<FLATCONE name="flat-cone analyzer" value="0">no</FLATCONE>
+		</SPECTROMETER>
+		<FRAME class="SAMPLE" id="SAMPLE" name="generic sample">
+			<DIST name="distance" units="mm">750.0</DIST>
+			<SHAPE name="shape" value="1">cylinder</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">10.0 10.0 10.0</SIZE>
+			<AX name="axis" units="deg">60.0 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">0.0 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<SAMPLE>
+				<TYPE name="type" value="0">inelastic resolution</TYPE>
+				<SGN name="sign" value="1">+1</SGN>
+				<SIGSC name="Sigma_s" units="cm^-1">1.0E-1</SIGSC>
+				<SIGA name="Sigma_a" units="cm^-1A^-1">0.121</SIGA>
+				<SIGI name="Sigma_i" units="cm^-1">3.4E-2</SIGI>
+				<TEMP name="temperature" units="K">300.0</TEMP>
+				<MAG name="magnetic field" units="gauss">0.0 0.0 0.0</MAG>
+				<STRAIN name="strain" units=" ">0.0 0.0 0.0</STRAIN>
+				<PRESS name="isotropic pressure" units="MPa">0.0</PRESS>
+				<TRANS name="allow transmission" value="0">no</TRANS>
+				<SCATT name="allow scattering" value="1">yes</SCATT>
+			</SAMPLE>
+		</FRAME>
+		<FRAME class="FRAME" id="FRAME" name="slit">
+			<DIST name="distance" units="mm">100.0</DIST>
+			<SHAPE name="shape" value="3">box</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>			
+			<SIZE name="dimensions" units="mm">100.0 100.0 1.0</SIZE>
+			<AX name="axis" units="deg">0.0 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">0.0 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+		</FRAME>		
+		<FRAME class="PCRYST" id="PCRYST" name="polycrystal">
+			<DIST name="distance" units="mm">1700.0</DIST>
+			<SHAPE name="shape" enum="FRAME_SHAPE" value="1">cylinder</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">2.0 40.0 2.0</SIZE>
+			<AX name="axis" units="deg">87.947 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">0.0 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<SAMPLE>
+				<TYPE name="type" enum="SAMPLE_TYPE" value="2">powder</TYPE>
+				<SGN name="sign" enum="SIGN" value="1">+1</SGN>
+				<SIGSC name="Sigma_s" units="cm^-1">1.0E-1</SIGSC>
+				<SIGA name="Sigma_a" units="cm^-1A^-1">0.121</SIGA>
+				<SIGI name="Sigma_i" units="cm^-1">3.4E-2</SIGI>
+				<TEMP name="temperature" units="K">300.0</TEMP>
+				<MAG name="magnetic field" units="gauss">0.0 0.0 0.0</MAG>
+				<STRAIN name="strain" units=" ">0.0 0.0 0.0</STRAIN>
+				<PRESS name="isotropic pressure" units="MPa">0.0</PRESS>
+				<TRANS name="allow transmission" value="0">no</TRANS>
+				<SCATT name="allow scattering" value="1">yes</SCATT>
+				<PCRYST>
+					<FHKL name="structure factor" units="fm.A^-3">0.802</FHKL>
+					<DHKL name="d-spacing" units="A">1.1702</DHKL>
+					<THETA name="scattering angle" units="deg">87.947</THETA>
+					<DD name="d-spread" units=" ">0.0</DD>
+					<GRAIN name="grain size" units="um">0.0</GRAIN>
+					<JHKL name="plane multiplicity">24</JHKL>
+					<REFTAB name="flux table">none</REFTAB>
+					<STRTAB name="strain table index">0</STRTAB>
+				</PCRYST>
+			</SAMPLE>
+		</FRAME>		
+		<FRAME class="SCRYST" id="SCRYST" name="single crystal">
+			<DIST name="distance" units="mm">750.0</DIST>
+			<SHAPE name="shape" value="1">cylinder</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">10.0 10.0 10.0</SIZE>
+			<AX name="axis" units="deg">58.1593 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">140.0384 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<SAMPLE>
+				<TYPE name="type" value="3">vanad</TYPE>
+				<SGN name="sign" value="1">+1</SGN>
+				<SIGSC name="Sigma_s" units="cm^-1">1.0E-1</SIGSC>
+				<SIGA name="Sigma_a" units="cm^-1A^-1">0.121</SIGA>
+				<SIGI name="Sigma_i" units="cm^-1">3.4E-2</SIGI>
+				<TEMP name="temperature" units="K">300.0</TEMP>
+				<MAG name="magnetic field" units="gauss">0.0 0.0 0.0</MAG>
+				<STRAIN name="strain" units=" ">0.0 0.0 0.0</STRAIN>
+				<PRESS name="isotropic pressure" units="MPa">0.0</PRESS>
+				<TRANS name="allow transmission" value="0">no</TRANS>
+				<SCATT name="allow scattering" value="1">yes</SCATT>
+				<SCRYST>
+					<VECA name="A vector" units="hkl">1.0 1.0 0.0</VECA>
+					<VECB name="B vector" units="hkl">0.0 0.0 1.0</VECB>
+					<CELLS name="cell size" units="hkl">5.43 5.43 5.43</CELLS>
+					<CELLA name="cell angles" units="deg">90.0 90.0 90.0</CELLA>
+					<ZERO name="zeros" units="deg">0.0 0.0 0.0</ZERO>
+					<TAU name="tau" units="hkl">2.0 2.0 0.0</TAU>
+					<QHKL name="q_hkl" units="hkl">0.15 0.15 0.0</QHKL>
+					<EN name="EN" units="meV">0.0</EN>
+					<MOS name="mosaicity" units="minutes">0.0</MOS>
+					<GHKL name="gradE_direction" units="hkl">2.0 2.0 0.0</GHKL>
+					<GRAD name="gradE_magnitude" units="meV/rlu">0.0</GRAD>
+					<EIG name="phonon eigenvector" units="hkl">0.0 0.0 1.0</EIG>
+				</SCRYST>
+			</SAMPLE>
+		</FRAME>
+		<FRAME class="SOURCE" id="SOURCE" name="source">
+			<DIST name="distance" units="mm">0.0</DIST>
+			<SHAPE name="shape" value="3">box</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">80.0 140.0 1.0E-1</SIZE>
+			<AX name="axis" units="deg">0.0 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">0.0 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<SOURCE>
+				<FLUX name="flux" units="10^14/s/cm^2">1</FLUX>
+				<TEMP name="temperature" units="K">300</TEMP>
+				<LAMW name="wavelength band" units="rel">0</LAMW>
+				<PULSW name="pulse width" units="ms">0</PULSW>
+				<TYPE name="type" enum="SOURCE_TYPE" value="0">steady-state</TYPE>
+				<FRQ name="frequency" units="Hz">16.66</FRQ>
+				<DELAY name="delay time" units="ms">0</DELAY>
+				<OVERLAP name="frame overlap" value="0">no</OVERLAP>
+				<FLUXTAB name="flux table">none</FLUXTAB>
+			</SOURCE>
+		</FRAME>
+		<FRAME class="GUIDE" id="GUIDE" name="guide">
+			<DIST name="distance" units="mm">3008.0</DIST>
+			<SHAPE name="shape" value="3">box</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">60.0 130.0 400.0</SIZE>
+			<AX name="axis" units="deg">0.0 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">0.0 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<GUIDE>
+				<TYPE name="type" value="0">soller or coarse</TYPE>
+				<EXIT name="exit window" units="mm">60.0 130.0</EXIT>
+				<RO name="curvature" units="m^-1">0.0 0.0</RO>
+				<N name="slits">15 1</N>
+				<DL name="lamella thickness" units="mm">0.5 0.5</DL>
+				<M name="m-value" units="Ni_nat">0.0 0.0</M>
+				<REF name="reflectivity" units=" ">0.0 0.0</REF>
+				<MATER name="blade material" value="0">absorbing</MATER>
+				<MU name="absorption" units="cm^-1A^-1">1.0E10</MU>
+				<WAV name="waviness" units="mrad">0.2</WAV>
+				<MISALIGN name="misalignment" units="mm">0.0 0.0</MISALIGN>
+				<MONITOR name="monitor" value="0">no</MONITOR>
+				<CLOSED name="closed" value="0">no</CLOSED>
+				<ONESIDE name="one-sided" value="0">no</ONESIDE>
+				<TRFRONT name="front transmission" value="0">no</TRFRONT>
+				<OSC name="oscillate" value="0">no</OSC>
+				<NODIR name="no direct view" value="0">no</NODIR>
+				<LOGBNC name="log bounces" value="0">none</LOGBNC>
+			</GUIDE>
+		</FRAME>
+		<FRAME class="SGUIDE" id="SGUIDE" name="segmented guide">
+			<DIST name="distance" units="mm">1000.0</DIST>
+			<SHAPE name="shape" value="3">box</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">80.0 80.0 12000.0</SIZE>
+			<AX name="axis" units="deg">0.0 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">0.0 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<SGUIDE>
+				<NSEG name="segments" >10</NSEG>
+				<RHO name="curvature" units="m^-1">0.0 0.0</RHO>
+				<GAP name="gap" units="mm">0.1</GAP>
+				<WAV name="waviness" units="mrad">0.2</WAV>
+				<MISALIGN name="misalignment" units="mm">0.0 0.0</MISALIGN>
+				<ACTIVE name="active" >1 1 1 1</ACTIVE>
+				<SMOOTH name="smooth" >0 0 0 0</SMOOTH>
+				<MONITOR name="monitor">0 0 0 0</MONITOR>
+				<REF0 name="r_0" units=" ">0.99</REF0>
+				<REFM name="r_m" units=" ">0.8</REFM>
+				<REFW name="width" units="Ni_nat">0.1</REFW>
+				<PROFH name="horizontal" value="0">manual</PROFH>
+				<PROFV name="vertical" value="0">manual</PROFV>
+				<EXIT name="exit window" units="mm">56.0 56.0</EXIT>
+				<CLOSED name="closed" value="0">no</CLOSED>
+				<FRONTMASK name="front mask" value="1">yes</FRONTMASK>
+				<GAPABS name="absorbing gaps" value="1">yes</GAPABS>
+				<LOGBNC name="log bounces" value="0">none</LOGBNC>
+				<SEG name="segments paraeters" rows="10">
+					<ITEM>79.0 79.0 2000.0 1.0 1.0 1.0 1.0</ITEM>
+					<ITEM>78.0 78.0 2000.0 1.0 1.0 1.0 1.0</ITEM>
+					<ITEM>77.0 77.0 2000.0 1.0 1.0 1.0 1.0</ITEM>
+					<ITEM>75.0 75.0 2000.0 1.0 1.0 1.0 1.0</ITEM>
+					<ITEM>72.0 72.0 2000.0 1.0 1.0 1.0 1.0</ITEM>
+					<ITEM>68.0 68.0 2000.0 1.0 1.0 1.0 1.0</ITEM>
+					<ITEM>65.0 65.0 1000.0 2.0 2.0 2.0 2.0</ITEM>
+					<ITEM>61.0 61.0 1000.0 2.0 2.0 2.0 2.0</ITEM>
+					<ITEM>59.0 59.0 500.0 3.0 3.0 3.0 3.0</ITEM>
+					<ITEM>56.0 56.0 500.0 3.0 3.0 3.0 3.0</ITEM>
+				</SEG>
+			</SGUIDE>
+		</FRAME>
+		<FRAME class="CRYSTAL" id="CRYSTAL" name="crystal">
+			<DIST name="distance" units="mm">1170.0</DIST>
+			<SHAPE name="shape" value="3">box</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">350.0 196.0 2.0</SIZE>
+			<AX name="axis" units="deg">-26.4606 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">-103.2303 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<CRYSTAL>
+				<TYPE name="type" value="1">mosaic</TYPE>
+				<REFNAME name="reflection" value="36">PG 00.2</REFNAME>
+				<DHKL name="d-spacing" units="A">3.348</DHKL>
+				<SGN name="sign" value="0">-1</SGN>
+				<CHI name="cutting angle" units="deg">0.0</CHI>
+				<MOS name="mosaicity" units="arc_min">20.0</MOS>
+				<ANIZ name="anisotropy" units=" ">1.0</ANIZ>
+				<POISS name="Poisson" units=" ">0.3</POISS>
+				<RO name="curvatures" units="m^-1">0.1 1.0 0.0</RO>
+				<N name="segments">11 9 1</N>
+				<D name="gaps" units="mm">2.0 2.0 1.0E-2</D>
+				<ASTACK name="stacking angle" units="deg">0.0</ASTACK>
+				<STACKH name="smooth horizontal">no</STACKH>
+				<STACKV name="smooth vertical">no</STACKV>
+				<DGR name="gradient" units="10^-3.cm^-1">0.0</DGR>
+				<DGA name="gradient angle" units="deg">0.0</DGA>
+				<DLAM name="domain thickness" units="um">0.0</DLAM>
+				<MODEL name="model" value="1">random walk</MODEL>
+				<AUTOADJ name="auto-adjust" value="1">yes</AUTOADJ>
+				<FOCH name="focus horizontally" value="0">no</FOCH>
+				<FH1 name="horiz. focus 1" units="m">0.0</FH1>
+				<FH2 name="horiz. focus 2" units="m">0.0</FH2>
+				<FOCV name="focus vertically" value="0">no</FOCV>
+				<FV1 name="vert. focus 1" units="m">0.0</FV1>
+				<FV2 name="vert. focus 2" units="m">0.0</FV2>
+			</CRYSTAL>
+		</FRAME>
+		<FRAME class="XTAL" id="XTAL" name="bent perfect crystal">
+			<DIST name="distance" units="mm">1000.0</DIST>
+			<SHAPE name="shape" value="3">box</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">120.0 40.0 5.0</SIZE>
+			<AX name="axis" units="deg">0.0 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">0.0 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<XTAL>
+				<CRID name="crystal" value="0">Si</CRID>
+				<ORI name="orientation" units="hkl">1.0 1.0 1.0</ORI>
+				<REF name="reflection" length="1" selected="0">
+					<ITEM>0 0 0</ITEM>
+				</REF>
+				<SGN name="sign" value="0">-1</SGN>
+				<A name="reference vector A">1 1 1</A>
+				<B name="reference vector B">-2 1 1</B>
+				<CHI name="cut angle horizontal" units="deg">0.0</CHI>
+				<PSI name="cut angle vertical" units="deg">0.0</PSI>
+				<POISS name="Poisson" units=" ">0.3</POISS>
+				<RHO name="bending curvature" units="m^-1">1.0E-1</RHO>
+				<RHV name="vertical bending" units="m^-1">0.0</RHV>
+				<NSW name="sandwich layers">1</NSW>
+				<SWGAP name="sandwich gaps" units="mm">0.05</SWGAP>
+				<T name="temperature" units="K">298.0</T>
+				<DT name="temperature gradient" units="K/mm">0.0 0.0 0.0</DT>
+				<VFOC name="vertically focusing array">
+					<NSEG name="segments">1</NSEG>
+					<GAP name="gaps" units="mm">0.1</GAP>
+					<RHO name="curvature" units="m^-1">0.0</RHO>
+					<AUTO name="autofocus" value="0">no</AUTO>
+					<BENT name="bent surface" value="0">no</BENT>
+					<STACK name="curved stack" value="0">no</STACK>
+					<FOC1 name="source distance" units="m">100</FOC1>
+					<FOC2 name="target distance" units="m">2.3</FOC2>
+				</VFOC>
+				<HFOC name="horizontally focusing array">
+					<NSEG name="segments">1</NSEG>
+					<GAP name="gaps" units="mm">0.1</GAP>
+					<RHO name="curvature" units="m^-1">0.1</RHO>
+					<AUTO name="autofocus" value="0">no</AUTO>
+					<BENT name="bent surface" value="0">no</BENT>
+					<STACK name="curved stack" value="0">no</STACK>
+					<FOC1 name="source distance" units="m">2.3</FOC1>
+					<FOC2 name="target distance" units="m">2.3</FOC2>
+				</HFOC>
+				<AUTOADJ name="autoadjust" value="1">yes</AUTOADJ>
+				<DKK name="delta_k/k" units=" ">5.0E-2</DKK>
+				<UMWEG name="multiple reflections">0</UMWEG>
+				<MAXHKL name="max. reflection index">10</MAXHKL>
+			</XTAL>
+		</FRAME>
+		<FRAME class="DETECTOR" id="DETECTOR" name="detector">
+			<DIST name="distance" units="mm">265.0</DIST>
+			<SHAPE name="shape" value="3">box</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">200.0 200.0 50.0</SIZE>
+			<AX name="axis" units="deg">0.0 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">0.0 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<DETECTOR>
+				<TYPE name="type" value="2">PSD</TYPE>
+				<RES name="resolution" units="mm">1.5 1.5</RES>
+				<RAD name="radius" units="mm">0.0</RAD>
+				<THMIN name="theta min." units="deg">0.0</THMIN>
+				<THMAX name="theta max." units="deg">180.0</THMAX>		
+				<ALPHA name="efficiency" units="A^-1.cm^-1">0.5</ALPHA>
+				<SPACE name="spacing" units="mm">0.0</SPACE>
+				<ND name="tubes">1</ND>
+			</DETECTOR>
+		</FRAME>
+		<FRAME class="MONITOR" id="MONITOR" name="beam monitor">
+			<DIST name="distance" units="mm">1000.0</DIST>
+			<SHAPE name="shape" value="3">box</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">200.0 200.0 1.0</SIZE>
+			<AX name="axis" units="deg">0.0 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">0.0 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<MONITOR>
+				<CMODE name="counting mode" value="0">sum</CMODE>
+				<IX name="x-variable" value="0">x</IX>
+				<IY name="y-variable" value="1">y</IY>
+				<X0 name="center" units=" ">0.0</X0>
+				<DX name="range" units=" ">10.0</DX>
+				<Y0 name="center" units=" ">0.0</Y0>
+				<DY name="range" units=" ">10.0</DY>
+				<BLOCK name="blocking area" value="0">no</BLOCK>
+			</MONITOR>
+		</FRAME>
+		<FRAME class="DCHOPPER" id="DCHOPPER" name="disc chopper">
+			<DIST name="distance" units="mm">265.0</DIST>
+			<SHAPE name="shape" value="3">box</SHAPE>
+			<ORDER name="stage-gonio order" value="0">gonio on stage</ORDER>
+			<SIZE name="dimensions" units="mm">30.0 50.0 50.0</SIZE>
+			<AX name="axis" units="deg">0.0 0.0 0.0</AX>
+			<STA name="stage" units="mm">0.0 0.0 0.0</STA>
+			<GON name="gonio" units="deg">0.0 0.0 0.0</GON>
+			<VEL name="velocity" units="m.s^-1">0.0 0.0 0.0</VEL>
+			<DCHOPPER>
+				<FRQ name="frequency" units="Hz">100</FRQ>
+				<PHASE  name="phase" units="2PI">0</PHASE>
+				<WIN name="window width" units="2PI">0.1</WIN>
+				<RAD name="radius" units="mm">250</RAD>
+				<NWIN name="number of windows">1</NWIN>
+				<TIMING name="timing">0.0:1.0</TIMING> 
+				<PROF name="profile"  enum="DCHOPPER_PROF" value="0">V-shape</PROF>
+				<ORI name="orientation" value="0">vertical</ORI>
+				<ADJ name="auto adjust" value="1">yes</ADJ>
+				<T0 name="T0" value="0">no</T0>
+				<LOCKT0 name="lock to T0" value="0">no</LOCKT0>
+				<OVERLAP name="frame overlap" value="0">no</OVERLAP>
+			</DCHOPPER>
+		</FRAME>
+	</INITIALIZATION>
+</REPOSITORY>
+</SIMRES>
