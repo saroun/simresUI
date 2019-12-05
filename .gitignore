@@ -9,11 +9,13 @@
 *.so
 *.log
 *.jar
+*.class
 lib
 bin
 backup
 doc
 tmp*
+images
 
 # Excluded projects
 Jama
