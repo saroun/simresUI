@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="./simresCON" default="build" name="simresCON">
+    <property environment="env"/>
+    <property name="simresGUI.location" value="../simresGUI"/>
+    <property name="JSUtils.location" value="../JSUtils"/>
+	<property name="dist" value="../dist"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <import file="build.xml"/>
+    <path id="JSUtils.classpath">
+        <pathelement location="${JSUtils.location}/bin"/>
+    </path>
+    <path id="simresCON.classpath">
+        <pathelement location="bin"/>
+        <path refid="JSUtils.classpath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <include name="Jama/"/>
+                <include name="cz/"/>
+                <exclude name="**/*.java"/>
+                <exclude name="obsolete/"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall">
+        <ant antfile="build.xml" dir="${JSUtils.location}" inheritAll="false" target="clean"/>
+    </target>
+    <target name="build" depends="build-subprojects,build-project" />
+    <target name="build-subprojects">
+        <ant antfile="build.xml" dir="${JSUtils.location}" inheritAll="false" target="build-project"/>
+    </target>
+    <target name="build-project" depends="init">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <include name="Jama/"/>
+            <include name="cz/"/>
+            <exclude name="obsolete/"/>
+            <classpath refid="simresCON.classpath"/>
+        </javac>
+    </target>
+    <target name="dist" description="Generate distribution jar" >
+        <jar destfile="${dist}/simresCON.jar" basedir="bin">
+			<fileset dir="${JSUtils.location}/bin"/>
+		</jar>
+    </target>
+    <target  name="build-refprojects" description="Build all projects which reference this project. Useful to propagate changes.">
+        <ant antfile="build.xml" dir="${simresGUI.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${simresGUI.location}" inheritAll="false" target="build"/>
+    </target>
+</project>
