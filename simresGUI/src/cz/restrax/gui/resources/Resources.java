@@ -10,9 +10,9 @@ import java.net.URL;
 
 import javax.swing.ImageIcon;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.definitions.Utils;
 import cz.restrax.gui.SimresGUI;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.definitions.Utils;
 
 public class Resources {
 	private static final String RESOURCE_PATH = "/cz/restrax/gui/resources/"; 

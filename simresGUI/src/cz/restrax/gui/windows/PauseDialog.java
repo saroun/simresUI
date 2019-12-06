@@ -5,8 +5,8 @@ import javax.swing.JButton;
 import javax.swing.JDesktopPane;
 import javax.swing.JPanel;
 
-import cz.saroun.classes.editors.CommandExecutor;
-import cz.saroun.classes.ieditors.InternalDialog;
+import cz.jstools.classes.editors.CommandExecutor;
+import cz.jstools.classes.ieditors.InternalDialog;
 
 
 

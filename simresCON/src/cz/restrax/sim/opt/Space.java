@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import cz.saroun.classes.definitions.Utils;
+import cz.jstools.classes.definitions.Utils;
 
 public abstract class Space {
 	protected double[] lowlim;

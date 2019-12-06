@@ -10,8 +10,8 @@ import java.util.HashMap;
 import javax.media.j3d.TransformGroup;
 import javax.vecmath.Point3f;
 
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
 import cz.restrax.sim.Instrument;
 import cz.restrax.view3D.components.Chopper3D;
 import cz.restrax.view3D.components.Crystal3D;

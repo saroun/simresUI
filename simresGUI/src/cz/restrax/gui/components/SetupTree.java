@@ -17,11 +17,11 @@ import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 import javax.swing.tree.TreeSelectionModel;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.ClassDef;
+import cz.jstools.classes.FieldDef;
 import cz.restrax.gui.resources.Resources;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.ClassDef;
-import cz.saroun.classes.FieldDef;
 
 
 public class SetupTree extends JTree {

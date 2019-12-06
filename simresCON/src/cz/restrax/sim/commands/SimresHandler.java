@@ -3,12 +3,12 @@ package cz.restrax.sim.commands;
 
 import java.io.IOException;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.classes.editors.CommandHandler;
 import cz.restrax.sim.RsxProject;
 import cz.restrax.sim.SimresCON;
 import cz.restrax.sim.utils.FileTools;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.classes.editors.CommandHandler;
 
 
 /**

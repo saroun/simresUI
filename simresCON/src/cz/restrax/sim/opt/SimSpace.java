@@ -1,11 +1,11 @@
 package cz.restrax.sim.opt;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.FieldData;
+import cz.jstools.classes.FieldDef;
+import cz.jstools.classes.FieldType;
 import cz.restrax.sim.Instrument;
 import cz.restrax.sim.SimresCON;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.FieldData;
-import cz.saroun.classes.FieldDef;
-import cz.saroun.classes.FieldType;
 
 public class SimSpace extends Space {
 	protected SimresCON program;	

@@ -7,10 +7,10 @@ import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.FieldData;
-import cz.saroun.classes.FieldDef;
-import cz.saroun.classes.definitions.Utils;
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.FieldData;
+import cz.jstools.classes.FieldDef;
+import cz.jstools.classes.definitions.Utils;
 
 /**
  * In addition to DefaultTreeModel, this class keeps a list of ClassDataTreeNode ID names

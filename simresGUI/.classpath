@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry excluding="obsolete/" including="cz/" kind="src" path="src"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/JSUtils"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JSTools"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/simresCON"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Java3D"/>

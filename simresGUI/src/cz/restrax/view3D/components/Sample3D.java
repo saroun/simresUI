@@ -6,7 +6,7 @@ import javax.media.j3d.Transform3D;
 import javax.vecmath.Color3f;
 import javax.vecmath.Vector3f;
 
-import cz.saroun.classes.ClassData;
+import cz.jstools.classes.ClassData;
 
 
 public class Sample3D extends Frame3D  {

@@ -8,10 +8,10 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JTextPane;
 
+import cz.jstools.util.WinHyperlinkListener;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.resources.Resources;
 import cz.restrax.sim.Version;
-import cz.saroun.utils.WinHyperlinkListener;
 
 public class CopyrightPane extends JPanel {
 	private static final long serialVersionUID = -2111156044874116173L;

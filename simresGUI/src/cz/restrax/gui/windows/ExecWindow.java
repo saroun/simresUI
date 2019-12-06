@@ -23,12 +23,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import cz.jstools.classes.definitions.Constants;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.classes.editors.IntegerField;
 import cz.restrax.gui.Actions;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.resources.Resources;
-import cz.saroun.classes.definitions.Constants;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.classes.editors.IntegerField;
 
 
 

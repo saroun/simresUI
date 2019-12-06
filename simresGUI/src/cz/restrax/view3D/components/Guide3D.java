@@ -11,6 +11,7 @@ import javax.media.j3d.TransformGroup;
 import javax.vecmath.Color3f;
 import javax.vecmath.Point3f;
 
+import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.geometry.GuideAttributes;
 import cz.restrax.view3D.geometry.GuideAttributesE;
 import cz.restrax.view3D.geometry.GuideAttributesP;
@@ -19,7 +20,6 @@ import cz.restrax.view3D.geometry.OFaceGeometry;
 import cz.restrax.view3D.geometry.OWallGeometry;
 import cz.restrax.view3D.geometry.RFaceGeometry;
 import cz.restrax.view3D.geometry.RWallGeometry;
-import cz.saroun.classes.ClassData;
 
 public class Guide3D extends Frame3D {
 	protected static final Color3f wallColour = new Color3f(0.0f, 0.0f, 0.9f);

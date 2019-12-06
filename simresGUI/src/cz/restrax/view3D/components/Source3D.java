@@ -7,7 +7,7 @@ package cz.restrax.view3D.components;
  */
 import javax.vecmath.Color3f;
 
-import cz.saroun.classes.ClassData;
+import cz.jstools.classes.ClassData;
 
 
 public class Source3D extends Frame3D  {

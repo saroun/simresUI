@@ -1,7 +1,7 @@
 package cz.restrax.sim;
 
+import cz.jstools.util.FileLogger;
 import cz.restrax.sim.utils.SimProgressInterface;
-import cz.saroun.utils.FileLogger;
 
 
 /**

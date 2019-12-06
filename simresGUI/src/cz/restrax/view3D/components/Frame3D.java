@@ -16,6 +16,8 @@ import javax.vecmath.Vector3f;
 
 import com.sun.j3d.utils.geometry.Sphere;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDef;
 import cz.restrax.view3D.Utils;
 import cz.restrax.view3D.geometry.BoxGeometry;
 import cz.restrax.view3D.geometry.DiscFaceGeometry;
@@ -25,8 +27,6 @@ import cz.restrax.view3D.geometry.OWallGeometry;
 import cz.restrax.view3D.geometry.RFaceGeometry;
 import cz.restrax.view3D.geometry.RWallGeometry;
 import cz.restrax.view3D.geometry.SlitAttributes;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDef;
 
 /** 
  * @author   Jan Šaroun
@@ -128,7 +128,7 @@ public class Frame3D {
     /**
      * Reads values from given ClassData object. Then updates geometry, appearance and all TransformGroup objects.
      * @param cls ClassData object with component parameters.
-     * @see cz.saroun.classes.ClassData
+     * @see cz.jstools.classes.ClassData
      */
     public void updateFromClass(ClassData cls) { 
     	readClassData(cls);

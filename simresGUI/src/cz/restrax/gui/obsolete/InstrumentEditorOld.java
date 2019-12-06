@@ -8,17 +8,17 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.classes.editors.ClassPane;
+import cz.jstools.classes.editors.PropertiesPane.DefaultListener;
+import cz.jstools.classes.editors.propertiesView.PropertyItem;
+import cz.jstools.classes.editors.propertiesView.VString;
+import cz.jstools.classes.ieditors.IClassEditor;
+import cz.jstools.obsolete.IClassEditorOld;
+import cz.jstools.obsolete.IPropertiesDialogOld;
 import cz.restrax.gui.SimresGUI;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.classes.editors.ClassPane;
-import cz.saroun.classes.editors.PropertiesPane.DefaultListener;
-import cz.saroun.classes.editors.propertiesView.PropertyItem;
-import cz.saroun.classes.editors.propertiesView.VString;
-import cz.saroun.classes.ieditors.IClassEditor;
-import cz.saroun.obsolete.IClassEditorOld;
-import cz.saroun.obsolete.IPropertiesDialogOld;
 
 
 

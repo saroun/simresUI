@@ -3,6 +3,7 @@ package cz.restrax.gui.editors;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.io.File;
+
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -11,12 +12,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileFilter;
+
+import cz.jstools.classes.definitions.GuiFileFilter;
+import cz.jstools.util.DirectoryChooser;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.sim.ProjectList;
 import cz.restrax.sim.RsxProject;
 import cz.restrax.sim.utils.FileTools;
-import cz.saroun.classes.definitions.GuiFileFilter;
-import cz.saroun.utils.DirectoryChooser;
 
 
 /**

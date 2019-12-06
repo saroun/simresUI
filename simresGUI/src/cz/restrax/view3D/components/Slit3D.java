@@ -3,8 +3,8 @@ package cz.restrax.view3D.components;
 import javax.media.j3d.QuadArray;
 import javax.vecmath.Color3f;
 
+import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.geometry.SlitAttributes;
-import cz.saroun.classes.ClassData;
 
 public class Slit3D extends Frame3D  {
 	protected static final Color3f wallColour = new Color3f(0.0f, 0.0f, 0.9f);

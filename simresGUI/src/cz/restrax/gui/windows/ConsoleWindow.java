@@ -18,14 +18,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.util.FileLogger;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.WinLoggerConsole;
 import cz.restrax.gui.resources.Resources;
 import cz.restrax.sim.Script;
 import cz.restrax.sim.mcstas.McStas;
 import cz.restrax.sim.utils.FileTools;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.utils.FileLogger;
 
 /**
  * Console output window for GUI

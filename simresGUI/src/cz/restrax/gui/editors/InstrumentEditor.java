@@ -6,13 +6,13 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.classes.editors.ClassPane;
+import cz.jstools.classes.editors.PropertiesPane;
+import cz.jstools.classes.ieditors.IClassEditor;
+import cz.jstools.classes.ieditors.IPropertiesDialog;
 import cz.restrax.gui.SimresGUI;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.classes.editors.ClassPane;
-import cz.saroun.classes.editors.PropertiesPane;
-import cz.saroun.classes.ieditors.IClassEditor;
-import cz.saroun.classes.ieditors.IPropertiesDialog;
 
 /**
  *  This class implements editor for any SIMRES class using property editors.

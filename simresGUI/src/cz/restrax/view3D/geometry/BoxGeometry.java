@@ -1,6 +1,6 @@
 package cz.restrax.view3D.geometry;
 /** 
- * @author   Jan Šaroun
+ * @author   Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2009/02/06 17:43:29 $</dt></dl>

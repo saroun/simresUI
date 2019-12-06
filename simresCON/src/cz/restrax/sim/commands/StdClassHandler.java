@@ -1,8 +1,8 @@
 package cz.restrax.sim.commands;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.editors.CommandHandler;
 import cz.restrax.sim.SimresCON;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.editors.CommandHandler;
 
 public class StdClassHandler implements CommandHandler {
 	private boolean echo=false;

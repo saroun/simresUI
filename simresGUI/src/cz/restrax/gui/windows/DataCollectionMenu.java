@@ -9,11 +9,11 @@ import java.util.HashMap;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.editors.CommandPane;
+import cz.jstools.classes.ieditors.ICommandEditor;
 import cz.restrax.gui.SimresGUI;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.editors.CommandPane;
-import cz.saroun.classes.ieditors.ICommandEditor;
 
 
 /**

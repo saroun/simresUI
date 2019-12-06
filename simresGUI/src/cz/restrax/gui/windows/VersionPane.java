@@ -8,10 +8,10 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JTextPane;
 
+import cz.jstools.util.WinHyperlinkListener;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.resources.Resources;
 import cz.restrax.sim.Version;
-import cz.saroun.utils.WinHyperlinkListener;
 
 public class VersionPane extends JPanel {
 	private static final long serialVersionUID = 7764203301479419728L;
@@ -85,16 +85,6 @@ public class VersionPane extends JPanel {
 				+ "<a href=\"http://neutron.ujf.cas.cz/restrax/\">neutron.ujf.cas.cz/restrax</a>"
 				+ "<br/></td>"
 				+ "</tr>"
-				/*
-				+ "<tr><td colspan=\"2\"  align=\"center\">"
-				+ "<i>Copyright &#x00A9;&nbsp;1995-2012&nbsp;All rights reserved</i><br/>"
-				+ "Nuclear Physics Institute, AVČR, Řež, Czech Republic<br/>"
-				+ "Institut Laue Langevin, Grenoble, France<br/>"
-				+ "<b>written by</b>: Jan Šaroun</a><br/>" 
-				+ "<b>project homepage:</b> <a href='http://neutron.ujf.cas.cz/restrax/'>neutron.ujf.cas.cz/restrax</a>"
-				+"</td>"
-				+ "</tr>"
-				*/
 				+ "</table>"
 				+ "</div>"
 				+ "</body>"

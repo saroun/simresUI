@@ -1,9 +1,9 @@
 package cz.restrax.gui.xml;
 
+import cz.jstools.xml.XmlUtils;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.sim.Instrument;
 import cz.restrax.sim.xml.reader.InstrumentExh;
-import cz.saroun.xml.XmlUtils;
 
 
 public class InstrumentGuiExh extends InstrumentExh {

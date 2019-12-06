@@ -25,22 +25,22 @@ import javax.swing.event.TreeSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.TreePath;
 
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.FieldData;
-import cz.saroun.classes.FieldType;
-import cz.saroun.classes.FloatDef;
-import cz.saroun.classes.RangeData;
-import cz.saroun.classes.ValueRange;
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.FieldData;
+import cz.jstools.classes.FieldType;
+import cz.jstools.classes.FloatDef;
+import cz.jstools.classes.RangeData;
+import cz.jstools.classes.ValueRange;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.classes.editors.propertiesView.Browsable;
+import cz.jstools.classes.ieditors.InternalDialog;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.components.SetupTree;
 import cz.restrax.gui.components.SetupTreeNode;
 import cz.restrax.gui.components.ValueRangeTable;
 import cz.restrax.gui.components.ValueTreeHandler;
 import cz.restrax.gui.components.ValueTreeNode;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.classes.editors.propertiesView.Browsable;
-import cz.saroun.classes.ieditors.InternalDialog;
 
 public class ValueChooserDialog extends InternalDialog implements Browsable {
 	//public class ConfigTreeDialog extends InternalDialog {

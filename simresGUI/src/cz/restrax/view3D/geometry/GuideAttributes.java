@@ -8,7 +8,7 @@ import javax.vecmath.Vector2f;
 import javax.vecmath.Vector3d;
 import javax.vecmath.Vector3f;
 
-import cz.saroun.classes.ClassData;
+import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.Utils;
 
 

@@ -17,8 +17,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.vecmath.Matrix3f;
 
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ieditors.InternalDialog;
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ieditors.InternalDialog;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.view3D.components.Frame3D;
 import cz.restrax.view3D.components.FrameShape;

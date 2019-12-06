@@ -3,8 +3,8 @@ package cz.restrax.sim.xml.handlers;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXParseException;
 
-import cz.saroun.xml.CallBackInterface;
-import cz.saroun.xml.XmlUtils;
+import cz.jstools.xml.CallBackInterface;
+import cz.jstools.xml.XmlUtils;
 
 /**
  * This handler allows to ignore the whole block, otherwise does nothing

@@ -9,13 +9,13 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
-import cz.saroun.classes.FieldDef;
-import cz.saroun.classes.RangeData;
-import cz.saroun.classes.ValueRange;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.classes.editors.propertiesView.PropertyValueEditor;
-import cz.saroun.classes.editors.propertiesView.VString;
-import cz.saroun.classes.editors.propertiesView.ValueChecker;
+import cz.jstools.classes.FieldDef;
+import cz.jstools.classes.RangeData;
+import cz.jstools.classes.ValueRange;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.classes.editors.propertiesView.PropertyValueEditor;
+import cz.jstools.classes.editors.propertiesView.VString;
+import cz.jstools.classes.editors.propertiesView.ValueChecker;
 
 public class ValueRangeTable extends JTable {
 	private static final long serialVersionUID = 1L;

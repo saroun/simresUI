@@ -6,8 +6,8 @@ import javax.vecmath.Point3i;
 import javax.vecmath.Vector3d;
 import javax.vecmath.Vector3f;
 
+import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.geometry.BoxGeometry;
-import cz.saroun.classes.ClassData;
 
 /**
  * Abstract class for 3D arrays of components.

@@ -19,6 +19,9 @@ import javax.swing.JInternalFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
+import cz.jstools.classes.definitions.Constants;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.util.DirectoryChooser;
 import cz.restrax.gui.Actions;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.WinConsoleMessages;
@@ -29,9 +32,6 @@ import cz.restrax.sim.RsxProject;
 import cz.restrax.sim.commands.SimresHandler;
 import cz.restrax.sim.utils.FileTools;
 import cz.restrax.sim.xml.writer.ProjectXmlExport;
-import cz.saroun.classes.definitions.Constants;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.utils.DirectoryChooser;
 
 
 /**

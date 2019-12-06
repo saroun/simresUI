@@ -13,8 +13,8 @@ import javax.swing.JRootPane;
 import javax.swing.JScrollPane;
 import javax.swing.WindowConstants;
 
+import cz.jstools.classes.definitions.Constants;
 import cz.restrax.gui.resources.Resources;
-import cz.saroun.classes.definitions.Constants;
 
 
 

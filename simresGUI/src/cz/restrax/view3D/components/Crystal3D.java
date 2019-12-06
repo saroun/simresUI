@@ -10,7 +10,7 @@ import javax.media.j3d.Transform3D;
 import javax.vecmath.Color3f;
 import javax.vecmath.Vector3f;
 
-import cz.saroun.classes.ClassData;
+import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.Utils;
 import cz.restrax.view3D.geometry.BoxGeometry;
 

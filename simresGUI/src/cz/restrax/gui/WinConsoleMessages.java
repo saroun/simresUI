@@ -4,8 +4,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JOptionPane;
 
-import cz.saroun.utils.ConsoleMessages;
-import cz.saroun.utils.HTMLLogger;
+import cz.jstools.util.ConsoleMessages;
+import cz.jstools.util.HTMLLogger;
 
 public class WinConsoleMessages extends ConsoleMessages {
 

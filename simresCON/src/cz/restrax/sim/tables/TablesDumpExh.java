@@ -4,9 +4,9 @@ package cz.restrax.sim.tables;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXParseException;
 
-import cz.saroun.classes.editors.CommandExecutor;
-import cz.saroun.xml.CallBackInterface;
-import cz.saroun.xml.XmlUtils;
+import cz.jstools.classes.editors.CommandExecutor;
+import cz.jstools.xml.CallBackInterface;
+import cz.jstools.xml.XmlUtils;
 
 /**
  * Xml handler for element <code>MIRRORLIST</code>.

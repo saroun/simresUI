@@ -3,9 +3,9 @@ package cz.restrax.gui.components;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
+import cz.jstools.classes.editors.BetterComboBox;
 import cz.restrax.sim.ProjectList;
 import cz.restrax.sim.RsxProject;
-import cz.saroun.classes.editors.BetterComboBox;
 
 public class ProjectsComboBox extends BetterComboBox {
 	private static final long serialVersionUID = 7262464702595092876L;

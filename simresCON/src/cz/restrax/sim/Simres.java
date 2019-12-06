@@ -3,8 +3,8 @@ package cz.restrax.sim;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+import cz.jstools.classes.definitions.Constants;
 import cz.restrax.sim.SimresCON.CmdLineOptions;
-import cz.saroun.classes.definitions.Constants;
 
 /**
  * This class encapsulates the console layer SimresCON. 

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Vector;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import cz.saroun.tasks.WriteRunnable;
+import cz.jstools.tasks.WriteRunnable;
 
 /**
  * Extends WriteRunnable by overriding the send() method. It allows to insert WAIT/NOTIFY commands for SIMRES kernel

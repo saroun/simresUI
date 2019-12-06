@@ -1,9 +1,9 @@
 package cz.restrax.sim.xml.reader;
 
 //import cz.restrax.sim.Instrument;
+import cz.jstools.xml.CallBackInterface;
+import cz.jstools.xml.DefaultXmlHandler;
 import cz.restrax.sim.SimresCON;
-import cz.saroun.xml.CallBackInterface;
-import cz.saroun.xml.DefaultXmlHandler;
 
 public class ComponentHandler extends DefaultXmlHandler {
 	protected final SimresCON program;

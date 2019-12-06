@@ -1,11 +1,11 @@
 package cz.restrax.gui.xml;
 
+import cz.jstools.xml.CallBackInterface;
+import cz.jstools.xml.XmlUtils;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.sim.xml.handlers.BatchModeExh;
 import cz.restrax.sim.xml.handlers.ExhFactory;
 import cz.restrax.sim.xml.handlers.PauseExh;
-import cz.saroun.xml.CallBackInterface;
-import cz.saroun.xml.XmlUtils;
 
 /**
  * Modifies ExhFactory so that it returns GUI dependent handlers where needed.

@@ -1,7 +1,7 @@
 package cz.restrax.sim.tables;
 
-import cz.saroun.xml.CallBackInterface;
-import cz.saroun.xml.DefaultXmlHandler;
+import cz.jstools.xml.CallBackInterface;
+import cz.jstools.xml.DefaultXmlHandler;
 
 public class TablesXmlHandler extends DefaultXmlHandler {
 	private TablesListExh contentHandler=null;

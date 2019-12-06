@@ -2,12 +2,12 @@ package cz.restrax.sim.opt;
 
 import java.util.ArrayList;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.FieldDef;
+import cz.jstools.classes.FieldType;
+import cz.jstools.classes.definitions.Utils;
 import cz.restrax.sim.Instrument;
 import cz.restrax.sim.SimresCON;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.FieldDef;
-import cz.saroun.classes.FieldType;
-import cz.saroun.classes.definitions.Utils;
 
 public class GuideSpace extends SimSpace {
 	private final ArrayList<ClassData> guides;

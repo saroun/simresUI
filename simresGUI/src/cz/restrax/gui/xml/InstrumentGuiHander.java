@@ -1,8 +1,8 @@
 package cz.restrax.gui.xml;
 
+import cz.jstools.xml.CallBackInterface;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.sim.xml.reader.InstrumentHandler;
-import cz.saroun.xml.CallBackInterface;
 
 public class InstrumentGuiHander extends InstrumentHandler {
 	public InstrumentGuiHander(boolean autoUpdate, SimresGUI program, boolean canRedefine) {

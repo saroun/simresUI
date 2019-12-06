@@ -23,14 +23,14 @@ import javax.swing.WindowConstants;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import cz.jstools.classes.definitions.Constants;
+import cz.jstools.util.WinHyperlinkListener;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.components.ProjectsComboBox;
 import cz.restrax.gui.resources.Resources;
 import cz.restrax.sim.ProjectList;
 import cz.restrax.sim.RsxProject;
 import cz.restrax.sim.Version;
-import cz.saroun.classes.definitions.Constants;
-import cz.saroun.utils.WinHyperlinkListener;
 
 /**
  * This class opens a startup dialog, where user can choose a project

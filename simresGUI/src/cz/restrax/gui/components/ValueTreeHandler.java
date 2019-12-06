@@ -15,9 +15,9 @@ import javax.swing.table.JTableHeader;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
 
-import cz.saroun.classes.FieldDef;
-import cz.saroun.classes.FieldType;
-import cz.saroun.classes.ValueRange;
+import cz.jstools.classes.FieldDef;
+import cz.jstools.classes.FieldType;
+import cz.jstools.classes.ValueRange;
 
 public class ValueTreeHandler extends TransferHandler {
 		private static final long serialVersionUID = 1L;

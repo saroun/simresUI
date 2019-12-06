@@ -13,9 +13,9 @@ import javax.swing.text.html.HTML;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.StyleSheet;
 
+import cz.jstools.util.HTMLLogger;
 import cz.restrax.gui.WinLoggerConsole.myRunnable;
 import cz.restrax.sim.resources.Resources;
-import cz.saroun.utils.HTMLLogger;
 
 /**
  * Advanced implementation of HTMLLogger for ResultsWindow. 

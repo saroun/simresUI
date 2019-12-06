@@ -3,7 +3,7 @@ package cz.restrax.view3D.geometry;
 import javax.vecmath.Color3f;
 import javax.vecmath.Vector3d;
 
-import cz.saroun.classes.ClassData;
+import cz.jstools.classes.ClassData;
 
 
 /**

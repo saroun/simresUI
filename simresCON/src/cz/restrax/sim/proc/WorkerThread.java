@@ -4,9 +4,9 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
+import cz.jstools.tasks.TaskExecutor;
 import cz.restrax.sim.SimresCON;
 import cz.restrax.sim.SimresStatus.Phase;
-import cz.saroun.tasks.TaskExecutor;
 
 public class WorkerThread extends Thread {
 	private static final boolean __DEBUG__ = false;

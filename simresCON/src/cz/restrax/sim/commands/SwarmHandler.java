@@ -1,7 +1,7 @@
 package cz.restrax.sim.commands;
 
+import cz.jstools.classes.ClassData;
 import cz.restrax.sim.SimresCON;
-import cz.saroun.classes.ClassData;
 import cz.restrax.sim.opt.GuideSpace;
 import cz.restrax.sim.opt.SimSpace;
 import cz.restrax.sim.opt.SwarmOptimizer;

@@ -13,9 +13,9 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.tasks.ConsoleListener;
-import cz.saroun.tasks.ReadRunnable;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.tasks.ConsoleListener;
+import cz.jstools.tasks.ReadRunnable;
 
 
 /**

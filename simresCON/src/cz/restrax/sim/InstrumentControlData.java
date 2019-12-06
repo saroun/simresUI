@@ -1,8 +1,8 @@
 package cz.restrax.sim;
 
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.FloatData;
-import cz.saroun.classes.definitions.Utils;
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.FloatData;
+import cz.jstools.classes.definitions.Utils;
 
 public class InstrumentControlData  {
     private double ki,kf,q,en,lambda, ttheta, psi;

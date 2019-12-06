@@ -6,15 +6,15 @@ import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.definitions.FileAccess;
+import cz.jstools.classes.definitions.GuiFileFilter;
+import cz.jstools.classes.editors.ClassPane;
+import cz.jstools.classes.editors.CommandGuiExecutor;
+import cz.jstools.classes.editors.FileSelectDialog;
 import cz.restrax.gui.editors.InstrumentPane;
 import cz.restrax.gui.resources.Resources;
 import cz.restrax.sim.SimresExecutor;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.definitions.FileAccess;
-import cz.saroun.classes.definitions.GuiFileFilter;
-import cz.saroun.classes.editors.ClassPane;
-import cz.saroun.classes.editors.CommandGuiExecutor;
-import cz.saroun.classes.editors.FileSelectDialog;
 
 public class SimresGuiExecutor extends SimresExecutor implements CommandGuiExecutor {
 	public SimresGuiExecutor(SimresGUI program) {

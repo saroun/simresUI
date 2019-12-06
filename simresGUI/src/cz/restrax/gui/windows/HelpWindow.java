@@ -8,9 +8,9 @@ import javax.swing.JInternalFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import cz.jstools.util.WinHyperlinkListener;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.resources.Resources;
-import cz.saroun.utils.WinHyperlinkListener;
 
 
 public class HelpWindow extends JInternalFrame {

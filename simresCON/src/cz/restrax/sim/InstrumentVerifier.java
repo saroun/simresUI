@@ -4,10 +4,10 @@ import java.awt.Component;
 
 import javax.swing.JOptionPane;
 
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.ClassDef;
-import cz.saroun.classes.ClassesCollection;
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.ClassDef;
+import cz.jstools.classes.ClassesCollection;
 
 public class InstrumentVerifier {
 	private ClassesCollection classes;

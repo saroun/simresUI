@@ -21,13 +21,13 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 import javax.swing.text.html.HTMLDocument;
 
+import cz.jstools.classes.definitions.GuiFileFilter;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.classes.ieditors.InternalDialog;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.WinConsoleMessages;
 import cz.restrax.gui.WinLoggerResults;
 import cz.restrax.gui.resources.Resources;
-import cz.saroun.classes.definitions.GuiFileFilter;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.classes.ieditors.InternalDialog;
 
 
 /**

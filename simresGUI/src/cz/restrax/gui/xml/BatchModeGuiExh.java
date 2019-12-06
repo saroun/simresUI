@@ -3,11 +3,11 @@ package cz.restrax.gui.xml;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXParseException;
 
+import cz.jstools.xml.XmlUtils;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.sim.SimresCON;
 import cz.restrax.sim.xml.handlers.BatchModeExh;
 import cz.restrax.sim.xml.handlers.PauseExh;
-import cz.saroun.xml.XmlUtils;
 
 public class BatchModeGuiExh extends BatchModeExh  {
 

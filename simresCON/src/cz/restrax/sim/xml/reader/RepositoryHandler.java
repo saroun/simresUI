@@ -2,10 +2,10 @@ package cz.restrax.sim.xml.reader;
 
 import java.util.HashMap;
 
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.ClassesCollection;
+import cz.jstools.xml.DefaultXmlHandler;
 import cz.restrax.sim.SimresCON;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.ClassesCollection;
-import cz.saroun.xml.DefaultXmlHandler;
 
 public class RepositoryHandler extends DefaultXmlHandler {
 	public RepositoryHandler(SimresCON program) {

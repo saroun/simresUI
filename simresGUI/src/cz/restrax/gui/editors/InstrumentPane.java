@@ -5,15 +5,15 @@ import java.awt.Point;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.editors.ClassPane;
+import cz.jstools.classes.editors.PropertiesPane;
+import cz.jstools.classes.editors.propertiesView.PropertyItem;
+import cz.jstools.classes.editors.propertiesView.VString;
+import cz.jstools.classes.ieditors.IClassEditor;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.sim.InstrumentControlData;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.editors.ClassPane;
-import cz.saroun.classes.editors.PropertiesPane;
-import cz.saroun.classes.editors.propertiesView.PropertyItem;
-import cz.saroun.classes.editors.propertiesView.VString;
-import cz.saroun.classes.ieditors.IClassEditor;
 
 
 
@@ -48,7 +48,7 @@ public class InstrumentPane extends PropertiesPane {
 	/** 
 	 * Creates property editors for all instrument components etc.
 	 * Called automatically by InitProperties.
-	 * @see cz.saroun.classes.editors.PropertiesPane#createContent()
+	 * @see cz.jstools.classes.editors.PropertiesPane#createContent()
 	 */
 	@Override
 	protected void createContent() {

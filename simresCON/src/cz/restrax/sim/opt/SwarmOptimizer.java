@@ -4,11 +4,11 @@ import java.io.File;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.definitions.Utils;
 import cz.restrax.sim.ProjectList;
 import cz.restrax.sim.SimresCON;
-import cz.saroun.classes.ClassData;
 import cz.restrax.sim.commands.SimresHandler;
-import cz.saroun.classes.definitions.Utils;
 
 public class SwarmOptimizer extends AbstractOptimizer {
 	public static final int TYPE_ALLPARAM=0;

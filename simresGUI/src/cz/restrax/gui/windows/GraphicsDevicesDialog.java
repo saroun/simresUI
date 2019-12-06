@@ -11,9 +11,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
+import cz.jstools.classes.definitions.Constants;
+import cz.jstools.classes.definitions.Utils;
 import cz.restrax.gui.SimresGUI;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.classes.definitions.Constants;
 
 
 

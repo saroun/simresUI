@@ -4,7 +4,7 @@ import java.util.Vector;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
-import cz.saroun.classes.ClassDataCollection;
+import cz.jstools.classes.ClassDataCollection;
 
 public class SetupTreeGroup extends DefaultMutableTreeNode {
 	private static final long serialVersionUID = -2660381839667505201L;

@@ -38,9 +38,9 @@ This software package may be used and distributed under the following terms:
 
 The text of this license is given below.
 
-----------------------
+==============================
 Additional Copyrights
-----------------------
+==============================
 
 Any file that is explicitly marked as "public domain" is free from any
 restriction on distribution.  
@@ -49,13 +49,20 @@ Any file that has a explicit copyright notice may be distributed under
 the terms of both the GPL and whatever stated conditions accompany the
 copyright.
 
-------------------------------
-Code written by other authors:
-------------------------------
+==============================
+Code written by other authors
+==============================
 
 JAMA : A Java Matrix Package
-see http://math.nist.gov/javanumerics/jama/
-Licence: public domain
+-----------------------------
+source: http://math.nist.gov/javanumerics/jama/
+Copyright Notice: 
+This software is a cooperative product of 
+The MathWorks and the National Institute of Standards and Technology (NIST) 
+which has been released to the public domain. Neither The MathWorks nor 
+NIST assumes any responsibility whatsoever for its use by other parties, 
+and makes no guarantees, expressed or implied, about its quality, 
+reliability, or any other characteristic. 
 
 =======================================================================
 		    

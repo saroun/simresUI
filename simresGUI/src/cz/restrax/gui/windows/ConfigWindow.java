@@ -29,19 +29,19 @@ import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.definitions.Constants;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.classes.editors.BetterComboBox;
+import cz.jstools.classes.editors.ClassPane;
+import cz.jstools.classes.ieditors.IClassEditor;
+import cz.jstools.classes.ieditors.IPropertiesDialog;
+import cz.jstools.obsolete.IPropertiesDialogOld;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.editors.InstrumentEditor;
 import cz.restrax.gui.resources.Resources;
 import cz.restrax.sim.RsxProject;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.definitions.Constants;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.classes.editors.BetterComboBox;
-import cz.saroun.classes.editors.ClassPane;
-import cz.saroun.classes.ieditors.IClassEditor;
-import cz.saroun.classes.ieditors.IPropertiesDialog;
-import cz.saroun.obsolete.IPropertiesDialogOld;
 
 /**
  * This class creates a window with buttons, pointing to all configuration dialogs.

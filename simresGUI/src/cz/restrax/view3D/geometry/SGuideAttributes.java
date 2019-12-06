@@ -7,10 +7,10 @@ import javax.vecmath.Vector2f;
 import javax.vecmath.Vector3d;
 import javax.vecmath.Vector3f;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.IntData;
+import cz.jstools.classes.TableData;
 import cz.restrax.view3D.Utils;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.IntData;
-import cz.saroun.classes.TableData;
 
 
 /**

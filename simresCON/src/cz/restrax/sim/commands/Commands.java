@@ -3,12 +3,12 @@ package cz.restrax.sim.commands;
 import java.io.File;
 import java.util.HashMap;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.ClassesCollection;
+import cz.jstools.classes.editors.CommandHandler;
 import cz.restrax.sim.ProjectList;
 import cz.restrax.sim.SimresCON;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.ClassesCollection;
-import cz.saroun.classes.editors.CommandHandler;
 
 /**
  * Collects information about all commands and their groups.

@@ -2,7 +2,7 @@ package cz.restrax.gui.components;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
-import cz.saroun.classes.ClassData;
+import cz.jstools.classes.ClassData;
 
 
 public class SetupTreeNode extends DefaultMutableTreeNode {

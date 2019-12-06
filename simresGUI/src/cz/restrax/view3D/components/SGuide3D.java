@@ -6,9 +6,9 @@ import javax.vecmath.Color3f;
 import javax.vecmath.Point3f;
 import javax.vecmath.Vector3d;
 
+import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.geometry.BladeSequenceAtt;
 import cz.restrax.view3D.geometry.SGuideAttributes;
-import cz.saroun.classes.ClassData;
 
 /** 
  * @author   Jan Šaroun

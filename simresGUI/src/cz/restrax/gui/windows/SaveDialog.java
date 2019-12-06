@@ -6,8 +6,8 @@ import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
-import cz.saroun.classes.definitions.GuiFileFilter;
-import cz.saroun.classes.definitions.Utils;
+import cz.jstools.classes.definitions.GuiFileFilter;
+import cz.jstools.classes.definitions.Utils;
 
 public class SaveDialog extends JFileChooser {
 	private static final long  serialVersionUID = -7762737552561934603L;

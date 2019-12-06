@@ -4,10 +4,10 @@ import java.util.zip.DataFormatException;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.FieldData;
-import cz.saroun.classes.FieldDef;
-import cz.saroun.classes.ValueRange;
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.FieldData;
+import cz.jstools.classes.FieldDef;
+import cz.jstools.classes.ValueRange;
 
 public class ValueTreeNode extends DefaultMutableTreeNode {
 	private static final long serialVersionUID = 1L;

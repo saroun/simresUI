@@ -34,15 +34,15 @@ import javax.swing.tree.TreePath;
 
 import org.xml.sax.SAXParseException;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.editors.ClassPane;
+import cz.jstools.classes.ieditors.IClassEditor;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.components.SetupTree;
 import cz.restrax.gui.components.SetupTreeHandler;
 import cz.restrax.gui.components.SetupTreeNode;
 import cz.restrax.sim.InstrumentVerifier;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.editors.ClassPane;
-import cz.saroun.classes.ieditors.IClassEditor;
 
 public class SetupTreeDialogModal extends JDialog implements PropertyChangeListener {
 // public class SetupTreeDialog extends InternalDialog {

@@ -10,18 +10,18 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
+import cz.jstools.util.WinHyperlinkListener;
 import cz.restrax.gui.SimresGUI;
-import cz.saroun.utils.WinHyperlinkListener;
 
 
 
 
 
 /**
- * Zobraz� informace o programu.
+ * Zobrazi informace o programu.
  *
  *
- * @author   Svoboda Ji��, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.6 $</dt>
  *               <dt>$Date: 2014/06/18 20:07:54 $</dt></dl>
@@ -124,9 +124,9 @@ public class AboutRestrax extends JDialog {
 		+   "</style>\n"+
 			"</head><body>"
 				+ "<i>Copyright &#x00A9;&nbsp;1995-2012&nbsp;All rights reserved</i><br/>"
-				+ "Nuclear Physics Institute, AVČR, Řež, Czech Republic<br/>"
+				+ "Nuclear Physics Institute, CAS, Rez, Czech Republic<br/>"
 				+ "Institut Laue Langevin, Grenoble, France<br/><br>"
-				+ "<b>written by</b>: Jan Šaroun</a><br/>" 
+				+ "<b>written by</b>: Jan Saroun</a><br/>" 
 				+ "<b>project homepage:</b> <a href='http://neutron.ujf.cas.cz/restrax/'>neutron.ujf.cas.cz/restrax</a>"
 				+ "</body></html>";
 			txtDescription = new JEditorPane("text/html; charset=UTF-8",content);			

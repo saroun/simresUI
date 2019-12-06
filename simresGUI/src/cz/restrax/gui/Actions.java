@@ -9,6 +9,10 @@ import java.util.zip.DataFormatException;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.definitions.GuiFileFilter;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.xml.DefaultXmlLoader;
 import cz.restrax.gui.editors.ProjectDialog;
 import cz.restrax.gui.editors.SetupTreeDialogModal;
 import cz.restrax.gui.windows.FormattedMsgDialog;
@@ -16,10 +20,6 @@ import cz.restrax.gui.windows.SaveDialog;
 import cz.restrax.sim.opt.Swarm;
 import cz.restrax.sim.opt.TestSpace;
 import cz.restrax.sim.utils.FileTools;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.definitions.GuiFileFilter;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.xml.DefaultXmlLoader;
 
 /**
  * Encapsulates action adapters for main menus

@@ -11,9 +11,9 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.Vector;
 
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.tasks.ConsoleListener;
 import cz.restrax.sim.proc.ConsoleReader;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.tasks.ConsoleListener;
 
 
 /**

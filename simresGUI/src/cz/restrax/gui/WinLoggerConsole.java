@@ -4,7 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JTextArea;
 
-import cz.saroun.utils.FileLogger;
+import cz.jstools.util.FileLogger;
 
 /**
  * Extends FileLogger. It shows log text in JTextArea. The output is not formated, so 

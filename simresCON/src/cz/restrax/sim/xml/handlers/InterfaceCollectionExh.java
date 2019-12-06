@@ -5,10 +5,10 @@ import java.util.Vector;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXParseException;
 
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.ClassesCollection;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.xml.XmlUtils;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.ClassesCollection;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.xml.XmlUtils;
 
 
 public class InterfaceCollectionExh extends InstrumentCollectionExh {

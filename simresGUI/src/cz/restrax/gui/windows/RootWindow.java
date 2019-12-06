@@ -19,15 +19,15 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.RangeData;
+import cz.jstools.classes.RangeDef;
+import cz.jstools.classes.definitions.GuiFileFilter;
 import cz.restrax.gui.Actions;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.menu.HelpMenu;
 import cz.restrax.gui.resources.Resources;
 import cz.restrax.sim.commands.Commands;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.RangeData;
-import cz.saroun.classes.RangeDef;
-import cz.saroun.classes.definitions.GuiFileFilter;
 
 
 

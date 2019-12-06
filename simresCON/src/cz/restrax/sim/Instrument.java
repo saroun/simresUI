@@ -4,14 +4,14 @@ import java.io.IOException;
 import java.util.Vector;
 import java.util.zip.DataFormatException;
 
+import cz.jstools.classes.ClassData;
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.StringData;
+import cz.jstools.classes.StringDef;
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.xml.DefaultXmlLoader;
 import cz.restrax.sim.xml.reader.ComponentHandler;
 import cz.restrax.sim.xml.reader.InstrumentHandler;
-import cz.saroun.classes.ClassData;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.StringData;
-import cz.saroun.classes.StringDef;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.xml.DefaultXmlLoader;
 
 
 /**

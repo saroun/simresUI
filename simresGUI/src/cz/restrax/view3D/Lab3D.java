@@ -24,7 +24,7 @@ import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
 import com.sun.j3d.utils.behaviors.vp.ViewPlatformBehavior;
 import com.sun.j3d.utils.universe.SimpleUniverse;
 
-import cz.saroun.classes.ClassData;
+import cz.jstools.classes.ClassData;
 import cz.restrax.sim.Instrument;
 import cz.restrax.view3D.components.CoordAxes;
 import cz.restrax.view3D.components.Axis;

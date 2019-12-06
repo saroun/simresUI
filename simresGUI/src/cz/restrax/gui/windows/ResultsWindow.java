@@ -13,12 +13,12 @@ import javax.swing.JInternalFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import cz.jstools.classes.definitions.Utils;
+import cz.jstools.util.HTMLLogger;
+import cz.jstools.util.WinHyperlinkListener;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.WinLoggerResults;
 import cz.restrax.gui.resources.Resources;
-import cz.saroun.classes.definitions.Utils;
-import cz.saroun.utils.HTMLLogger;
-import cz.saroun.utils.WinHyperlinkListener;
 
 
 

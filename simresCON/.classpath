@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="obsolete/" including="cz/" kind="src" path="src"/>
+	<classpathentry excluding="obsolete/" including="Jama/|cz/" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/JSUtils"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Jama"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/JSTools"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

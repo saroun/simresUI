@@ -10,8 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.WindowConstants;
 
+import cz.jstools.classes.definitions.Utils;
 import cz.restrax.sim.utils.SimProgressInterface;
-import cz.saroun.classes.definitions.Utils;
 
 
 

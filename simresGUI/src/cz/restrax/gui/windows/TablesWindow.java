@@ -24,11 +24,11 @@ import javax.swing.WindowConstants;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableCellRenderer;
 
+import cz.jstools.classes.definitions.Constants;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.WinConsoleMessages;
 import cz.restrax.gui.resources.Resources;
 import cz.restrax.sim.tables.Tables;
-import cz.saroun.classes.definitions.Constants;
 
 
 public class TablesWindow extends JDialog  {

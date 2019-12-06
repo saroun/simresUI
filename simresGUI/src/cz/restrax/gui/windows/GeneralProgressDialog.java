@@ -14,8 +14,8 @@ import javax.swing.JTextArea;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 
+import cz.jstools.classes.definitions.Utils;
 import cz.restrax.sim.utils.ProgressInterface;
-import cz.saroun.classes.definitions.Utils;
 
 
 

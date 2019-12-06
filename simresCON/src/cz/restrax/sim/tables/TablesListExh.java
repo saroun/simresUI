@@ -5,8 +5,9 @@ import java.io.IOException;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXParseException;
-import cz.saroun.xml.CallBackInterface;
-import cz.saroun.xml.XmlUtils;
+
+import cz.jstools.xml.CallBackInterface;
+import cz.jstools.xml.XmlUtils;
 
 
 /**

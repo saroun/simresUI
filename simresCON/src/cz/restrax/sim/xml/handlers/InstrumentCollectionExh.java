@@ -1,10 +1,10 @@
 package cz.restrax.sim.xml.handlers;
 
+import cz.jstools.classes.ClassDataCollection;
+import cz.jstools.classes.ClassesCollection;
+import cz.jstools.classes.xml.ClassDataCollectionExh;
+import cz.jstools.xml.XmlUtils;
 import cz.restrax.sim.Instrument;
-import cz.saroun.classes.ClassDataCollection;
-import cz.saroun.classes.ClassesCollection;
-import cz.saroun.classes.xml.ClassDataCollectionExh;
-import cz.saroun.xml.XmlUtils;
 
 /**
  * Read XML data for a collection of ClassData objects. 

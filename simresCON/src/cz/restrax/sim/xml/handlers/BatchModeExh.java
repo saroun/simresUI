@@ -3,9 +3,9 @@ package cz.restrax.sim.xml.handlers;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXParseException;
 
+import cz.jstools.xml.CallBackInterface;
+import cz.jstools.xml.XmlUtils;
 import cz.restrax.sim.SimresCON;
-import cz.saroun.xml.CallBackInterface;
-import cz.saroun.xml.XmlUtils;
 
 public class BatchModeExh implements CallBackInterface {
 	public static final String  ENAME = "BATCHMODE";

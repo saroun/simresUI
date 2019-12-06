@@ -6,7 +6,7 @@ import java.nio.CharBuffer;
 import java.util.TimerTask;
 import java.util.Vector;
 
-import cz.saroun.tasks.ConsoleListener;
+import cz.jstools.tasks.ConsoleListener;
 
 
 /**
