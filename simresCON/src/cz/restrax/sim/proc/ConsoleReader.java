@@ -2,6 +2,7 @@ package cz.restrax.sim.proc;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.nio.Buffer;
 import java.nio.CharBuffer;
 import java.util.TimerTask;
 import java.util.Vector;
@@ -61,10 +62,10 @@ public class ConsoleReader extends TimerTask {
 				CharBuffer charBuf = CharBuffer.allocate(1024);
 				// read all available console output by 1024 blocks
 				do {  
-					charBuf.clear();
+					((Buffer)charBuf).clear();
 					conIn.read(charBuf);
 					// console output (stream) shall be reversed
-					charBuf.flip();
+					((Buffer)charBuf).flip();
 					outputBuffer += charBuf.toString();
 				} while (conIn.ready());
 			}

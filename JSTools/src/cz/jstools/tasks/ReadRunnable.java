@@ -2,6 +2,7 @@ package cz.jstools.tasks;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.nio.Buffer;
 import java.nio.CharBuffer;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -65,9 +66,9 @@ public final class ReadRunnable implements Runnable {
 			if (inp != null) {
 				try {
 					while (inp.ready()) {  
-						charBuf.clear();
+						((Buffer)charBuf).clear();
 						inp.read(charBuf);
-						charBuf.flip();
+						((Buffer)charBuf).flip();
 						if (__DEBUG__) System.out.format("Put on Queue\n%s\n", charBuf.toString());
 						receiveQueue.put(charBuf.toString());
 					}
