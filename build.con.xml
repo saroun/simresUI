@@ -2,9 +2,7 @@
 <project basedir="./simresCON" default="build" name="simresCON">
     <property environment="env"/>
     <property name="JSTools.location" value="../JSTools"/>
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.7"/>
-    <property name="source" value="1.7"/>
+    <property file="../build.properties"/>
     <path id="JSTools.classpath">
         <pathelement location="${JSTools.location}/bin"/>
     </path>
@@ -35,8 +33,10 @@
     </target>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
+		<echo message="javac options: ${javac_options}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
+			<compilerarg line="${javac_options}" />
             <include name="Jama/"/>
             <include name="cz/"/>
             <exclude name="obsolete/"/>

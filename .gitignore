@@ -18,6 +18,7 @@ tmp*
 images
 
 # Excluded projects
-Jama
 Java3D
+dist
+
 

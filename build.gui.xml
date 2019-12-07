@@ -3,69 +3,10 @@
     <property environment="env"/>
     <property name="JSTools.location" value="../JSTools"/>
 	<property name="simresCON.location" value="../simresCON"/>
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.7"/>
-    <property name="source" value="1.7"/>
+	<property file="../build.properties"/>
 
 <!-- OS specific tasks -->	
-	<target name="getos" >
-		<condition property="windows_64">
-			<and>
-				<os family="windows"/>
-				<contains string="${os.arch}" substring="amd64" />
-			</and>
-		</condition>
-		<condition property="windows_32">
-			<and>
-				<os family="windows"/>
-				<not>
-					<contains string="${os.arch}" substring="amd64" />
-				</not>
-			</and>
-		</condition>
-		<condition property="linux_64">
-			<and>
-			<os family="unix"/>
-			<contains string="${os.arch}" substring="amd64" />
-			</and>
-		</condition>
-		<condition property="linux_32">
-			<and>
-				<os family="unix"/>
-				<not>
-					<contains string="${os.arch}" substring="amd64" />
-				</not>
-			</and>
-		</condition>
-    </target>	
-	<target name="win32" depends="getos" if="windows_32" >
-		<property name="osname" value="windows" />
-		<property name="bits" value="32" />
-		<property name="j3d" value="j3d-1_5_2-windows-i586"/>
-    </target>
-	<target name="win64" depends="getos" if="windows_64" >
-		<property name="osname" value="windows" />
-		<property name="bits" value="64" />
-		<property name="j3d" value="j3d-1_5_2-windows-amd64"/>
-    </target>
-	<target name="lin32" depends="getos" if="linux_32" >
-		<property name="osname" value="linux" />
-		<property name="bits" value="32" />
-		<property name="j3d" value="j3d-1_5_2-linux-i586"/>
-    </target>
-	<target name="lin64" depends="getos" if="linux_64" >
-		<property name="osname" value="linux" />
-		<property name="bits" value="64" />
-		<property name="j3d" value="j3d-1_5_2-linux-amd64"/>
-    </target>
-	
-	<target name="osinfo" depends="win32,win64,lin32,lin64" >
-	    <echo message="OS Target:          ${osname}-${bits}bit"  />
-        <echo message="OS Name is:         ${os.name}" />
-        <echo message="OS Architecture is: ${os.arch}" />
-        <echo message="OS Version is:      ${os.version}" />
-		<echo message="J3D path is:        ${j3d}" />
-    </target>
+    <import file="build.os.xml"/>
 			
 <!-- compiler tasks -->		
 	
@@ -77,9 +18,9 @@
 			<pathelement location="${simresCON.location}/bin"/>
 		</path>
 		<path id="j3d.classpath">
-			<pathelement location="../Java3D/${j3d}/lib/ext/j3dcore.jar"/>
-			<pathelement location="../Java3D/${j3d}/lib/ext/vecmath.jar"/>
-			<pathelement location="../Java3D/${j3d}/lib/ext/j3dutils.jar"/>
+			<pathelement location="../${j3d}/lib/ext/j3dcore.jar"/>
+			<pathelement location="../${j3d}/lib/ext/vecmath.jar"/>
+			<pathelement location="../${j3d}/lib/ext/j3dutils.jar"/>
 		</path>		
 		<path id="simresGUI.classpath">
 			<pathelement location="bin"/>
@@ -110,10 +51,12 @@
     </target>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
+		<echo message="javac options: ${javac_options}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
-            <include name="cz/"/>
+			<compilerarg line="${javac_options}" />
             <exclude name="obsolete/"/>
+			<include name="**/*.java"/>
             <classpath refid="simresGUI.classpath"/>
         </javac>
     </target>

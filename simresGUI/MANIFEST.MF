@@ -1,10 +1,7 @@
 Manifest-Version: 1.0
 Main-Class: cz.restrax.gui.SimresGUI
-Class-Path: JSUtils.jar simresCON.jar lib/Jama-1.0.2.jar j3d-jre/lib/ext/j3dcore.jar j3d-jre/lib/ext/j3dutils.jar j3d-jre/lib/ext/vecmath.jar 
-Name: cz/restrax
-Specification-Title: MC simulation of neutron scattering instruments
-Specification-Version: 1.1.1
-Specification-Vendor: Nuclear Physics Institute, v.v.i., Rez
-Implementation-Title: cz/restrax
-Implementation-Version: build01
-Implementation-Vendor: Nuclear Physics Institute, v.v.i., Rez
+Class-Path: simresCON.jar 
+ j3d-jre/lib/ext/j3dcore.jar 
+ j3d-jre/lib/ext/j3dutils.jar 
+ j3d-jre/lib/ext/vecmath.jar 
+

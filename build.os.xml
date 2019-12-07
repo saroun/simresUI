@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 
+This ant script provides system dependent information.
+To be imported to other project builds a <import file="build.os.xml"/>
+and used by calling the target `osinfo`.
+
+Defined properties:
+osname = linux or windoes
+bits = 32 or 64
+j3d = path to the Java3D distribution for given system 
+      (define appropriate paths in build.properties)
+	  
+Defined conditions: 
+windows_32
+windows_64
+linux_32
+linux_64
+
+-->	
+<project basedir="." default="osinfo" name="osinfo">
+	<property file="../build.properties"/>
+	<target name="getos" >
+		<condition property="windows_64">
+			<and>
+				<os family="windows"/>
+				<contains string="${os.arch}" substring="amd64" />
+			</and>
+		</condition>
+		<condition property="windows_32">
+			<and>
+				<os family="windows"/>
+				<not>
+					<contains string="${os.arch}" substring="amd64" />
+				</not>
+			</and>
+		</condition>
+		<condition property="linux_64">
+			<and>
+			<os family="unix"/>
+			<contains string="${os.arch}" substring="amd64" />
+			</and>
+		</condition>
+		<condition property="linux_32">
+			<and>
+				<os family="unix"/>
+				<not>
+					<contains string="${os.arch}" substring="amd64" />
+				</not>
+			</and>
+		</condition>
+    </target>	
+	<target name="win32" depends="getos" if="windows_32" >
+		<property name="osname" value="windows" />
+		<property name="bits" value="32" />
+		<property name="j3d" value="${j3d_win32}"/>
+    </target>
+	<target name="win64" depends="getos" if="windows_64" >
+		<property name="osname" value="windows" />
+		<property name="bits" value="64" />
+		<property name="j3d" value="${j3d_win64}"/>
+    </target>
+	<target name="lin32" depends="getos" if="linux_32" >
+		<property name="osname" value="linux" />
+		<property name="bits" value="32" />
+		<property name="j3d" value="${j3d_linux32}"/>
+    </target>
+	<target name="lin64" depends="getos" if="linux_64" >
+		<property name="osname" value="linux" />
+		<property name="bits" value="64" />
+		<property name="j3d" value="${j3d_linux64}"/>
+    </target>
+	
+	<target name="osinfo" depends="win32,win64,lin32,lin64">
+		<echo message="OS Target:          ${osname}-${bits}bit"  />
+        <echo message="OS Name is:         ${os.name}" />
+        <echo message="OS Architecture is: ${os.arch}" />
+        <echo message="OS Version is:      ${os.version}" />
+		<echo message="J3D path is:        ${j3d}" />
+	</target>	
+</project>
