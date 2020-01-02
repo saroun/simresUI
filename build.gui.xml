@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="./simresGUI" default="build" name="simresGUI">
+<project basedir="." default="build" name="simresGUI">
     <property environment="env"/>
-    <property name="JSTools.location" value="../JSTools"/>
-	<property name="simresCON.location" value="../simresCON"/>
-	<property file="../build.properties"/>
+    <property name="JSTools.location" value="./JSTools"/>
+	<property name="simresCON.location" value="./simresCON"/>
+	<property name="simresGUI.location" value="./simresGUI"/>
+	<property file="./build.properties"/>
 
 <!-- OS specific tasks -->	
     <import file="build.os.xml"/>
@@ -11,26 +12,20 @@
 <!-- compiler tasks -->		
 	
     <target name="init" depends="osinfo">
-		<path id="JSTools.classpath">
-			<pathelement location="${JSTools.location}/bin"/>
-		</path>
-		<path id="simresCON.classpath">
-			<pathelement location="${simresCON.location}/bin"/>
-		</path>
 		<path id="j3d.classpath">
-			<pathelement location="../${j3d}/lib/ext/j3dcore.jar"/>
-			<pathelement location="../${j3d}/lib/ext/vecmath.jar"/>
-			<pathelement location="../${j3d}/lib/ext/j3dutils.jar"/>
+			<pathelement location="${j3d}/lib/ext/j3dcore.jar"/>
+			<pathelement location="${j3d}/lib/ext/vecmath.jar"/>
+			<pathelement location="${j3d}/lib/ext/j3dutils.jar"/>
 		</path>		
 		<path id="simresGUI.classpath">
-			<pathelement location="bin"/>
-			<path refid="JSTools.classpath"/>
-			<path refid="simresCON.classpath"/>
+			<pathelement location="${simresGUI.location}/bin"/>
+			<pathelement location="${JSTools.location}/bin"/>
+			<pathelement location="${simresCON.location}/bin"/>
 			<path refid="j3d.classpath"/>
 		</path>
-        <mkdir dir="bin"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
+        <mkdir dir="${simresGUI.location}/bin"/>
+        <copy includeemptydirs="false" todir="${simresGUI.location}/bin">
+            <fileset dir="${simresGUI.location}/src">
                 <include name="cz/"/>
                 <exclude name="**/*.java"/>
                 <exclude name="obsolete/"/>
@@ -38,22 +33,20 @@
         </copy>
     </target>
     <target name="clean">
-        <delete dir="bin"/>
+        <delete dir="${simresGUI.location}/bin"/>
     </target>
     <target depends="clean" name="cleanall">
-        <ant antfile="../build.jstools.xml"  inheritAll="false" target="clean"/>
-		<ant antfile="../build.con.xml" inheritAll="false" target="clean"/>
+		<ant antfile="build.con.xml" inheritAll="false" target="cleanall"/>
     </target>
     <target depends="build-subprojects,build-project" name="build"/>
     <target name="build-subprojects">
-        <ant antfile="../build.jstools.xml" inheritAll="false" target="build-project"/>
-		<ant antfile="../build.con.xml" inheritAll="false" target="build-project"/>
+		<ant antfile="build.con.xml" inheritAll="false" target="build"/>
     </target>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
 		<echo message="javac options: ${javac_options}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
-            <src path="src"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="${simresGUI.location}/bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="${simresGUI.location}/src"/>
 			<compilerarg line="${javac_options}" />
             <exclude name="obsolete/"/>
 			<include name="**/*.java"/>

@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="./simresCON" default="build" name="simresCON">
+<project basedir="." default="build" name="simresCON">
     <property environment="env"/>
-    <property name="JSTools.location" value="../JSTools"/>
-    <property file="../build.properties"/>
-    <path id="JSTools.classpath">
-        <pathelement location="${JSTools.location}/bin"/>
-    </path>
+    <property name="JSTools.location" value="./JSTools"/>
+	<property name="simresCON.location" value="./simresCON"/>
+    <property file="./build.properties"/>
     <path id="simresCON.classpath">
-        <pathelement location="bin"/>
-        <path refid="JSTools.classpath"/>
+	    <pathelement location="${JSTools.location}/bin"/>
+        <pathelement location="${simresCON.location}/bin"/>
     </path>
     <target name="init">
-        <mkdir dir="bin"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
+        <mkdir dir="${simresCON.location}/bin"/>
+        <copy includeemptydirs="false" todir="${simresCON.location}/bin">
+            <fileset dir="${simresCON.location}/src">
                 <include name="Jama/"/>
                 <include name="cz/"/>
                 <exclude name="**/*.java"/>
@@ -22,20 +20,20 @@
         </copy>
     </target>
     <target name="clean">
-        <delete dir="bin"/>
+        <delete dir="${simresCON.location}/bin"/>
     </target>
     <target depends="clean" name="cleanall">
-        <ant antfile="build.xml" dir="${JSTools.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.jstools.xml" inheritAll="false" target="clean"/>
     </target>
     <target depends="build-subprojects,build-project" name="build"/>
     <target name="build-subprojects">
-        <ant antfile="build.xml" dir="${JSTools.location}" inheritAll="false" target="build-project"/>
+	    <ant antfile="build.jstools.xml" inheritAll="false" target="build"/> 
     </target>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
 		<echo message="javac options: ${javac_options}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
-            <src path="src"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="${simresCON.location}/bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="${simresCON.location}/src"/>
 			<compilerarg line="${javac_options}" />
             <include name="Jama/"/>
             <include name="cz/"/>

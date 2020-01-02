@@ -17,20 +17,12 @@ J. Saroun, 2019
     <property name="simresCON.location" value="./simresCON"/>
     <property name="simresGUI.location" value="./simresGUI"/>
 	<property name="dest" value="./dist"/>
-	<property name="j3d.dir" value="./dist"/>
 	<property file="./build.properties"/>
     <import file="build.os.xml"/>
 	<tstamp>
 	    <format property="BUILD_DATE" pattern="yyyy-MM-dd HH:mm:ss"  locale="en,UK" />
 	</tstamp>
 
-<!-- constructs the classpath for simresGUI -->
-	<manifestclasspath property="gui.classpath" jarfile="simresGUI.jar">
-	    <classpath>
-	        <fileset dir="${dest}" includes="**/*.jar"/>
-	    </classpath>
-	</manifestclasspath>
-	
     <target name="init">
         <mkdir dir="${dest}"/>
 		<mkdir dir="${dest}/j3d-jre"/>
@@ -44,7 +36,13 @@ J. Saroun, 2019
         <ant antfile="build.gui.xml" inheritAll="false" target="build"/>
     </target>
 	
-    <target name="build-jar" depends="compile" description="compile + create jar files in ./dist" >
+    <target name="build-jar" depends="init, compile" description="compile + create jar files in ./dist" >
+		<!-- constructs the classpath for simresGUI -->
+		<manifestclasspath property="gui.classpath" jarfile="simresGUI.jar">
+			<classpath>
+				<fileset dir="${dest}" includes="**/*.jar"/>
+			</classpath>
+		</manifestclasspath>
 	    <jar destfile="${dest}/simresCON.jar">
 		   <manifest>
 				<attribute name="Main-Class" value="cz.restrax.gui.SimresCON"/>
@@ -91,7 +89,7 @@ J. Saroun, 2019
 		</delete>
 	</target>
 	
-    <target name="build" depends="clean,compile,cleandist,build-jar,pack-j3d" 
+    <target name="build" depends="init, clean,compile,cleandist,build-jar,pack-j3d" 
     	description="clean and re-build complete GUI distribution" >
     	<echo message="GUI distribution created in ${dest}"  />
 	</target>	

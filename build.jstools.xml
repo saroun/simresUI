@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="./JSTools" default="build" name="JSTools">
+<project basedir="." default="build" name="JSTools">
     <property environment="env"/>
-	<property file="../build.properties"/>
+	<property name="JSTools.location" value="./JSTools"/>
+	<property file="./build.properties"/>
     <path id="JSTools.classpath">
-        <pathelement location="bin"/>
+        <pathelement location="${JSTools.location}/bin"/>
     </path>
     <target name="init">
-        <mkdir dir="bin"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
+        <mkdir dir="${JSTools.location}/bin"/>
+        <copy includeemptydirs="false" todir="${JSTools.location}/bin">
+            <fileset dir="${JSTools.location}/src">
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
     </target>
     <target name="clean">
-        <delete dir="bin"/>
+        <delete dir="${JSTools.location}/bin"/>
     </target>
     <target depends="clean" name="cleanall"/>
     <target depends="build-subprojects,build-project" name="build"/>
@@ -22,9 +23,9 @@
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
 		<echo message="javac options: ${javac_options}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+        <javac debug="true" debuglevel="${debuglevel}" destdir="${JSTools.location}/bin" includeantruntime="false" source="${source}" target="${target}">
 		    <compilerarg line="${javac_options}" />
-            <src path="src"/>
+            <src path="${JSTools.location}/src"/>
             <classpath refid="JSTools.classpath"/>
         </javac>
     </target>
