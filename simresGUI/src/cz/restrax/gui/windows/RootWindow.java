@@ -2,13 +2,13 @@ package cz.restrax.gui.windows;
 
 
 import java.awt.Dimension;
-import java.awt.Event;
 import java.awt.Frame;
 import java.awt.GraphicsEnvironment;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.InputEvent;
 import java.io.File;
 
 import javax.swing.JDesktopPane;
@@ -656,7 +656,7 @@ public class RootWindow extends JFrame {
 		if (mitSave == null) {
 			mitSave = new JMenuItem();
 			mitSave.setText("Save configuration");
-			mitSave.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, Event.CTRL_MASK, true));
+			mitSave.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_DOWN_MASK, true));
 			mitSave.addActionListener(new Actions.SaveXmlConfigAdapter(program));
 		}
 		return mitSave;
@@ -676,7 +676,7 @@ public class RootWindow extends JFrame {
 		if (mitLoad == null) {
 			mitLoad = new JMenuItem();
 			mitLoad.setText("Load configuration");
-			mitLoad.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, Event.CTRL_MASK, true));
+			mitLoad.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, InputEvent.CTRL_DOWN_MASK, true));
 			mitLoad.addActionListener(new Actions.LoadXmlConfigAdapter(program));
 		}
 		return mitLoad;

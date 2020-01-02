@@ -13,7 +13,6 @@ public class TestLoader {
 	}
 	
 	public void loadMyClass() throws Exception {
-		Class<Boolean> pTypes = boolean.class;
 		Class<String[]> cTypes = String[].class;
 		String[] cArgs = new String[1];
 		URL[] myURL = new URL[1];

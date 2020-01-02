@@ -120,9 +120,9 @@ public class IntData extends FieldData {
 	    		for (int i=0;i<type.size;i++) ((Integer[])a)[i]=intData[i];
 	    	} else {
 	    		if (intData!=null && intData.length>0) {
-	    			a = new Integer(intData[0]);
+	    			a = Integer.valueOf(intData[0]);
 	    		} else {
-	    			a = new Integer(0);
+	    			a =Integer.valueOf(0);
 	    		}
 	    	}
 	    	return a;
@@ -168,7 +168,7 @@ public class IntData extends FieldData {
 	    	Object a=null;
 	    	if (type.isVector()) {
 	    		if (index < type.size) {
-	    			a = new Integer(intData[index]);
+	    			a = Integer.valueOf(intData[index]);
 	    		}
 	    	} else {
 	        	a=getValue();

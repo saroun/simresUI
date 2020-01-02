@@ -97,7 +97,7 @@ public class SetupTreeDialogModal extends JDialog implements PropertyChangeListe
          * Validation and closing is then handled by propertyChange */            
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent we) {
-            optionPane.setValue(new Integer(JOptionPane.CLOSED_OPTION));
+            optionPane.setValue(Integer.valueOf(JOptionPane.CLOSED_OPTION));
             }
         });
 

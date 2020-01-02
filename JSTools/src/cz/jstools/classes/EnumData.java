@@ -57,7 +57,7 @@ public class EnumData extends FieldData {
      * @return
      */
     public Object getValue() {
-    	return new Integer(enumData);
+    	return Integer.valueOf(enumData);
     }
     
     

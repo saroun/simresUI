@@ -119,9 +119,9 @@ public class FloatData extends FieldData {
     		for (int i=0;i<type.size;i++) ((Double[])a)[i]=floatData[i];
     	} else {
     		if (floatData!=null && floatData.length>0) {
-    			a = new Double(floatData[0]);
+    			a = Double.valueOf(floatData[0]);
     		} else {
-    			a = new Double(0);
+    			a = Double.valueOf(0);
     		}
     	}
     	return a;
@@ -142,7 +142,7 @@ public class FloatData extends FieldData {
     	Double a=null;
     	if (type.isVector()) {
     		if (index < type.size) {
-    			a = new Double(floatData[index]);
+    			a = Double.valueOf(floatData[index]);
     		}
     	} else {
         	a=(Double) getValue();

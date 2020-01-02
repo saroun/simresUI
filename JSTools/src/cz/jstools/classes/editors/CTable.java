@@ -130,7 +130,7 @@ public class CTable extends JTable {
 			String s = (String)super.getCellEditorValue();
 			
 			try {
-				value = new Double(Utils.s2de(s));
+				value = Double.valueOf(Utils.s2de(s));
 			}
 			catch (ParseException ex) {
 				((JTextField)getComponent()).setBorder(errorBorder);
@@ -160,7 +160,7 @@ public class CTable extends JTable {
 			String s = (String)super.getCellEditorValue();
 			
 			try {
-				value = new Integer(Utils.s2ie(s));
+				value = Integer.valueOf(Utils.s2ie(s));
 			}
 			catch (ParseException ex) {
 				((JTextField)getComponent()).setBorder(errorBorder);

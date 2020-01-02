@@ -2,7 +2,6 @@ package cz.restrax.view3D.geometry;
 
 import javax.media.j3d.Transform3D;
 import javax.vecmath.Color3f;
-import javax.vecmath.Point2i;
 import javax.vecmath.Vector2f;
 import javax.vecmath.Vector3d;
 import javax.vecmath.Vector3f;
@@ -58,18 +57,16 @@ public class SGuideAttributes extends SlitAttributes{
 	   Vector2f V2;
 	   TableData seg;
 	   Vector3f V3;
-	   Point2i N2;
 	   try {
-		   
 		    seg = (TableData) cls.getField("SEG");
 		    nWalls=seg.getNrows();
 		    walls=(Double[][]) seg.getValue();		    
 		    V3=Utils.DoubleToVector3f((Double[]) cls.getField("SIZE").getValue());		    
 		    widthIn=Math.max(V3.x,0.1f)*0.001f;
 		    heightIn=Math.max(V3.y,0.1f)*0.001f;		    
-		    length=(float) getLength();		    
-		    float wExit = new Float(walls[nWalls-1][0]);
-		    float hExit = new Float(walls[nWalls-1][1]);		    
+		    length=(float) getLength();
+		    float wExit = walls[nWalls-1][0].floatValue();
+		    float hExit = walls[nWalls-1][1].floatValue();		    
 			widthOut=(Math.max(wExit,0.1f)*0.001f);
 			heightOut=Math.max(hExit,0.1f)*0.001f;
 			V2=Utils.DoubleToVector2f((Double[]) cls.getField("RHO").getValue());

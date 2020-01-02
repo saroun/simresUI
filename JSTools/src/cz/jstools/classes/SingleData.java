@@ -28,7 +28,7 @@ public class SingleData extends FloatData {
     	if (a instanceof Double[]) {
     		return getValueArrayF();
     	} else if (a instanceof Double) {
-    		return (Float)a;
+    		return ((Double)a).floatValue();
     	} else return a;    	
     }
     
@@ -40,7 +40,7 @@ public class SingleData extends FloatData {
     
     public Float getValueF(int index) {    	
     	Double a=getValue(index);
-    	return new Float(a);
+    	return a.floatValue();
     }    
     
     public String valueToStringFmt(int format) {
