@@ -10,6 +10,7 @@
         <mkdir dir="${JSTools.location}/bin"/>
         <copy includeemptydirs="false" todir="${JSTools.location}/bin">
             <fileset dir="${JSTools.location}/src">
+			    <include name="cz/"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>

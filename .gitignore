@@ -15,7 +15,7 @@ bin
 backup
 doc
 tmp*
-images
+
 
 # Excluded projects
 Java3D
