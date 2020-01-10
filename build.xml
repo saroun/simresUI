@@ -43,9 +43,8 @@ J. Saroun, 2019
 				<fileset dir="${dest}" includes="**/*.jar"/>
 			</classpath>
 		</manifestclasspath>
-	    <jar destfile="${dest}/simresCON.jar">
+	    <jar destfile="${dest}/simresCON.jar" manifest="${simresCON.location}/MANIFEST.MF">
 		   <manifest>
-				<attribute name="Main-Class" value="cz.restrax.gui.SimresCON"/>
 				<attribute name="Built-By" value="${user.name}"/>
 				<attribute name="Specification-Title" value="SIMRES Console UI"/>
 				<attribute name="Specification-Version" value="${version}"/>
