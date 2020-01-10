@@ -21,7 +21,7 @@ import cz.restrax.gui.SimresGUI;
  * Zobrazi informace o programu.
  *
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.6 $</dt>
  *               <dt>$Date: 2014/06/18 20:07:54 $</dt></dl>

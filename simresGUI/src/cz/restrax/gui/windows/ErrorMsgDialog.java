@@ -27,7 +27,7 @@ import cz.restrax.gui.resources.Resources;
  * given by exceptions (where stack trace is present).
  *
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.4 $</dt>
  *               <dt>$Date: 2012/01/20 17:43:07 $</dt></dl>

@@ -7,7 +7,7 @@ import javax.swing.plaf.metal.DefaultMetalTheme;
 /**
  * Vytvori barvy pro "Metal Look and Feel". 
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.4 $</dt>
  *               <dt>$Date: 2012/01/20 17:43:19 $</dt></dl>

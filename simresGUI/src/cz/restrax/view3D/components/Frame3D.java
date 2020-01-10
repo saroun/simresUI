@@ -29,7 +29,7 @@ import cz.restrax.view3D.geometry.RWallGeometry;
 import cz.restrax.view3D.geometry.SlitAttributes;
 
 /** 
- * @author   Jan Šaroun
+ * @author   Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.13 $</dt>
  *               <dt>$Date: 2019/06/22 19:53:47 $</dt></dl>

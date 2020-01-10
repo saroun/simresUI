@@ -5,7 +5,7 @@ package cz.jstools.classes.definitions;
  * Definition of vector with components H, K, L and Energy
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.2 $</dt>
  *               <dt>$Date: 2014/06/18 20:07:35 $</dt></dl>

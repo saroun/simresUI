@@ -24,7 +24,7 @@ import cz.restrax.sim.utils.ProgressInterface;
  * and height depends on the length of caption, which is wrapped if necessary.
  *
  *
- * @author   Svoboda Ji��, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.3 $</dt>
  *               <dt>$Date: 2012/01/23 22:18:14 $</dt></dl>

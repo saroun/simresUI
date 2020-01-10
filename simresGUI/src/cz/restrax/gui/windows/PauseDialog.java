@@ -18,7 +18,7 @@ import cz.jstools.classes.ieditors.InternalDialog;
  * its job file.
  *
  *
- * @author   Svoboda Ji��, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.5 $</dt>
  *               <dt>$Date: 2019/01/06 00:08:39 $</dt></dl>

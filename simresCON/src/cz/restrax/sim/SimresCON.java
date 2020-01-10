@@ -58,7 +58,7 @@ import cz.restrax.sim.xml.writer.TasConfigXmlExport;
  * SIMRES main class. The is the container for all class instances which are active
  * during program execution. Starts kernel process.
  * 
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.55 $</dt>
  *               <dt>$Date: 2019/07/10 18:42:32 $</dt></dl>

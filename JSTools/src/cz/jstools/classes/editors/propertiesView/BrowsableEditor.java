@@ -37,7 +37,7 @@ import javax.swing.table.TableCellEditor;
  * zustat tak jak je. Browsable by ale mel vracet stejny typ objektu, coz se kontroluje.
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.2 $</dt>
  *               <dt>$Date: 2012/01/23 22:18:36 $</dt></dl>

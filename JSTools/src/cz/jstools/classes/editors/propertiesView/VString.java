@@ -12,7 +12,7 @@ import java.text.ParseException;
  * via call getClass.getMethod, so valueOf(String must be implemented
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2012/01/12 15:08:52 $</dt></dl>

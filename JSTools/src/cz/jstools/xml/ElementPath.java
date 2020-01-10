@@ -4,15 +4,9 @@ import java.util.Stack;
 
 
 /**
- * Tato tøída je odvozena od tøídy "Stack" a slouží k uchování cesty k aktuálnímu
- * XML elementu. Definuje se v ní nová metoda "getPath()", která vrací celý obsah
- * zásobníku (cestu) s hodnotami oddìlenými znakem '.'.
- *
- *
- * @author   Svoboda Jiøí, PhD.
- * @version  <dl><dt>$Name: HEAD $</dt>
- *               <dt>$Revision: 1.1 $</dt>
- *               <dt>$Date: 2012/01/12 15:08:51 $</dt></dl>
+ * Derived from the class Stack. It serves to store the path to the actual XML element.
+ * Defines "getPath()", which returns the whole stack content (path) with values delimited by ".".
+ * @author   Svoboda Jan Saroun, PhD.
  */
 public class ElementPath extends Stack<String> {
 	private static final long  serialVersionUID = 6231724023109952526L;

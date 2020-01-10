@@ -20,7 +20,7 @@ import cz.jstools.tasks.ReadRunnable;
 
 /**
  * 
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2019/07/10 18:42:32 $</dt></dl>
  */

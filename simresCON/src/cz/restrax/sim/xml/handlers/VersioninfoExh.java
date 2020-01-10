@@ -20,7 +20,7 @@ import cz.restrax.sim.SimresCON;
  * <LI>program.sendParameters();</LI>
  * <LI>program.execPendingCommand();</LI>
  *<UL>
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.6 $</dt>
  *               <dt>$Date: 2019/07/10 18:42:32 $</dt></dl>

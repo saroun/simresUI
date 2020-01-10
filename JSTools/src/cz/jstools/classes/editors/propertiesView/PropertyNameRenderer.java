@@ -20,7 +20,7 @@ import javax.swing.table.TableCellRenderer;
  * and set border, margin of checkbox (level skip) had been ignored... 
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2012/01/12 15:08:52 $</dt></dl>

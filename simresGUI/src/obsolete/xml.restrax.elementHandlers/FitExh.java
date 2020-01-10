@@ -18,7 +18,7 @@ import xml.XmlUtils;
  * Xml handler for element <code>FIT</code>.
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2009/01/27 12:35:36 $</dt></dl>
@@ -259,9 +259,9 @@ public class FitExh implements CallBackInterface {
 				if (n == 1) {  // TODO: jaky je index prvni iterace??? podle toho poznam zacatek
 					program.getControlWindow().getPanelFit().initIteration(nmax);	
 				}
-				// poøadové èíslo iterace a parametry lambda a meanChisqr se vypisují do panelu
-				// "FIT". Individuální chisqr pro každý dataset se pro úsporu místa na panelu
-				// vypisuje pouze do konzolového okna
+				// poï¿½adovï¿½ ï¿½ï¿½slo iterace a parametry lambda a meanChisqr se vypisujï¿½ do panelu
+				// "FIT". Individuï¿½lnï¿½ chisqr pro kaï¿½dï¿½ dataset se pro ï¿½sporu mï¿½sta na panelu
+				// vypisuje pouze do konzolovï¿½ho okna
 				program.getControlWindow().getPanelFit().handleIteration(n, lambda, meanChisqr);
 				String s = "";
 				for (int i=0; i<chisqr.size(); ++i) {

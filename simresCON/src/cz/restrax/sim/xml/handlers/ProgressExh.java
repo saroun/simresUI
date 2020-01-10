@@ -16,7 +16,7 @@ import cz.restrax.sim.SimresStatus.Phase;
 
 /**
  * Xml handler for element <code>PROGRESS</code>.
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.7 $</dt>
  *               <dt>$Date: 2019/05/26 20:18:29 $</dt></dl>

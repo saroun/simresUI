@@ -1,6 +1,6 @@
 package cz.restrax.view3D;
 /** 
- * @author   Jan �aroun
+ * @author   Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.7 $</dt>
  *               <dt>$Date: 2012/01/23 22:18:15 $</dt></dl>

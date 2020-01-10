@@ -30,12 +30,12 @@ import definitions.VectorHKLE;
 
 
 /**
- * Tato tøída vytvoøí panel s øídícími prvky konzolového programu "Restrax".
- * Tento panel je pak zobrazen v záložce "Fit" øídícího okna
+ * Tato tï¿½ï¿½da vytvoï¿½ï¿½ panel s ï¿½ï¿½dï¿½cï¿½mi prvky konzolovï¿½ho programu "Restrax".
+ * Tento panel je pak zobrazen v zï¿½loï¿½ce "Fit" ï¿½ï¿½dï¿½cï¿½ho okna
  * "ControWindow".
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2009/01/27 12:35:36 $</dt></dl>
@@ -177,11 +177,11 @@ public class PanelFit extends JPanel {
 	//                                    OTHER METHODS                                     //
 	//////////////////////////////////////////////////////////////////////////////////////////
 	/*
-	 * následující funkèní signatura:
+	 * nï¿½sledujï¿½cï¿½ funkï¿½nï¿½ signatura:
 	 *     public void handleIteration(int nit, double lambda, double meanChisqr, Vector<Double> chisqr) {
-	 * byla zamýšlena pro pøípad, kdyby se individuální chisqr
-	 * pro každý dataset vypisoval v panelu FIT. Teï se však vypisuje v konzolovém oknu,
-	 * což obstarává XML handler
+	 * byla zamï¿½ï¿½lena pro pï¿½ï¿½pad, kdyby se individuï¿½lnï¿½ chisqr
+	 * pro kaï¿½dï¿½ dataset vypisoval v panelu FIT. Teï¿½ se vï¿½ak vypisuje v konzolovï¿½m oknu,
+	 * coï¿½ obstarï¿½vï¿½ XML handler
 	 */
 	public void handleIteration(int nit, double lambda, double meanChisqr) {
 		prbIterationProgress.setValue(nit);
@@ -330,9 +330,9 @@ public class PanelFit extends JPanel {
 					}
 					
 					/*
-					 * Zjisti zda je nìkteré z polí H, K, L a En prázdné:
-					 * Pokud ano vyšli jen pøíkaz OMEXC
-					 * Pokud ne vyšli pøíkaz ve formátu OMEXC H K L En
+					 * Zjisti zda je nï¿½kterï¿½ z polï¿½ H, K, L a En prï¿½zdnï¿½:
+					 * Pokud ano vyï¿½li jen pï¿½ï¿½kaz OMEXC
+					 * Pokud ne vyï¿½li pï¿½ï¿½kaz ve formï¿½tu OMEXC H K L En
 					 * 
 					 * Pozn. jsou zde dva pripady vyslani prikazu, protoze
 					 * v pripade ze se parsuji hodnoty, muze dojit k vhybe
@@ -428,8 +428,8 @@ public class PanelFit extends JPanel {
 			btnFitPlot.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
 					/*
-					 * I když je to pøíkaz pro kreslení, chová se jinak, když se volá z podmenu FIT
-					 * Navíc u tohoto pøíkazu záleží na tom jestli se volá jako MFIT èi FIT
+					 * I kdyï¿½ je to pï¿½ï¿½kaz pro kreslenï¿½, chovï¿½ se jinak, kdyï¿½ se volï¿½ z podmenu FIT
+					 * Navï¿½c u tohoto pï¿½ï¿½kazu zï¿½leï¿½ï¿½ na tom jestli se volï¿½ jako MFIT ï¿½i FIT
 					 */
 					String cmd="";
 
@@ -556,10 +556,10 @@ public class PanelFit extends JPanel {
 			scrFitParameters = new JScrollPane();
 			scrFitParameters.setLocation(new java.awt.Point(225,10));
 			scrFitParameters.setViewportView(getTblFitParameters());
-			// "JScrollPane.gerPreferredSize()" se bere implicitnì z vnitøního "JViewport.getPreferredSize()"
-            // a ten je nastaven v tabulce "JTable tblDataTable" pomocí metody "setPreferredScrollableViewportSize"
-			// Tento krkolomný zpùsoben je zvolen proto, že v tabulce se nastavují šíøky sloupcù
-			// a tak i tam by logicky mìla být nastavena šíøka celé tabulky
+			// "JScrollPane.gerPreferredSize()" se bere implicitnï¿½ z vnitï¿½nï¿½ho "JViewport.getPreferredSize()"
+            // a ten je nastaven v tabulce "JTable tblDataTable" pomocï¿½ metody "setPreferredScrollableViewportSize"
+			// Tento krkolomnï¿½ zpï¿½soben je zvolen proto, ï¿½e v tabulce se nastavujï¿½ ï¿½ï¿½ï¿½ky sloupcï¿½
+			// a tak i tam by logicky mï¿½la bï¿½t nastavena ï¿½ï¿½ï¿½ka celï¿½ tabulky
 			scrFitParameters.setSize(scrFitParameters.getPreferredSize());  
 		}
 		return scrFitParameters;
@@ -575,7 +575,7 @@ public class PanelFit extends JPanel {
 			tblFitParameters.setPreferredScrollableViewportSize(new java.awt.Dimension(260,190));
 			tblFitParameters.setModel(fitParameters);
 			tblFitParameters.setFocusable(false);
-			tblFitParameters.setAutoResizeMode(JTable.AUTO_RESIZE_LAST_COLUMN);  // když už, tak mìò velikost pouze u sloupce "value"
+			tblFitParameters.setAutoResizeMode(JTable.AUTO_RESIZE_LAST_COLUMN);  // kdyï¿½ uï¿½, tak mï¿½ï¿½ velikost pouze u sloupce "value"
 			
 			TableColumn tableColumn;
 			tableColumn = tblFitParameters.getColumnModel().getColumn(0);
@@ -629,7 +629,7 @@ public class PanelFit extends JPanel {
 	}
 
 	/*
-	 * Následující tabulka je pouze "zrcadlem" tabulky restraxu. Viz. "PanelData" a tamní
+	 * Nï¿½sledujï¿½cï¿½ tabulka je pouze "zrcadlem" tabulky restraxu. Viz. "PanelData" a tamnï¿½
 	 * "DataNameList". 
 	 */
 	public class FitParameters extends AbstractTableModel {
@@ -687,8 +687,8 @@ public class PanelFit extends JPanel {
 			this.parameter.add(parameter);
 			this.value.add(value);
 			
-			// nezapomeò dát pøíkaz k obnovì tabulky:
-			int addedRowNum = this.parameter.size()-1; // pøidaná øádka je umístìna na konci
+			// nezapomeï¿½ dï¿½t pï¿½ï¿½kaz k obnovï¿½ tabulky:
+			int addedRowNum = this.parameter.size()-1; // pï¿½idanï¿½ ï¿½ï¿½dka je umï¿½stï¿½na na konci
 			fireTableRowsInserted(addedRowNum, addedRowNum);
 		}
 		
@@ -722,7 +722,7 @@ public class PanelFit extends JPanel {
 		}
 		
 		/*
-		 * "JTable" využívá tuto metodu k urèení standardního editoru, takže pole tabulky typu "Boolean"
+		 * "JTable" vyuï¿½ï¿½vï¿½ tuto metodu k urï¿½enï¿½ standardnï¿½ho editoru, takï¿½e pole tabulky typu "Boolean"
 		 * budou vykresleny jako "check boxes"
 		 */
 		public Class<?> getColumnClass(int col) {
@@ -731,9 +731,9 @@ public class PanelFit extends JPanel {
 		
 		public boolean isCellEditable(int row, int col) {
 			//Note that the data/cell address is constant, no matter where the cell appears onscreen.
-			if (col == 1) {  // "parameters" sloupec není možné mìnit
+			if (col == 1) {  // "parameters" sloupec nenï¿½ moï¿½nï¿½ mï¿½nit
 				return false;
-			} else {         // avšak sloupce "fit" a "value" je možné mìnit/pøepínat
+			} else {         // avï¿½ak sloupce "fit" a "value" je moï¿½nï¿½ mï¿½nit/pï¿½epï¿½nat
 				return true;
 			}
 		}
@@ -752,7 +752,7 @@ public class PanelFit extends JPanel {
 					cmd += String.format(Constants.FIX_LOCALE, " FIX %d", row+1);  // restrax indexuje od 1
 					break;
 				// case 1:
-					// Poznámka: Druhý sloupeèek tabulky není editovatelný
+					// Poznï¿½mka: Druhï¿½ sloupeï¿½ek tabulky nenï¿½ editovatelnï¿½
 				case 2:
 					cmd += String.format(Constants.FIX_LOCALE, " a%d %s", row+1, Utils.d2s(((Double)value).doubleValue()));
 					break;

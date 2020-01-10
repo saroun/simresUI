@@ -131,7 +131,7 @@ import cz.jstools.classes.definitions.Constants;
  *     tabulator characters) in the file.
  *
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.2 $</dt>
  *               <dt>$Date: 2019/07/10 18:42:31 $</dt></dl>

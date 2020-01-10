@@ -1,6 +1,6 @@
 package view3D.geometry;
 /** 
- * @author   Jan Šaroun
+ * @author   Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2009/01/27 16:45:35 $</dt></dl>

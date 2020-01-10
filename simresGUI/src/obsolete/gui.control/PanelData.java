@@ -23,12 +23,12 @@ import utils.Utils;
 
 
 /**
- * Tato tøída vytvoøí panel s øídícími prvky konzolového programu "Restrax".
- * Tento panel je pak zobrazen v záložce "Data" øídícího okna
+ * Tato tï¿½ï¿½da vytvoï¿½ï¿½ panel s ï¿½ï¿½dï¿½cï¿½mi prvky konzolovï¿½ho programu "Restrax".
+ * Tento panel je pak zobrazen v zï¿½loï¿½ce "Data" ï¿½ï¿½dï¿½cï¿½ho okna
  * "ControWindow".
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2009/01/27 12:35:36 $</dt></dl>
@@ -251,10 +251,10 @@ public class PanelData extends JPanel {
 			scrDataTable = new JScrollPane();
 			scrDataTable.setLocation(new java.awt.Point(10,10));
 			scrDataTable.setViewportView(getTblDataTable());
-			// "JScrollPane.gerPreferredSize()" se bere implicitnì z vnitøního "JViewport.getPreferredSize()"
-            // a ten je nastaven v tabulce "JTable tblDataTable" pomocí metody "setPreferredScrollableViewportSize"
-			// Tento krkolomný zpùsoben je zvolen proto, že v tabulce se nastavují šíøky sloupcù
-			// a tak i tam by logicky mìla být nastavena šíøka celé tabulky
+			// "JScrollPane.gerPreferredSize()" se bere implicitnï¿½ z vnitï¿½nï¿½ho "JViewport.getPreferredSize()"
+            // a ten je nastaven v tabulce "JTable tblDataTable" pomocï¿½ metody "setPreferredScrollableViewportSize"
+			// Tento krkolomnï¿½ zpï¿½soben je zvolen proto, ï¿½e v tabulce se nastavujï¿½ ï¿½ï¿½ï¿½ky sloupcï¿½
+			// a tak i tam by logicky mï¿½la bï¿½t nastavena ï¿½ï¿½ï¿½ka celï¿½ tabulky
 			scrDataTable.setSize(scrDataTable.getPreferredSize());  
 		}
 
@@ -271,7 +271,7 @@ public class PanelData extends JPanel {
 			tblDataTable.setPreferredScrollableViewportSize(new java.awt.Dimension(520,195));
 			tblDataTable.setModel(dataNameList);
 			tblDataTable.setFocusable(false);
-			tblDataTable.setAutoResizeMode(JTable.AUTO_RESIZE_LAST_COLUMN);  // když už, tak mìò velikost pouze u sloupce "Datalist"
+			tblDataTable.setAutoResizeMode(JTable.AUTO_RESIZE_LAST_COLUMN);  // kdyï¿½ uï¿½, tak mï¿½ï¿½ velikost pouze u sloupce "Datalist"
 			
 			TableColumn tableColumn;
 			// select
@@ -315,19 +315,19 @@ public class PanelData extends JPanel {
 		String s = txfDatalistValue.getText().trim();
 
 		if (s.length() != 0) {
-			txfDatalistValue.setText("");  // po pøidání položky "Datalist" vymaž zadávací pole
+			txfDatalistValue.setText("");  // po pï¿½idï¿½nï¿½ poloï¿½ky "Datalist" vymaï¿½ zadï¿½vacï¿½ pole
 			program.executeCommand("DATA " + cmd + " " + s,true);
 		} else {
 			/*
-			 * txfDataDatalistValue je prázdné. Otevøi proto JFileChooser podle toho, jaké tlaèítko
-			 * bylo zmáèknuto
+			 * txfDataDatalistValue je prï¿½zdnï¿½. Otevï¿½i proto JFileChooser podle toho, jakï¿½ tlaï¿½ï¿½tko
+			 * bylo zmï¿½ï¿½knuto
 			 */
 			GuiFileFilter dataListFileFilter = GuiFileFilter.createDataFileFilter();
 			
-			JFileChooser fileChooser = new JFileChooser(dataPath);  // otevøi poslednì navštívený adresáø
+			JFileChooser fileChooser = new JFileChooser(dataPath);  // otevï¿½i poslednï¿½ navï¿½tï¿½venï¿½ adresï¿½ï¿½
 
-			// chceme sice pøidat filtr pro DATAFILE (*.dat), ale to pouze jako tøešnièku na dortu
-			// --- nejèastìji nemají soubory s daty žádnou pøíponu a tak chci, aby se implicitnì nastavil
+			// chceme sice pï¿½idat filtr pro DATAFILE (*.dat), ale to pouze jako tï¿½eï¿½niï¿½ku na dortu
+			// --- nejï¿½astï¿½ji nemajï¿½ soubory s daty ï¿½ï¿½dnou pï¿½ï¿½ponu a tak chci, aby se implicitnï¿½ nastavil
 			// filtr "All files" *.*. 
 			fileChooser.addChoosableFileFilter(dataListFileFilter);
 			fileChooser.setFileFilter(fileChooser.getAcceptAllFileFilter());
@@ -348,8 +348,8 @@ public class PanelData extends JPanel {
 				String fileName = fileChooser.getSelectedFile().getPath();  // getPath() returns absolute path plus file name
 				int np = ((Integer)spnPAL.getValue()).intValue(); // get default PAL		
 				program.executeCommand("DATA " + cmd + " \"" + fileName + "\""+" PAL="+np,true);
-				dataPath = Utils.getDirectory(fileName);  // zapamatuj si posledni navstiveny adresar, abychom se pøi
-				                                          // pøíštím otevøení dialogu zase ocitli v nem
+				dataPath = Utils.getDirectory(fileName);  // zapamatuj si posledni navstiveny adresar, abychom se pï¿½i
+				                                          // pï¿½ï¿½tï¿½m otevï¿½enï¿½ dialogu zase ocitli v nem
 			}
 		}
 	}
@@ -359,11 +359,11 @@ public class PanelData extends JPanel {
 	//                                 NESTED CLASSES                                       //
 	//////////////////////////////////////////////////////////////////////////////////////////
 	/*
-	 * Následující tabulka je pouze "zrcadlem" tabulky restraxu. Tzn. že pøi kliknutí napø.
-	 * na sloupeèek "sel" restraxGUI pouze vyšle pøíkaz do restraxu a posléze se naète znovu
-	 * celý obsah tabulky jak ho vypíše restrax. Je tedy na restraxu, jak vše obhospodaøí
-	 * (sloupeèek "sel" se totiž chová jako radio button --- pouze jedna položka mùže být
-	 * aktivní) 
+	 * Nï¿½sledujï¿½cï¿½ tabulka je pouze "zrcadlem" tabulky restraxu. Tzn. ï¿½e pï¿½i kliknutï¿½ napï¿½.
+	 * na sloupeï¿½ek "sel" restraxGUI pouze vyï¿½le pï¿½ï¿½kaz do restraxu a poslï¿½ze se naï¿½te znovu
+	 * celï¿½ obsah tabulky jak ho vypï¿½e restrax. Je tedy na restraxu, jak vï¿½e obhospodaï¿½ï¿½
+	 * (sloupeï¿½ek "sel" se totiï¿½ chovï¿½ jako radio button --- pouze jedna poloï¿½ka mï¿½ï¿½e bï¿½t
+	 * aktivnï¿½) 
 	 */
 	public class DataNameList extends AbstractTableModel {
 		private static final long serialVersionUID = 5647434399155877020L;
@@ -415,8 +415,8 @@ public class PanelData extends JPanel {
 			this.position.add(position);
 			this.dataName.add(dataName);
 
-			// nezapomeò dát pøíkaz k obnovì tabulky:			
-			int addedRowNum = this.dataName.size()-1; // pøidaná øádka je umístìna na konci
+			// nezapomeï¿½ dï¿½t pï¿½ï¿½kaz k obnovï¿½ tabulky:			
+			int addedRowNum = this.dataName.size()-1; // pï¿½idanï¿½ ï¿½ï¿½dka je umï¿½stï¿½na na konci
 			fireTableRowsInserted(addedRowNum, addedRowNum);
 		}
 
@@ -459,7 +459,7 @@ public class PanelData extends JPanel {
 		}
 		
 		/*
-		 * "JTable" využívá tuto metodu k urèení standardního editoru, takže pole tabulky typu "Boolean"
+		 * "JTable" vyuï¿½ï¿½vï¿½ tuto metodu k urï¿½enï¿½ standardnï¿½ho editoru, takï¿½e pole tabulky typu "Boolean"
 		 * budou vykresleny jako "check boxes"
 		 */
 		public Class<?> getColumnClass(int col) {
@@ -468,10 +468,10 @@ public class PanelData extends JPanel {
 		
 		public boolean isCellEditable(int row, int col) {
 			//Note that the data/cell address is constant, no matter where the cell appears onscreen.
-			if (col > 1) {  // sloupce ("mcdone", "npoints", "position" a "dataName") není možné mìnit
+			if (col > 1) {  // sloupce ("mcdone", "npoints", "position" a "dataName") nenï¿½ moï¿½nï¿½ mï¿½nit
 				return false;
 				// no editting is possible for multianalyzer mode
-			} else {         // avšak sloupce "selected" a "tagged" je možné mìnit/pøepínat
+			} else {         // avï¿½ak sloupce "selected" a "tagged" je moï¿½nï¿½ mï¿½nit/pï¿½epï¿½nat
 				return true;
 			}
 		}
@@ -487,7 +487,7 @@ public class PanelData extends JPanel {
 					cmd = "DATA TAG " + (row+1);
 					break;
 				default:
-					// Poznámka: tøetí až šestý sloupeèek tabulky není editovatelný a tak "case 2:"--"case 5:" nebude nikdy volán
+					// Poznï¿½mka: tï¿½etï¿½ aï¿½ ï¿½estï¿½ sloupeï¿½ek tabulky nenï¿½ editovatelnï¿½ a tak "case 2:"--"case 5:" nebude nikdy volï¿½n
 					throw new IndexOutOfBoundsException("Only first two columns of table 'DataListTable' are editable (col=" + col + ").");
 			}
 

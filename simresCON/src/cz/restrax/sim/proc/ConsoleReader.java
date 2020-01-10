@@ -13,7 +13,7 @@ import cz.jstools.tasks.ConsoleListener;
 /**
  * This class handles periodic console output using a Timer.
  * 
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.5 $</dt>
  *               <dt>$Date: 2019/06/12 17:58:10 $</dt></dl>

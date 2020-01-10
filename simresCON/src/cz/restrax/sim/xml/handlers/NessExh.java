@@ -15,7 +15,7 @@ import cz.restrax.sim.utils.SimProgressInterface;
 
 /**
  * Xml handler for element <code>NESS</code>. It reports on the simulation progress.
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Revision: 1.7 $</dt>
  *               <dt>$Date: 2019/06/24 17:00:52 $</dt></dl>
  */

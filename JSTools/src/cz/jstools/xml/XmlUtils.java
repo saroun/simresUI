@@ -7,13 +7,10 @@ import org.xml.sax.SAXParseException;
 
 
 /**
- * Definuje rùzné pomocné metody, jako napø. pro testování atributù XML elementù.
+ * 
+ * Defines methods for testing of XML attributes 
  *
- *
- * @author   Svoboda Jiøí, PhD.
- * @version  <dl><dt>$Name: HEAD $</dt>
- *               <dt>$Revision: 1.2 $</dt>
- *               <dt>$Date: 2013/05/02 23:01:15 $</dt></dl>
+ * @author   Svoboda Jan Saroun, PhD.
  */
 public class XmlUtils {
 	//////////////////////////////////////////////////////////////////////////////////////////
@@ -123,12 +120,13 @@ public class XmlUtils {
 	}
 
 	/**
-	 * Tato metoda ovìøuje, zda poèet daných atributù je alespon roven požadovanému poètu atributù.
-	 * V záporném pøípadì hází "SAXParseException".
+	 * Verifies that:  <br/>
+	 * - number of given attributes is at least the required number.<br/>
+	 * If not passed, throw SAXParseException
 	 *
-	 * @param   atts               dané atributy
-	 * @param   expected           požadovaný poèet atributù
-	 * @throws  SAXParseException  v pøípadì, že nejsou splnìny podmínky testu
+	 * @param   atts               given attributes
+	 * @param   expected           expected number of attributes
+	 * @throws  SAXParseException  if test is not successful
 	 */
 	public void testAttributes(Attributes atts, int expected) throws SAXParseException {
 		if (atts.getLength() < expected) {
@@ -137,14 +135,16 @@ public class XmlUtils {
 	}
 
 	/**
-	 * Tato metoda ovìøuje, zda poèet daných atributù je alespon roven požadovanému poètu atributù, zda
-	 * existuje specifikovaný atribut a zdali má požadovanou hodnotu.
+	 * Verifies that:  <br/>
+	 * - number of given attributes is at least the required number.<br/>
+	 * - given attribute exists and has required value<br/>
+	 * If not passed, throw SAXParseException
 	 *
-	 * @param   atts               dané atributy
-	 * @param   expected           požadovaný poèet atributù
-	 * @param   attName            jméno konkrétního atributu
-	 * @param   attValue           požadovaná hodnota tohoto konkrétního atributu
-	 * @throws  SAXParseException  v pøípadì, že nejsou splnìny podmínky testu
+	 * @param   atts               given attributes
+	 * @param   expected           expected number of attributes
+	 * @param   attName            name of an attribute
+	 * @param   attValue           required attribute value
+	 * @throws  SAXParseException  if test is not successful
 	 */
 	public void testAttributes(Attributes atts, int expected, String attName, String attValue) throws SAXParseException {
 		if (atts.getLength() < expected) {
@@ -161,13 +161,15 @@ public class XmlUtils {
 	}
 
 	/**
-	 * Tato metoda ovìøuje, zda poèet daných atributù je alespon roven požadovanému poètu atributù a zda
-	 * existuje specifikovaný atribut.
+	 * Verifies that:  <br/>
+	 * - number of given attributes is at least the required number.<br/>
+	 * - given attribute exists<br/>
+	 * If not passed, throw SAXParseException
 	 *
-	 * @param   atts               dané atributy
-	 * @param   expected           požadovaný poèet atributù
-	 * @param   attName            jméno konkrétního atributu
-	 * @throws  SAXParseException  v pøípadì, že nejsou splnìny podmínky testu
+	 * @param   atts               given attributes
+	 * @param   expected           expected number of attributes
+	 * @param   attName            name of an attribute
+	 * @throws  SAXParseException  if test is not successful	 * 
 	 */
 	public void testAttributes(Attributes atts, int expected, String attName) throws SAXParseException {
 		if (atts.getLength() < expected) {
@@ -180,13 +182,15 @@ public class XmlUtils {
 	}
 
 	/**
-	 * Tato metoda ovìøuje, zda poèet daných atributù je alespon roven požadovanému poètu atributù a zda
-	 * existují specifikované atributy.
+	 * Verifies that:  <br/>
+	 * - number of given attributes is at least the required number.<br/>
+	 * - given attributes exist<br/>
+	 * If not passed, throw SAXParseException
 	 *
-	 * @param   atts               dané atributy
-	 * @param   expected           požadovaný poèet atributù
-	 * @param   attNames           seznam ("array") jmen konkrétních atributù
-	 * @throws  SAXParseException  v pøípadì, že nejsou splnìny podmínky testu
+	 * @param   atts               given attributes
+	 * @param   expected           expected number of attributes
+	 * @param   attNames           list of attribute names
+	 * @throws  SAXParseException  if test is not successful	 * 
 	 */
 	public void testAttributes(Attributes atts, int expected, String[] attNames) throws SAXParseException {
 		if (atts.getLength() < expected) {
@@ -201,14 +205,16 @@ public class XmlUtils {
 	}
 	
 	/**
-	 * Tato metoda ovìøuje, zda poèet daných atributù je alespon roven požadovanému poètu atributù, zda
-	 * existuje specifikovaný atribut a zdali má jednu z požadovaných hodnot.
-	 *  
-	 * @param   atts               dané atributy
-	 * @param   expected           požadovaný poèet atributù
-	 * @param   attName            jméno konkrétního atributu
-	 * @param   attValues          seznam ("array") požadovaných hodnot tohoto konkrétního atributu
-	 * @throws  SAXParseException  v pøípadì, že nejsou splnìny podmínky testu
+	 * Verifies that:  <br/>
+	 * - number of given attributes is at least the required number.<br/>
+	 * - given attribute exists and has one of the specified values<br/>
+	 * If not passed, throw SAXParseException
+	 *
+	 * @param   atts               given attributes
+	 * @param   expected           expected number of attributes
+	 * @param   attName            name of an attribute
+	 * @param   attValues          required attribute values
+	 * @throws  SAXParseException  if test is not successful	 * 
 	 */
 	public void testAttributes(Attributes atts, int expected, String attName, String[] attValues) throws SAXParseException {
 		int i;
@@ -233,13 +239,14 @@ public class XmlUtils {
 	
 	
 	/**
-	 * Tato metoda ovìøuje zda
-	 * existuje specifikovaný atribut a zdali má jednu z požadovaných hodnot.
-	 *  
-	 * @param   atts               dané atributy
-	 * @param   attName            jméno konkrétního atributu
-	 * @param   attValues          seznam ("array") požadovaných hodnot tohoto konkrétního atributu
-	 * @throws  SAXParseException  v pøípadì, že nejsou splnìny podmínky testu
+	 * Verifies that:  <br/>
+	 * - given attribute exists and has one of given values<br/>
+	 * If not passed, throw SAXParseException
+	 *
+	 * @param   atts               given attributes
+	 * @param   attName            name of an attribute
+	 * @param   attValues          required attribute values
+	 * @throws  SAXParseException  if test is not successful
 	 */
 	public void testAttributes(Attributes atts, String attName, String[] attValues) throws SAXParseException {
 		int i;
@@ -260,18 +267,12 @@ public class XmlUtils {
 
 
 	/**
-	 * Tato metoda ukonèuje parsing XML a generuje patøiènou hlášku.
-	 * 
-	 * @param  whichCase  specifikuje okolnost, která vedla k ukonèení parsingu:<ul>
-	 *                    <li>WRONG_ELEMENT  XML element je neznámý nebo neoèekávaný.
-	 *                                   V hlášce je uvedeno plné jméno s XML cestou
-	 *                                   k tomuto chybnému elementu.</li>
-	 *                    <li>UNHANDLED_ELEMENT  XML element nemá definovanou obsluhu
-	 *                                       vinou programátora. V hlášce je uvedeno plné
-	 *                                       jméno s XML cestou k tomuto neošetøenému
-	 *                                       elementu.</li></ul>
-	 * @throws  SAXParseException  tuto vyjímku hází metoda vždy, nebo? slouží
-	 *                             k ukonèení parsování
+	 * Ends parsing and throws SAXParseException with given message
+	 *
+	 * @param  whichCase  specifies the cause:<ul>
+	 *                    <li>WRONG_ELEMENT  XML element unknown or unexpected.</li>
+	 *                    <li>UNHANDLED_ELEMENT  XML element has now handling defined</li></ul>
+	 * @throws  SAXParseException  always
 	 */
 	public void stopParsing(int whichCase) throws SAXParseException{
 		String  msg;
@@ -286,12 +287,7 @@ public class XmlUtils {
 			throw new IllegalArgumentException("Undefined stop condition: "+whichCase);
 		}
 
-		/* 
-		 * Po vygenerování chybové hlášky konèí parsing XML, je tøeba vyèistit zásobník, jinak by
-		 * v dalším parsování stále obsahoval tyto souèasné elementy. Nemusím se obávat, že pøijde
-		 * požadavek "pop()", protože parsing je hozením vyjímky ukonèen a proto již nepøijdou žádné
-		 * koncové elementy
-		 */
+		/* Cleanup the queue */
 		clearAll();
 		
 		throw new SAXParseException(msg, null);
@@ -299,21 +295,15 @@ public class XmlUtils {
 	
 	
 	/**
-	 * Tato metoda ukonèuje parsing XML a generuje patøiènou hlášku. Jde o klon užívaný pøi
-	 * parsování tagu Frame, jehož atribut id specifikuje, o jakou datovou strukturu uloženou
-	 * v potagu SPECIFIC jde. Pøi výpisu je tedy potøeba dodat informace o jaký typ Framu jde
+	 * Ends parsing and throws SAXParseException with given message. 
+	 *
+	 * @param  whichCase  specifies the cause:<ul>
+	 *                    <li>WRONG_ELEMENT  XML element unknown or unexpected.</li>
+	 *                    <li>UNHANDLED_ELEMENT  XML element has now handling defined</li></ul>                 
 	 * 
-	 * @param  whichCase  specifikuje okolnost, která vedla k ukonèení parsingu
-	 *                    WRONG_ELEMENT  XML element je neznámý nebo neoèekávaný.
-	 *                                   V hlášce je uvedeno plné jméno s XML cestou
-	 *                                   k tomuto chybnému elementu.
-	 *                    UNHANDLED_ELEMENT  XML element nemá definovanou obsluhu
-	 *                                       vinou programátora. V hlášce je uvedeno plné
-	 *                                       jméno s XML cestou k tomuto neošetøenému elementu.
-	 * @param  cid  specifikuje id framu
-	 * @param  type  specifikuje typ framu (SOURCE, DETECTOR a pod.)
-	 * @throws  SAXParseException  tuto vyjímku hází metoda vždy, nebo? slouží
-	 *                             k ukonèení parsování
+	 * @param  cid  specifies id of the frame
+	 * @param  type  specifies  type of the frame (SOURCE, DETECTOR a pod.)
+	 * @throws  SAXParseException  always
 	 */
 	public void stopParsing(int whichCase, String cid, String type) throws SAXParseException{
 		String  msg;
@@ -325,37 +315,20 @@ public class XmlUtils {
 		} else {
 			throw new IllegalArgumentException("Only WRONG_ELEMENT and UNHANDLED_ELEMENT arguments are allowed.");
 		}
-
-		/*
-		 * po vygenerování chybové hlášky konèí parsing XML, je tøeba vyèistit zásobník, jinak by
-		 * v dalším parsování stále obsahoval tyto souèasné elementy. Nemusím se obávat, že pøijde
-		 * požadavek "pop()", protože parsing je hozením vyjímky ukonèen a proto již nepøijdou žádné
-		 * koncové elementy
-		 */
 		clearAll();
-		
 		throw new SAXParseException(msg, null);
 	}
 
 
 	/**
-	 * Tato metoda ukonèuje parsování XML hozením vyjímky SAXParseException. Vypíše se
-	 * cesta aktuálního elementu plus požadovaná hláška
-	 *
-	 * @param   msg                uživatelská hláška
-	 * @throws  SAXParseException  tuto vyjímku hází metoda vždy, nebo? slouží k ukonèení parsování
+	 * Ends parsing and throws SAXParseException with given message.                
+	 * 
+	 * @param  msg  message to be thrown
+	 * @throws  SAXParseException  always
 	 */
 	public void stopParsing(String msg) throws SAXParseException {
 		String msg2 = "Element '" + elementPath.getPath() + "': " + msg;
-
-		/*
-		 * po vygenerování chybové hlášky konèí parsing XML, je tøeba vyèistit zásobník, jinak by
-		 * v dalším parsování stále obsahoval tyto souèasné elementy. Nemusím se obávat, že pøijde
-		 * požadavek "pop()", protože parsing je hozením vyjímky ukonèen a proto již nepøijdou žádné
-		 * koncové elementy
-		 */
 		clearAll();
-		
 		System.err.println(msg2);
 		throw new SAXParseException(msg2, null);
 	}

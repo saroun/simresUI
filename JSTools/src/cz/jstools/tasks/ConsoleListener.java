@@ -7,7 +7,7 @@ package cz.jstools.tasks;
  * by "ProcessLauncher"
  *
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2019/06/12 17:56:57 $</dt></dl>

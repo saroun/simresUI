@@ -5,7 +5,7 @@ package cz.jstools.classes.editors.propertiesView;
  * This listener is called when the value of PValue is changed.
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jan Saroun PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2012/01/12 15:08:51 $</dt></dl>

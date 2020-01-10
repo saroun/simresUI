@@ -24,7 +24,7 @@
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
 		<echo message="javac options: ${javac_options}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="${JSTools.location}/bin" includeantruntime="false" source="${source}" target="${target}">
+        <javac encoding="UTF-8" debug="true" debuglevel="${debuglevel}" destdir="${JSTools.location}/bin" includeantruntime="false" source="${source}" target="${target}">
 		    <compilerarg line="${javac_options}" />
             <src path="${JSTools.location}/src"/>
             <classpath refid="JSTools.classpath"/>

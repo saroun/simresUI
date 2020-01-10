@@ -16,7 +16,7 @@ import cz.restrax.sim.SimresStatus.Phase;
  * in the root tag <code>RSXDUMP</code>. All kernel XML output sent in this tag must be 
  * treated here, otherwise SAXParseException is thrown.  
  *
- * @author   Jan Saroun, Jiri Svoboda, PhD.
+ * @author   Jan Saroun, Jan Saroun Svoboda, PhD.
  * @version  <dl><dt>$Revision: 1.15 $</dt>
  *               <dt>$Date: 2019/07/10 18:42:32 $</dt></dl>
  */

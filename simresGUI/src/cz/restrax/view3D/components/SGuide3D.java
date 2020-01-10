@@ -11,7 +11,7 @@ import cz.restrax.view3D.geometry.BladeSequenceAtt;
 import cz.restrax.view3D.geometry.SGuideAttributes;
 
 /** 
- * @author   Jan Šaroun
+ * @author   Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.4 $</dt>
  *               <dt>$Date: 2013/04/06 23:15:09 $</dt></dl>

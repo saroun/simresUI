@@ -60,7 +60,7 @@ import cz.restrax.view3D.Lab3DFrame;
  * during program execution. This project builds GUI on top of the console 
  * version of SIMRES (SimresCON).  
  * 
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Revision: 1.33 $</dt>
  *               <dt>$Date: 2019/07/11 17:12:10 $</dt></dl>
  */

@@ -14,7 +14,7 @@ import cz.jstools.classes.definitions.Utils;
  * method that eventually throw ParseException and checkValue() method.
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2012/01/12 15:08:52 $</dt></dl>

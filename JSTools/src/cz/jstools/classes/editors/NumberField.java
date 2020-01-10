@@ -17,7 +17,7 @@ import javax.swing.border.Border;
  * appropriate factory method.
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2014/06/18 20:07:34 $</dt></dl>

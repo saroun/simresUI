@@ -16,7 +16,7 @@ import cz.jstools.classes.definitions.Utils;
  * appropriate factory method.
  *
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2014/06/18 20:07:34 $</dt></dl>

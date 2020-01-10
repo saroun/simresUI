@@ -24,7 +24,7 @@ import cz.restrax.gui.SimresGUI;
  * (e.g. for PostScript device) can be specified too.
  *
  *
- * @author   Svoboda Ji��, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.6 $</dt>
  *               <dt>$Date: 2019/04/15 19:58:30 $</dt></dl>

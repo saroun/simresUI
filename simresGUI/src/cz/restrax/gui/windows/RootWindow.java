@@ -38,7 +38,7 @@ import cz.restrax.sim.commands.Commands;
  * are stored in RestraxGUI class nevertheless.
  *
  *
- * @author   Svoboda Ji��, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.37 $</dt>
  *               <dt>$Date: 2019/05/25 23:55:28 $</dt></dl>

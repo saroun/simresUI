@@ -18,7 +18,7 @@ import cz.jstools.xml.XmlUtils;
  * Xml handler for element <code>MATRIX</code>.
  *
  *
- * @author   Svoboda Jiri, J. Saroun
+ * @author   Svoboda Jan Saroun, J. Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.2 $</dt>
  *               <dt>$Date: 2019/01/10 20:38:41 $</dt></dl>

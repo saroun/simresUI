@@ -20,7 +20,7 @@ import cz.restrax.sim.utils.SimProgressInterface;
  * and passed events, estimated and elapsed time and efficiency.
  *
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.5 $</dt>
  *               <dt>$Date: 2019/06/24 17:01:10 $</dt></dl>

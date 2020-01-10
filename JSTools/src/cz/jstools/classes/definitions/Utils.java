@@ -26,7 +26,7 @@ import javax.swing.JTextField;
  * "JTextFiels", working with file names, debug report formatting etc.  
  *
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.8 $</dt>
  *               <dt>$Date: 2014/06/18 20:07:35 $</dt></dl>
@@ -38,8 +38,7 @@ public class Utils {
 	private static final long  MAX_FILE_SIZE = 524288;    // 512kB
 	private static final int   BUFFER_SIZE   = 4096;     // 4kB
 	
-	// zachova platnost 4 desetinnych mist
-	// nechci 0.0001234 ale 1.234e-4, ale 0.1234 je OK, nemusi byt exponencialni forma
+	// defines float precision for output
 	public static final double   EXP_FORM_MIN  = 0.1;
 	public static final double   EXP_FORM_MAX  = 10000.0;
 
@@ -517,7 +516,7 @@ public class Utils {
 	}
 	
 	/**
-	 * Vrací jméno adresáøe. Na konci neobsahuje jméno separátoru. 
+	 * Vracï¿½ jmï¿½no adresï¿½ï¿½e. Na konci neobsahuje jmï¿½no separï¿½toru. 
 	 */
 	public static String getDirectory(File file) {
 		String dir = null;
@@ -548,7 +547,7 @@ public class Utils {
 	}
 	
 	/**
-	 * Vrací jméno adresáøe. Na konci neobsahuje jméno separátoru. 
+	 * Returns address name. No separator at the end.
 	 */
 	public static String getDirectory(String fileName) {
 		return Utils.getDirectory(new File(fileName));

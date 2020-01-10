@@ -11,7 +11,7 @@ import cz.restrax.sim.SimresCON;
 
 /**
  * Exports Instrument config. data, commands and repository components to XML files
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.9 $</dt>
  *               <dt>$Date: 2019/06/27 20:33:29 $</dt></dl>

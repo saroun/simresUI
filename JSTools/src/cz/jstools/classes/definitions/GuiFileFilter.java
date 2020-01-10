@@ -14,7 +14,7 @@ import javax.swing.filechooser.FileFilter;
  * This class provides various file filters, which are created by factory methods.
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.3 $</dt>
  *               <dt>$Date: 2017/10/25 15:39:58 $</dt></dl>

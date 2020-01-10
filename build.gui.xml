@@ -45,7 +45,7 @@
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
 		<echo message="javac options: ${javac_options}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="${simresGUI.location}/bin" includeantruntime="false" source="${source}" target="${target}">
+        <javac encoding="UTF-8"  debug="true" debuglevel="${debuglevel}" destdir="${simresGUI.location}/bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="${simresGUI.location}/src"/>
 			<compilerarg line="${javac_options}" />
             <exclude name="obsolete/"/>

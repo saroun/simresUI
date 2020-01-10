@@ -15,7 +15,7 @@ import javax.swing.JCheckBox;
  * to correctly align all properties.
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2012/01/12 15:08:52 $</dt></dl>

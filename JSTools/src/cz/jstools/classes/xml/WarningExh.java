@@ -14,7 +14,7 @@ import cz.jstools.xml.XmlUtils;
 /**
  * Xml handler for element <code>WARNING</code>.
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2012/01/16 17:37:15 $</dt></dl>

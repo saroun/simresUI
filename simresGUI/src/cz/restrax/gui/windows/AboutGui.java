@@ -15,10 +15,10 @@ import cz.restrax.gui.SimresGUI;
 
 
 /**
- * Zobraz� informace o programu.
+ * Zobrazr informace o programu.
  *
  *
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.11 $</dt>
  *               <dt>$Date: 2019/04/01 13:10:27 $</dt></dl>

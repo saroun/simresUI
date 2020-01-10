@@ -17,7 +17,7 @@ import cz.jstools.classes.editors.propertiesView.VString;
 
 /**
  * This class shows a dialog for editing the spectrometer description.
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2012/01/17 17:58:45 $</dt></dl>

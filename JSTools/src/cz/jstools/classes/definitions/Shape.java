@@ -11,7 +11,7 @@ import java.util.zip.DataFormatException;
  * was removed.
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.2 $</dt>
  *               <dt>$Date: 2014/06/18 20:07:35 $</dt></dl>

@@ -16,7 +16,7 @@ import javax.swing.table.TableCellRenderer;
  * jsou Double, Integer, String, Boolean, JComboBox a Icon.
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.2 $</dt>
  *               <dt>$Date: 2012/03/03 18:31:32 $</dt></dl>

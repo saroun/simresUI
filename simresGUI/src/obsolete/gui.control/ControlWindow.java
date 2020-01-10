@@ -24,7 +24,7 @@ import utils.Utils;
 
 /**
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2009/01/27 12:35:36 $</dt></dl>
@@ -145,7 +145,7 @@ public class ControlWindow extends JInternalFrame {
 	}
 
 	private void switchButton(JToggleButton source) {
-		if (source.isSelected()) {  // zmáèklo se tlaèítko? (ve chvili kdy se volá "actionPerformed()" je u stav zmìnìn)
+		if (source.isSelected()) {  // zmï¿½ï¿½klo se tlaï¿½ï¿½tko? (ve chvili kdy se volï¿½ "actionPerformed()" je uï¿½ stav zmï¿½nï¿½n)
 			JToggleButton  unselect      = selected;
 			JPanel         inactivePanel = activePanel;
 			
@@ -164,21 +164,21 @@ public class ControlWindow extends JInternalFrame {
 				unselect.setSelected(false);
 				inactivePanel.setVisible(false);
 			} else {
-				// okno bylo minimalizováno (byly kresleny jen tlaèítka),
-                // teï se odminimalizovává --- vykresli vertikální oddìlovaè
+				// okno bylo minimalizovï¿½no (byly kresleny jen tlaï¿½ï¿½tka),
+                // teï¿½ se odminimalizovï¿½vï¿½ --- vykresli vertikï¿½lnï¿½ oddï¿½lovaï¿½
 				sepVertical.setVisible(true);
 			}
 			activePanel.setVisible(true);
 			Dimension d = new Dimension(activePanel.getSize().width  + minimalSize.width, minimalSize.height);
 			ControlWindow.super.setSize(d);
 		} else {
-			// tlaèítko bylo odznaèeno
-			if (source == selected) { // zdrojem odznaèení je toto tlaèítko
+			// tlaï¿½ï¿½tko bylo odznaï¿½eno
+			if (source == selected) { // zdrojem odznaï¿½enï¿½ je toto tlaï¿½ï¿½tko
 				minimalize();
 			}
-			// else --- zdrojem odznaèení bylo jiné tlaèítko, které bylo
-			// zmáèknuto --- nedìlej nic (toto tlaèítko bylo ji odznaèeno, proto
-			// se (nechtìnì) zavolal tento Listener)
+			// else --- zdrojem odznaï¿½enï¿½ bylo jinï¿½ tlaï¿½ï¿½tko, kterï¿½ bylo
+			// zmï¿½ï¿½knuto --- nedï¿½lej nic (toto tlaï¿½ï¿½tko bylo jiï¿½ odznaï¿½eno, proto
+			// se (nechtï¿½nï¿½) zavolal tento Listener)
 		}
 	}
 
@@ -209,9 +209,9 @@ public class ControlWindow extends JInternalFrame {
 		this.setTitle("Commands");
 		
 		/* 
-		 * následující parametry bych mohl nastavit i "ruènì", nebo je znám
-		 * (viz. øádky) vıše. Nicménì kdyby se upravoval design Visual editorem,
-		 * mohlo by dojít k chybì, protoe tyto následující parametry by nebyly
+		 * nï¿½sledujï¿½cï¿½ parametry bych mohl nastavit i "ruï¿½nï¿½", neboï¿½ je znï¿½m
+		 * (viz. ï¿½ï¿½dky) vï¿½ï¿½e. Nicmï¿½nï¿½ kdyby se upravoval design Visual editorem,
+		 * mohlo by dojï¿½t k chybï¿½, protoï¿½e tyto nï¿½sledujï¿½cï¿½ parametry by nebyly
 		 * upraveny
 		 */
 		minimalSize = super.getSize();

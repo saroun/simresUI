@@ -18,12 +18,12 @@ import definitions.VectorHKLE;
 
 
 /**
- * Tato tøída vytvoøí panel s øídícími prvky konzolového programu "Restrax".
- * Tento panel je pak zobrazen v záložce "Commands" øídícího okna
+ * Tato tï¿½ï¿½da vytvoï¿½ï¿½ panel s ï¿½ï¿½dï¿½cï¿½mi prvky konzolovï¿½ho programu "Restrax".
+ * Tento panel je pak zobrazen v zï¿½loï¿½ce "Commands" ï¿½ï¿½dï¿½cï¿½ho okna
  * "ControWindow".
  *
  *
- * @author   Svoboda Jiøí, PhD.
+ * @author   Svoboda Jiri, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2009/01/27 12:35:36 $</dt></dl>
@@ -264,7 +264,7 @@ public class PanelCommands extends JPanel {
 					try {
 						sumCounts = txfCmdGendtIntValue.getDouble();
 						
-						// tento pøíkaz užívá vždy Monte Carlo
+						// tento pï¿½ï¿½kaz uï¿½ï¿½vï¿½ vï¿½dy Monte Carlo
 						cmd = String.format(Constants.FIX_LOCALE, "GENDT %s %s",
 						                                          Utils.i2s(controlWindow.getNEvents()),
 						                                          Utils.d2s(sumCounts));

@@ -20,7 +20,7 @@ import cz.restrax.sim.xml.handlers.RsxdumpExh;
  * Listens to the console input.
  *
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.13 $</dt>
  *               <dt>$Date: 2019/06/12 17:58:11 $</dt></dl>
@@ -180,7 +180,7 @@ public class RestraxParser implements ConsoleListener {
 				// XML obsah (protoze se nachazi mezi START_ELEMENT a END_ELEMENT)
 				// Jestlize vsak cekam na START_ELEMENT, pak obsah bufferu musi obsahovat
 				// jenom text mimo START_ELEMENT a END_ELEMENT (XML casti byly po parsingu
-				//  vyriznuty), tudiz ho poslu na textovou konzoli a vyprazdn�m ho
+				//  vyriznuty), tudiz ho poslu na textovou konzoli a vyprazdnrm ho
 				if (waitFor == START_ELEMENT) {
 					if (__DEBUG__) {
 						System.out.println(Utils.getDebugHdr("LOG"));

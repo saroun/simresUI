@@ -6,7 +6,7 @@ import cz.restrax.sim.utils.SimProgressInterface;
 
 /**
  * Log XML data from <code>NESS</code> tag.
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.3 $</dt>
  *               <dt>$Date: 2012/02/05 19:14:42 $</dt></dl>

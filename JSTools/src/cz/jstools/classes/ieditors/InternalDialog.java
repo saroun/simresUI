@@ -11,10 +11,7 @@ import cz.jstools.classes.definitions.Utils;
 
 /**
  * Internal non modal dialog based on JInternalFrame.
- * @author   Svoboda Jiøí, PhD.
- * @version  <dl><dt>$Name: HEAD $</dt>
- *               <dt>$Revision: 1.3 $</dt>
- *               <dt>$Date: 2012/01/20 17:42:34 $</dt></dl>
+ * @author   Svoboda Jan Saroun, PhD.
  */
 abstract public class InternalDialog extends JInternalFrame {
 	private static final long serialVersionUID = 1L;

@@ -22,7 +22,7 @@ import cz.restrax.gui.resources.Resources;
 /**
  * This class shows html-formatted information messsage in scrollable window.  
  *
- * @author   Svoboda Ji��, J. Saroun,
+ * @author   Svoboda Jan Saroun, J. Saroun,
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.4 $</dt>
  *               <dt>$Date: 2012/01/24 17:41:09 $</dt></dl>

@@ -8,7 +8,7 @@ import org.xml.sax.SAXParseException;
  * Tento interface slouzi k obsluze jednotlivych XML elementu.
  *
  *
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.2 $</dt>
  *               <dt>$Date: 2012/01/13 16:32:00 $</dt></dl>

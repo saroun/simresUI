@@ -45,7 +45,7 @@ import cz.restrax.sim.RsxProject;
 
 /**
  * This class creates a window with buttons, pointing to all configuration dialogs.
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Revision: 1.19 $</dt>
  *               <dt>$Date: 2019/01/06 00:08:39 $</dt></dl>
  */

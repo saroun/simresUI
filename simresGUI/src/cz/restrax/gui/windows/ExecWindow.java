@@ -36,7 +36,7 @@ import cz.restrax.gui.resources.Resources;
 
 /**
  * This class creates a window with buttons, pointing to all configuration dialogs.
- * @author   Jiri Svoboda, Jan Saroun
+ * @author   Jan Saroun Svoboda, Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.13 $</dt>
  *               <dt>$Date: 2019/07/10 18:42:31 $</dt></dl>

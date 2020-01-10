@@ -18,7 +18,7 @@ import cz.restrax.sim.proc.ConsoleReader;
 
 /**
  * 
- * @author   Svoboda Jiri, PhD.
+ * @author   Svoboda Jan Saroun, PhD.
  * @version  <dl><dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2019/06/12 17:58:11 $</dt></dl>
  */

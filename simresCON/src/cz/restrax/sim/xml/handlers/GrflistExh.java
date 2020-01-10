@@ -15,7 +15,7 @@ import cz.restrax.sim.SimresCON;
  * Xml handler for element <code>GRFLIST</code>.
  *
  *
- * @author   Jiri Svoboda
+ * @author   Jan Saroun Svoboda
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.3 $</dt>
  *               <dt>$Date: 2012/01/20 17:42:48 $</dt></dl>
