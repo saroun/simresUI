@@ -1,6 +1,5 @@
 Manifest-Version: 1.0
 Main-Class: cz.restrax.sim.SimresCON
-Name: cz/restrax/sim
 Specification-Title: MC simulation of neutron scattering instruments
 Implementation-Title: cz/restrax
 Implementation-Version: 6.5.0
