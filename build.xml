@@ -37,6 +37,7 @@ J. Saroun, 2019
     </target>
 	
     <target name="build-jar" depends="init, compile" description="compile + create jar files in ./dist" >
+	    <buildnumber />
 		<!-- constructs the classpath for simresGUI -->
 		<manifestclasspath property="gui.classpath" jarfile="simresGUI.jar">
 			<classpath>
@@ -50,7 +51,7 @@ J. Saroun, 2019
 				<attribute name="Specification-Version" value="${version}"/>
 				<attribute name="Specification-Vendor" value="${vendor}"/>
 				<attribute name="Implementation-Title" value="cz.restrax.sim"/>
-				<attribute name="Implementation-Version" value="${version} ${BUILD_DATE}"/>
+				<attribute name="Implementation-Version" value="${version}.${build.number}, ${BUILD_DATE}"/>
 				<attribute name="Implementation-Vendor" value="${vendor}"/>
 		   </manifest>		
 		   <fileset dir="${JSTools.location}/bin/" />
@@ -65,7 +66,7 @@ J. Saroun, 2019
 				<attribute name="Specification-Version" value="${version}"/>
 				<attribute name="Specification-Vendor" value="${vendor}"/>
 				<attribute name="Implementation-Title" value="cz.restrax.gui"/>
-				<attribute name="Implementation-Version" value="${version} ${BUILD_DATE}"/>
+				<attribute name="Implementation-Version" value="${version}.${build.number}, ${BUILD_DATE}"/>
 				<attribute name="Implementation-Vendor" value="${vendor}"/>
 			</manifest>		   
 			<fileset dir="${simresGUI.location}/bin/" />

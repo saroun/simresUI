@@ -1,8 +1,14 @@
 package cz.restrax.sim;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.Enumeration;
+import java.util.jar.Attributes;
+import java.util.jar.Manifest;
+
 public class Version {	
-	public  static final String    VERSION           = "6.5.0";
-	public  static final String    BUILD             = "$Date: 2019/12/06 17:58:11 $";
+	public  static String    VERSION           = "6.5.0";
+	public  static String    BUILD             = "$Date: 2019/12/06 17:58:11 $";
 	// RESTRAX versions  compatible with this  GUI 
 	public static final String[] RESVERSIONS =  {"6"};
 
@@ -12,6 +18,10 @@ public class Version {
 	
 	public Version (SimresCON program) {
 		this.program=program;
+		try {
+			readManifest();
+		} catch (IOException e) {
+		}
 	}
 	
 	public String getRestraxVersion() {
@@ -55,6 +65,30 @@ public class Version {
 
 	public void setRestraxBuild(String restraxBuild) {
 		this.restraxBuild = restraxBuild;
+	}
+	
+	/**
+	 * Read build and version from Manifest
+	 * @throws IOException
+	 */
+	private void readManifest() throws IOException {
+		String value="";
+		Enumeration<URL> resources = getClass().getClassLoader().getResources("META-INF/MANIFEST.MF");
+		while (resources.hasMoreElements()) {
+		try {
+			Manifest manifest = new Manifest(resources.nextElement().openStream());
+			Attributes attr = manifest.getMainAttributes();
+			value = attr.getValue("Main-Class");
+			if (value.equals("cz.restrax.gui.SimresCON")) {
+				value = attr.getValue("Specification-Version");
+				VERSION = value;
+				value = attr.getValue("Implementation-Version");
+				BUILD = value;
+			}
+		} catch (IOException E) {
+				      // handle
+		}
+		}
 	}
 
 }
