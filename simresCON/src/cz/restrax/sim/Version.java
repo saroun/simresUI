@@ -79,14 +79,15 @@ public class Version {
 			Manifest manifest = new Manifest(resources.nextElement().openStream());
 			Attributes attr = manifest.getMainAttributes();
 			value = attr.getValue("Main-Class");
-			if (value.equals("cz.restrax.gui.SimresCON")) {
+			if (value != null) {
+			if (value.equals("cz.restrax.sim.SimresCON")) {
 				value = attr.getValue("Specification-Version");
 				VERSION = value;
 				value = attr.getValue("Implementation-Version");
 				BUILD = value;
-			}
+			}}
 		} catch (IOException E) {
-				      // handle
+				      // handle 
 		}
 		}
 	}
