@@ -1,11 +1,11 @@
 package cz.restrax.view3D;
 
-import javax.media.j3d.Bounds;
-import javax.media.j3d.Node;
+import org.jogamp.java3d.Bounds;
+import org.jogamp.java3d.Node;
 
-import com.sun.j3d.utils.picking.PickResult;
-import com.sun.j3d.utils.picking.PickTool;
-import com.sun.j3d.utils.picking.behaviors.PickMouseBehavior;
+import org.jogamp.java3d.utils.picking.PickResult;
+import org.jogamp.java3d.utils.picking.PickTool;
+import org.jogamp.java3d.utils.picking.behaviors.PickMouseBehavior;
 
 import cz.restrax.view3D.components.Frame3D;
 import cz.restrax.view3D.components.FrameShape;

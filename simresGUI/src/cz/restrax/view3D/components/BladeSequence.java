@@ -1,7 +1,7 @@
 package cz.restrax.view3D.components;
 
-import javax.media.j3d.Appearance;
-import javax.media.j3d.BranchGroup;
+import org.jogamp.java3d.Appearance;
+import org.jogamp.java3d.BranchGroup;
 
 import cz.restrax.view3D.geometry.BladeAtt;
 import cz.restrax.view3D.geometry.BladeSequenceAtt;

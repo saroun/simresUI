@@ -5,12 +5,12 @@ package cz.restrax.view3D;
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2009/02/06 17:43:28 $</dt></dl>
  */
-import javax.media.j3d.Transform3D;
-import javax.vecmath.Point2i;
-import javax.vecmath.Point3f;
-import javax.vecmath.Point3i;
-import javax.vecmath.Vector2f;
-import javax.vecmath.Vector3f;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.vecmath.Point2i;
+import org.jogamp.vecmath.Point3f;
+import org.jogamp.vecmath.Point3i;
+import org.jogamp.vecmath.Vector2f;
+import org.jogamp.vecmath.Vector3f;
 
 public class Utils {
   public static final int CSEG=36; // number of segments for cylinder body

@@ -1,7 +1,7 @@
 package cz.restrax.view3D.components;
 
-import javax.media.j3d.QuadArray;
-import javax.vecmath.Color3f;
+import org.jogamp.java3d.QuadArray;
+import org.jogamp.vecmath.Color3f;
 
 import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.geometry.SlitAttributes;

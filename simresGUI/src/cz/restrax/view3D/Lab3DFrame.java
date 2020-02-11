@@ -10,12 +10,12 @@ import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.media.j3d.Transform3D;
+import org.jogamp.java3d.Transform3D;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import javax.vecmath.Matrix3f;
+import org.jogamp.vecmath.Matrix3f;
 
 import cz.jstools.classes.ClassData;
 import cz.jstools.classes.ieditors.InternalDialog;

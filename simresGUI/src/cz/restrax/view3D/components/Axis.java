@@ -1,14 +1,16 @@
 package cz.restrax.view3D.components;
 
 import java.util.Enumeration;
+import java.util.Iterator;
 
-import javax.media.j3d.Appearance;
-import javax.media.j3d.ColoringAttributes;
-import javax.media.j3d.LineArray;
-import javax.media.j3d.LineAttributes;
-import javax.media.j3d.Shape3D;
-import javax.vecmath.Color3f;
-import javax.vecmath.Point3f;
+import org.jogamp.java3d.Appearance;
+import org.jogamp.java3d.ColoringAttributes;
+import org.jogamp.java3d.Geometry;
+import org.jogamp.java3d.LineArray;
+import org.jogamp.java3d.LineAttributes;
+import org.jogamp.java3d.Shape3D;
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Point3f;
 
 /**
  * Coordinate axis (x,y or z) with default appearance.
@@ -69,9 +71,11 @@ public class Axis extends Shape3D {
 	
 	public String getGeometryInfo() {
 		String s="";
-		Enumeration<LineArray> e  = getAllGeometries();
-		for (;e.hasMoreElements();) {
-			LineArray nd=  e.nextElement();
+		Iterator<Geometry> e  = getAllGeometries();
+		while (e.hasNext()) {
+			LineArray nd=  (LineArray) e.next();
+		//for (;e.hasMoreElements();) {
+		//	LineArray nd=  e.nextElement();
 			Point3f c1 = new Point3f();
 			Point3f c2 = new Point3f();
 			nd.getCoordinate(0, c1);

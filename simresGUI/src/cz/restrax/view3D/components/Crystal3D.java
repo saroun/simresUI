@@ -5,10 +5,10 @@ package cz.restrax.view3D.components;
  *               <dt>$Revision: 1.6 $</dt>
  *               <dt>$Date: 2015/06/29 16:34:18 $</dt></dl>
  */
-import javax.media.j3d.Geometry;
-import javax.media.j3d.Transform3D;
-import javax.vecmath.Color3f;
-import javax.vecmath.Vector3f;
+import org.jogamp.java3d.Geometry;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Vector3f;
 
 import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.Utils;

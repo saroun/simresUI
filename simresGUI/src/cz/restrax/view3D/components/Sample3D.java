@@ -1,10 +1,10 @@
 package cz.restrax.view3D.components;
 
-import javax.media.j3d.Group;
-import javax.media.j3d.LineAttributes;
-import javax.media.j3d.Transform3D;
-import javax.vecmath.Color3f;
-import javax.vecmath.Vector3f;
+import org.jogamp.java3d.Group;
+import org.jogamp.java3d.LineAttributes;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Vector3f;
 
 import cz.jstools.classes.ClassData;
 

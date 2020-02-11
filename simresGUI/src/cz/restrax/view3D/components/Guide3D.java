@@ -5,11 +5,11 @@ package cz.restrax.view3D.components;
  *               <dt>$Revision: 1.5 $</dt>
  *               <dt>$Date: 2013/04/06 23:15:09 $</dt></dl>
  */
-import javax.media.j3d.QuadArray;
-import javax.media.j3d.Transform3D;
-import javax.media.j3d.TransformGroup;
-import javax.vecmath.Color3f;
-import javax.vecmath.Point3f;
+import org.jogamp.java3d.QuadArray;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.java3d.TransformGroup;
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Point3f;
 
 import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.geometry.GuideAttributes;

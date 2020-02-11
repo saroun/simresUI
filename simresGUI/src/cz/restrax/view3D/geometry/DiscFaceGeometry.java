@@ -1,9 +1,9 @@
 package cz.restrax.view3D.geometry;
 
-import javax.media.j3d.Transform3D;
-import javax.media.j3d.TriangleArray;
-import javax.vecmath.Point3f;
-import javax.vecmath.Vector3f;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.java3d.TriangleArray;
+import org.jogamp.vecmath.Point3f;
+import org.jogamp.vecmath.Vector3f;
 
 import cz.restrax.view3D.Utils;
 

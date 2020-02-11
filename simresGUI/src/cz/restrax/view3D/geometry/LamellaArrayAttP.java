@@ -1,6 +1,6 @@
 package cz.restrax.view3D.geometry;
 
-import javax.vecmath.Vector3d;
+import org.jogamp.vecmath.Vector3d;
 
 /**
  * Defines properties of curved tapered array of lamellae

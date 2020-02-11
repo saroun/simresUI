@@ -1,10 +1,10 @@
 package cz.restrax.view3D.components;
 
-import javax.media.j3d.Geometry;
-import javax.media.j3d.Transform3D;
-import javax.vecmath.Point3i;
-import javax.vecmath.Vector3d;
-import javax.vecmath.Vector3f;
+import org.jogamp.java3d.Geometry;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.vecmath.Point3i;
+import org.jogamp.vecmath.Vector3d;
+import org.jogamp.vecmath.Vector3f;
 
 import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.geometry.BoxGeometry;

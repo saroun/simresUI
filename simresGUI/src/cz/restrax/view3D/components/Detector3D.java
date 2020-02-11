@@ -1,11 +1,11 @@
 package cz.restrax.view3D.components;
 
-import javax.media.j3d.Geometry;
-import javax.media.j3d.Transform3D;
-import javax.media.j3d.TriangleArray;
-import javax.vecmath.Color3f;
-import javax.vecmath.Vector3d;
-import javax.vecmath.Vector3f;
+import org.jogamp.java3d.Geometry;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.java3d.TriangleArray;
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Vector3d;
+import org.jogamp.vecmath.Vector3f;
 
 import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.geometry.GeometryFactory;

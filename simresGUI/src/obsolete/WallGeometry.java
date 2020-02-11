@@ -5,10 +5,10 @@ package view3D.geometry;
  *               <dt>$Revision: 1.1 $</dt>
  *               <dt>$Date: 2009/01/27 16:45:35 $</dt></dl>
  */
-import javax.media.j3d.QuadArray;
-import javax.media.j3d.Transform3D;
-import javax.vecmath.Point3f;
-import javax.vecmath.Vector3f;
+import org.jogamp.java3d.QuadArray;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.vecmath.Point3f;
+import org.jogamp.vecmath.Vector3f;
 
 /**
  * WallGeometry represents a flat wall with finite thickness.

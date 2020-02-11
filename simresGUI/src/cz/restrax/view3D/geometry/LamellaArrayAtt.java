@@ -1,8 +1,8 @@
 package cz.restrax.view3D.geometry;
 
-import javax.media.j3d.QuadArray;
-import javax.vecmath.Color3f;
-import javax.vecmath.Vector3d;
+import org.jogamp.java3d.QuadArray;
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Vector3d;
 
 import cz.restrax.view3D.components.FrameShape;
 

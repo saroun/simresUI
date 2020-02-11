@@ -1,10 +1,10 @@
 package cz.restrax.view3D.geometry;
 
-import javax.media.j3d.QuadArray;
-import javax.media.j3d.Transform3D;
-import javax.vecmath.Point3f;
-import javax.vecmath.Vector2f;
-import javax.vecmath.Vector3f;
+import org.jogamp.java3d.QuadArray;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.vecmath.Point3f;
+import org.jogamp.vecmath.Vector2f;
+import org.jogamp.vecmath.Vector3f;
 
 public abstract class CurvedGeometry extends QuadArray {
 	public static final int INNER_FACE=0;

@@ -7,8 +7,8 @@ package cz.restrax.view3D;
  */
 import java.util.HashMap;
 
-import javax.media.j3d.TransformGroup;
-import javax.vecmath.Point3f;
+import org.jogamp.java3d.TransformGroup;
+import org.jogamp.vecmath.Point3f;
 
 import cz.jstools.classes.ClassData;
 import cz.jstools.classes.ClassDataCollection;

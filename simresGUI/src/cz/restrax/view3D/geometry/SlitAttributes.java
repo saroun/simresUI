@@ -1,8 +1,8 @@
 package cz.restrax.view3D.geometry;
 
-import javax.vecmath.Color3f;
-import javax.vecmath.Vector3d;
-import javax.vecmath.Vector3f;
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Vector3d;
+import org.jogamp.vecmath.Vector3f;
 
 import cz.jstools.classes.ClassData;
 import cz.restrax.view3D.Utils;

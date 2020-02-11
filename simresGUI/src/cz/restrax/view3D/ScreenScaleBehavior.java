@@ -38,10 +38,10 @@ package cz.restrax.view3D;
          */
 import java.awt.event.MouseEvent;
 
-import javax.media.j3d.Canvas3D;
+import org.jogamp.java3d.Canvas3D;
 
-import com.sun.j3d.internal.J3dUtilsI18N;
-import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
+import org.jogamp.java3d.internal.J3dUtilsI18N;
+import org.jogamp.java3d.utils.behaviors.vp.OrbitBehavior;
 
 // public class ScreenScaleBehavior extends ViewPlatformAWTBehavior {
 public class ScreenScaleBehavior extends OrbitBehavior {	

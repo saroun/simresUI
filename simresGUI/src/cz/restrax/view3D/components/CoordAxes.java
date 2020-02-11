@@ -1,6 +1,6 @@
 package cz.restrax.view3D.components;
 
-import javax.media.j3d.BranchGroup;
+import org.jogamp.java3d.BranchGroup;
 
 
 public class CoordAxes extends BranchGroup {

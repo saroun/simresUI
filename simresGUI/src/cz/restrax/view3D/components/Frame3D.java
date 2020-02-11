@@ -1,20 +1,22 @@
 package cz.restrax.view3D.components;
 
 import java.util.Enumeration;
+import java.util.Iterator;
 
-import javax.media.j3d.Appearance;
-import javax.media.j3d.Geometry;
-import javax.media.j3d.Material;
-import javax.media.j3d.Shape3D;
-import javax.media.j3d.Transform3D;
-import javax.media.j3d.TransformGroup;
-import javax.media.j3d.TransparencyAttributes;
-import javax.vecmath.Color3f;
-import javax.vecmath.Point3f;
-import javax.vecmath.Vector3d;
-import javax.vecmath.Vector3f;
+import org.jogamp.java3d.Appearance;
+import org.jogamp.java3d.Geometry;
+import org.jogamp.java3d.LineArray;
+import org.jogamp.java3d.Material;
+import org.jogamp.java3d.Shape3D;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.java3d.TransformGroup;
+import org.jogamp.java3d.TransparencyAttributes;
+import org.jogamp.vecmath.Color3f;
+import org.jogamp.vecmath.Point3f;
+import org.jogamp.vecmath.Vector3d;
+import org.jogamp.vecmath.Vector3f;
 
-import com.sun.j3d.utils.geometry.Sphere;
+import org.jogamp.java3d.utils.geometry.Sphere;
 
 import cz.jstools.classes.ClassData;
 import cz.jstools.classes.ClassDef;
@@ -44,7 +46,7 @@ public class Frame3D {
 	public static final int FRAME_SHAPE_ELLIPSOID = 0;
 	public static final int FRAME_SHAPE_CYLINDER = 1;  // cylinder, axis // y
 	public static final int FRAME_SHAPE_DISC = 2;      // cylinder, axis // z
-	public static final int FRAME_SHAPE_BOX = 3;
+	public static final int FRAME_SHAPE_BOX = 3; 
    
 	protected String id = "undefined";
 	protected String cid = "undefined";	
@@ -228,9 +230,15 @@ public class Frame3D {
 			if (SIZE.x <= 0.0) return;
 			Sphere s = new Sphere(SIZE.x,Sphere.GEOMETRY_NOT_SHARED,15,shape.getAppearance());
 			shape.removeAllGeometries();
-			for (Enumeration e = s.getShape().getAllGeometries() ; e.hasMoreElements() ;) {
-				 shape.addGeometry((Geometry) e.nextElement()); 
+			
+			Iterator<Geometry> e  = s.getShape().getAllGeometries();
+			while (e.hasNext()) {
+				shape.addGeometry((Geometry) e.next()); 
 			}
+			
+		//	for (Enumeration e = s.getShape().getAllGeometries() ; e.hasMoreElements() ;) {
+		//		 shape.addGeometry((Geometry) e.nextElement()); 
+		//	}
 			Transform3D t = new Transform3D();
 			t.setScale(new Vector3d(1.0,SIZE.y/SIZE.x,SIZE.z/SIZE.x));
 			scaling.setTransform(t);

@@ -1,11 +1,11 @@
 package cz.restrax.view3D.components;
 
-import javax.media.j3d.Appearance;
-import javax.media.j3d.BranchGroup;
-import javax.media.j3d.Material;
-import javax.media.j3d.Transform3D;
-import javax.media.j3d.TransparencyAttributes;
-import javax.vecmath.Color3f;
+import org.jogamp.java3d.Appearance;
+import org.jogamp.java3d.BranchGroup;
+import org.jogamp.java3d.Material;
+import org.jogamp.java3d.Transform3D;
+import org.jogamp.java3d.TransparencyAttributes;
+import org.jogamp.vecmath.Color3f;
 
 import cz.restrax.view3D.geometry.GuideAttributes;
 import cz.restrax.view3D.geometry.LamellaArrayAtt;

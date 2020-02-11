@@ -52,22 +52,22 @@ linux_64
 	<target name="win32" depends="getos" if="windows_32" >
 		<property name="osname" value="windows" />
 		<property name="bits" value="32" />
-		<property name="j3d" value="${j3d_win32}"/>
+		<property name="j3d" value="${j3d_jogamp}"/>
     </target>
 	<target name="win64" depends="getos" if="windows_64" >
 		<property name="osname" value="windows" />
 		<property name="bits" value="64" />
-		<property name="j3d" value="${j3d_win64}"/>
+		<property name="j3d" value="${j3d_jogamp}"/>
     </target>
 	<target name="lin32" depends="getos" if="linux_32" >
 		<property name="osname" value="linux" />
 		<property name="bits" value="32" />
-		<property name="j3d" value="${j3d_linux32}"/>
+		<property name="j3d" value="${j3d_jogamp}"/>
     </target>
 	<target name="lin64" depends="getos" if="linux_64" >
 		<property name="osname" value="linux" />
 		<property name="bits" value="64" />
-		<property name="j3d" value="${j3d_linux64}"/>
+		<property name="j3d" value="${j3d_jogamp}"/>
     </target>
 	
 	<target name="osinfo" depends="win32,win64,lin32,lin64">

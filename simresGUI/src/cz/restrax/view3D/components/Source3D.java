@@ -5,7 +5,7 @@ package cz.restrax.view3D.components;
  *               <dt>$Revision: 1.3 $</dt>
  *               <dt>$Date: 2013/04/06 23:15:09 $</dt></dl>
  */
-import javax.vecmath.Color3f;
+import org.jogamp.vecmath.Color3f;
 
 import cz.jstools.classes.ClassData;
 

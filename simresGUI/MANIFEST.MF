@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Main-Class: cz.restrax.gui.SimresGUI
 Class-Path: simresCON.jar 
- j3d-jre/lib/ext/j3dcore.jar 
- j3d-jre/lib/ext/j3dutils.jar 
- j3d-jre/lib/ext/vecmath.jar 
-
+ j3d-jre/j3dcore.jar 
+ j3d-jre/j3dutils.jar 
+ j3d-jre/vecmath.jar 
+ j3d-jre/jogamp-fat.jar
