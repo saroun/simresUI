@@ -1,10 +1,10 @@
-# simresUI - User interface for SIMRES
+# simresUI - the user interface for SIMRES
 
 `simresUI` is a Java based user interface for the Monte Carlo neutron ray-tracing progrem SIMRES - https://github.com/saroun/simres. It includes three packages:
 
 - `JSTools`: Common library of classes representing various data entities, property editors, file manipulation tools and xml parsers used by simresUI. This library is not designed specifically for SIMRES and can be used to build Java GUI's for other applications as well.  
-- `simresCON`: Console user interface for SIMRES providing all functions to run and communicate with SIMRES core application, simulation project managment, scripting and top level control of the simulaiton process. The SIMRES core application is executed as a process, which communicates with `simresCON` through the console IO. This package encapsulates all non-graphical functions of simres UI.  
-- `simresGUI`: An extension of `simresCON`, which adds graphical user interface, including property editors, script editor, 3D instrumet viewer (using Java3D library), project editor, simulation control and command editors etc. 
+- `simresCON`: Console user interface for SIMRES providing functions for launching and communicating with the SIMRES core application, setting up the simulation projects, scripting and top level control of the simulation process. The SIMRES core application is executed as a process which communicates with `simresCON` through the console IO. This package encapsulates all non-graphical functions of the Simres user interface.  
+- `simresGUI`: An extension of `simresCON`, which adds graphical user interface, including property editors, script editor, 3D instrument viewer (using the Java3D library), project editor, simulation control and command editors, etc.
 
 *See also*:  
 SIMRES repository: https://github.com/saroun/simres  
@@ -12,25 +12,32 @@ SIMRES homepage: http://neutron.ujf.cas.cz/restrax
 SIMRES user guide: http://neutron.ujf.cas.cz/restrax/download/simres-guide.pdf
 
 ---------------------------
+
+## Terms of use
+See the license conditions in the attached file LICENSE.
+
 ## Requirements
+### Java3D
 
-`Java3D` is required to run simnres GUI with 3D visualization of the instrument model. Java3D is system dependent. It is not part of the SIMRES source distribution, but should be found in the ./GUI/j3d-jre subdirectory of the binary distribution for given platform. Recent Java3D packages can be obtained at https://jogamp.org/deployment/java3d/. 
+`Java3D` is required to run simnres GUI with 3D visualization of the instrument model. Java3D is not part of the SIMRES source distribution. Recent Java3D packages can be obtained at  
+https://jogamp.org/deployment/java3d/  
+Required packages are `j3dcore.jar`, `vecmath.jar`, and `j3dutils.jar`. For the version 1.7, they are available at 
+https://jogamp.org/deployment/java3d/1.7.0-final/jogamp-java3d1.7.0-final.7z.
 
-The path to the java3D distribution for given platform has to be defined in `build.properties`. Both 32 and 64 bit Windows and Linux systems are supported by the simresUI build scripts. An example for Windows-x86_64:  
+Java3D is built on the `jogamp` package, which is also required. Get the `jogamp-fat.jar` package at https://jogamp.org/deployment/jogamp-current/archive/jogamp-fat-all.7z.
 
-- copy the java-3d distribution to `./Java3D/j3d-1_5_2-windows-amd64` 
-- in `build.properties`, set `j3d_win64=Java3D/j3d-1_5_2-windows-amd64`  
+Extract all the four jar files so that they are all in the same subdirectory, `./Java3D/j3d-jogamp`.
 
-Note that the current version assumes that the Java3D jar files are placed in `[j3d]/lib/ext`, where `[j3d]` is the path to Java3D defined in `build.properties`. The system dependent shared librarties should then be placed in `[j3d]/bin` for Windows (both 32 and 64 bit), or in `[j3d]/lib/amd64` and `[j3d]/lib/i386` for Linux 64 and 32 bit, respectively.
+This is the default path to Java3D defined in the file `build.properties` as the property `java3d=Java3D/j3d-jogamp`. If you decide to use another Java3D implementation, this property has to be changed so that it points to the folder with your Java3D jar files. 
 
 ## How to build the package
 
-Use Apache Ant builder: 
+Use the Apache Ant builder: 
 `ant -Ddest=[destination directory]`
 
-from the package root directory. This command will compile and create jar files and copy dependences (Java3D) to the [*destionation directory*]. The argument is optional, default destination directory is `./dest`. 
+from the package root directory. This command will compile and create jar files and copy dependences (Java3D) to the [*destionation directory*]. This argument is optional, the default destination directory is `./dist`. 
 
 Run `ant -p` to see other available targets.
 
-When deploying SIMRES, contents of the destination directory should be copied to the ./GUI directory of the SIMRES distribution. 
+When deploying SIMRES, the contents of the destination directory should be copied to the ./GUI subdirectory of the SIMRES distribution. 
 

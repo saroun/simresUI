@@ -1,26 +1,9 @@
 --------------------------------------------------------------------
-R E S T R A X GUI
-User interface for RESTRAX
-Copyright (C) 1997-2013 Jan Saroun and Jiri Svobnoda
+S I M R E S  GUI
+User interface for SIMRES
+Copyright (c) 1997-2020 Jan Saroun and Jiri Svobnoda
 Nuclear Physics Institute, Rez, Czech Republic, saroun@ujf.cas.cz
----------------------------------------------------------------------
-Terms of this copyright agreement apply to the two programs distributed 
-in the RESTRAX package (see http://neutron.ujf.cas.cz/restrax) including 
-the provided source code. 
-
-RESTRAX
-packed in restraxGUI.jar
-Monte Carlo simulation and data analysis for three-axis neutron spectrometers
-
-SIMRES
-packed in simresGUI.jar and simresCON.jar
-Monte Carlo ray-tracing simulation of neutron scattering instruments
-
-Important!
-Other terms may apply for the 3rd party codes supplied with this package 
-- consult the references given in the section  "Code written by other authors" below.
 ----------------------------------------------------------------------
-
 This software package may be used and distributed under the following terms:
 
     This program is free software; you can redistribute it and/or
@@ -38,31 +21,25 @@ This software package may be used and distributed under the following terms:
 
 The text of this license is given below.
 
-==============================
+----------------------
 Additional Copyrights
-==============================
+----------------------
 
 Any file that is explicitly marked as "public domain" is free from any
 restriction on distribution.  
 
 Any file that has a explicit copyright notice may be distributed under
-the terms of both the GPL and whatever stated conditions accompany the
-copyright.
+the terms of both the GNU General Public License and whatever stated 
+conditions accompany the copyright.
 
-==============================
-Code written by other authors
-==============================
+------------------------------
+Code written by other authors:
+------------------------------
 
 JAMA : A Java Matrix Package
------------------------------
-source: http://math.nist.gov/javanumerics/jama/
-Copyright Notice: 
-This software is a cooperative product of 
-The MathWorks and the National Institute of Standards and Technology (NIST) 
-which has been released to the public domain. Neither The MathWorks nor 
-NIST assumes any responsibility whatsoever for its use by other parties, 
-and makes no guarantees, expressed or implied, about its quality, 
-reliability, or any other characteristic. 
+embedded in ./simresCON/src/Jama 
+see http://math.nist.gov/javanumerics/jama/
+Licence: public domain
 
 =======================================================================
 		    
@@ -407,4 +384,4 @@ consider it more useful to permit linking proprietary applications with the
 library.  If this is what you want to do, use the GNU Library General
 Public License instead of this License.
 -----------------------------------------------------------------------------
-$Id: COPYRIGHT.txt,v 1.1 2013/02/07 15:46:10 saroun Exp $
+
