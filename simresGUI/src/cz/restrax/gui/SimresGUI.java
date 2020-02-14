@@ -330,7 +330,7 @@ public class SimresGUI extends SimresCON {
 //                                  GUI
 //////////////////////////////////////////////////////////////////////////////////////////	
 
-	public void showHelpWindow(String item) {
+	private void showHelpWindow(String item) {
 		if (helpWindow == null) {
 			helpWindow = new HelpWindow(this);
 			helpWindow.setPreferredSize(new Dimension(300,600));

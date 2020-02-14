@@ -2,7 +2,6 @@ package cz.restrax.gui.windows;
 
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
@@ -14,23 +13,18 @@ import javax.swing.ButtonModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextPane;
 import javax.swing.WindowConstants;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import cz.jstools.classes.definitions.Constants;
-import cz.jstools.util.WinHyperlinkListener;
-import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.components.ProjectsComboBox;
 import cz.restrax.gui.resources.Resources;
 import cz.restrax.sim.ProjectList;
 import cz.restrax.sim.RsxProject;
-import cz.restrax.sim.Version;
 
 /**
  * This class opens a startup dialog, where user can choose a project

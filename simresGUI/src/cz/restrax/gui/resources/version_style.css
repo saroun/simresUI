@@ -3,4 +3,4 @@ body { background-color: #E7E7EC; }
 img.label {float:right;padding:8px;margin-left:8px;}
 p {font-size:12pt;}
 h1 {padding-bottom:0px;margin-bottom:0px;}
-td {text-align:left;}
+td {text-align:left;margin:0px;padding-top:0px;padding-bottom:0px;}

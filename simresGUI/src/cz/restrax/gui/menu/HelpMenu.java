@@ -1,23 +1,26 @@
 package cz.restrax.gui.menu;
 
-import java.awt.Frame;
+import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.net.URL;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
 import cz.restrax.gui.Actions;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.windows.AboutGui;
-import cz.restrax.gui.windows.AboutRestrax;
+import cz.restrax.sim.utils.FileTools;
 
 public class HelpMenu extends JMenu {
   private static final long serialVersionUID = 1L;
   private JMenuItem  mitAboutGUI  = null;
-  private JMenuItem  mitAboutRes  = null;
   private JMenuItem  mitSysInfo  =  null;
   private JMenuItem  mitDebug  =  null;  
+  private JMenuItem mitHelp =  null;  
   private final SimresGUI program;
   public HelpMenu(SimresGUI program) {
 	  super();
@@ -26,7 +29,8 @@ public class HelpMenu extends JMenu {
 	//  add(getMitAboutRes());
 	  add(getMitAboutGUI());
 	  add(getMitSysInfo());
-	  add(getMitDebug());
+	 // add(getMitDebug());
+	  add(gethelp());
   }
   private JMenuItem getMitDebug() {
 		if (mitDebug == null) {
@@ -44,6 +48,26 @@ public class HelpMenu extends JMenu {
 		}
 		return mitSysInfo;
   }
+  private JMenuItem gethelp() {
+		if (mitHelp == null) {
+			mitHelp = new JMenuItem();
+			mitHelp.setText("Help");
+			mitHelp.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					String instdir = "file://"+FileTools.getRestraxPath()+"/doc/simres-guide.pdf";
+					instdir = instdir.replace(File.separator, "/");
+					try {
+						URL u = new URL(instdir);
+						Desktop.getDesktop().browse(u.toURI());
+					} catch (Exception e1) {
+						JOptionPane.showMessageDialog(null, "Can''t open " + instdir, "Error", JOptionPane.ERROR_MESSAGE);
+					}
+				}
+			});
+		}
+		return mitHelp;
+  }
+  
   private JMenuItem getMitAboutGUI() {
 		if (mitAboutGUI == null) {
 			mitAboutGUI = new JMenuItem();
@@ -56,20 +80,6 @@ public class HelpMenu extends JMenu {
 			});
 		}
 		return mitAboutGUI;
-  }
-	
-  private JMenuItem getMitAboutRes() {
-		if (mitAboutRes == null) {
-			mitAboutRes = new JMenuItem();
-			mitAboutRes.setText("About SIMRES");
-			mitAboutRes.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					AboutRestrax aboutRestrax = new AboutRestrax(program);
-					aboutRestrax.setVisible(true);
-				}
-			});
-		}
-		return mitAboutRes;
   }
 	
 }

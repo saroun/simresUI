@@ -3,6 +3,7 @@ package cz.restrax.gui.windows;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.io.File;
 
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
@@ -12,13 +13,19 @@ import cz.jstools.util.WinHyperlinkListener;
 import cz.restrax.gui.SimresGUI;
 import cz.restrax.gui.resources.Resources;
 import cz.restrax.sim.Version;
+import cz.restrax.sim.utils.FileTools;
 
+/**
+ * Actual content of the About dialog, encapsulated in CopyrightPane.
+ *
+ */
 public class VersionPane extends JPanel {
 	private static final long serialVersionUID = 7764203301479419728L;
 
 	public VersionPane() {
 		JTextPane ver = new JTextPane();
 		Resources.class.getClassLoader();
+		ver.setPreferredSize(new Dimension(400,200));
 		ver.setContentType("text/html; charset=UTF-8");
 		ver.setEditable(false);
 		ver.setBackground(new Color(231,231,236));
@@ -37,12 +44,16 @@ public class VersionPane extends JPanel {
 	public static String getContentBody() {
 		String temp=Resources.getText("version_template.html");
 		String ico=Resources.getResource("images/simres_64.png").toString();
-		String dat=Version.BUILD.replaceAll("[$]","");		
+		String dat=Version.BUILD.replaceAll("[$]","");	
+		String instdir=FileTools.getRestraxPath();
+		//instdir.replace("\\", "/");
+		instdir = instdir.replace(File.separator, "/");
 		String html;
 		html = temp.replaceAll("[$]PROGRAM_NAME[$]", SimresGUI.PROGRAM_NAME);
 		html = html.replaceAll("[$]VERSION[$]", Version.VERSION);
 		html = html.replaceAll("[$]ICON[$]", ico);
 		html = html.replaceAll("[$]VERSION_DATE[$]",dat);	
+		html = html.replaceAll("[$]INSTDIR[$]",instdir);	
 		return html;
 	}
 	

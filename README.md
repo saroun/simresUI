@@ -21,14 +21,18 @@ See the license conditions in the attached file LICENSE.
 
 `Java3D` is required to run simnres GUI with 3D visualization of the instrument model. Java3D is not part of the SIMRES source distribution. Recent Java3D packages can be obtained at  
 https://jogamp.org/deployment/java3d/  
-Required packages are `j3dcore.jar`, `vecmath.jar`, and `j3dutils.jar`. For the version 1.7, they are available at 
+Required packages are `org.jogamp.j3d` and `org.jogamp.vecmath` embeded in the archives  `j3dcore.jar`, `vecmath.jar`, and `j3dutils.jar`. For the version 1.7, they are available at 
 https://jogamp.org/deployment/java3d/1.7.0-final/jogamp-java3d1.7.0-final.7z.
 
-Java3D is built on the `jogamp` package, which is also required. Get the `jogamp-fat.jar` package at https://jogamp.org/deployment/jogamp-current/archive/jogamp-fat-all.7z.
+Java3D depends on the package `com.jogamp`, which is also required. Get the `jogamp-fat.jar` archive at https://jogamp.org/deployment/jogamp-current/archive/jogamp-fat-all.7z.
 
 Extract all the four jar files so that they are all in the same subdirectory, `./Java3D/j3d-jogamp`.
 
-This is the default path to Java3D defined in the file `build.properties` as the property `java3d=Java3D/j3d-jogamp`. If you decide to use another Java3D implementation, this property has to be changed so that it points to the folder with your Java3D jar files. 
+This is the default path to Java3D defined in the file `build.properties` as the property `java3d=Java3D/j3d-jogamp`. If you decide to use another path for Java3D files, this property has to be changed so that it points to the right folder. 
+
+Source code repositories for java3D and jogamp:  
+<https://jogamp.org/cgit/java3d/>.  
+<https://jogamp.org/cgit/jogl.git>
 
 ## How to build the package
 

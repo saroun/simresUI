@@ -54,7 +54,7 @@ public class AboutGui extends JDialog {
 	//////////////////////////////////////////////////////////////////////////////////////////
 	private void initialize() {
 		this.setResizable(true);
-		this.setPreferredSize(new Dimension(450,520));
+		this.setPreferredSize(new Dimension(450,550));
 		this.setTitle("About");
 		this.setContentPane(getPnlContentPane());
 	//	this.setLocation(new java.awt.Point(0,0));
