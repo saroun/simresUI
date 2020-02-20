@@ -48,6 +48,7 @@ public class VersionPane extends JPanel {
 		String instdir=FileTools.getRestraxPath();
 		//instdir.replace("\\", "/");
 		instdir = instdir.replace(File.separator, "/");
+		instdir = instdir.replace(" ", "%20");
 		String html;
 		html = temp.replaceAll("[$]PROGRAM_NAME[$]", SimresGUI.PROGRAM_NAME);
 		html = html.replaceAll("[$]VERSION[$]", Version.VERSION);

@@ -1,6 +1,8 @@
 package cz.jstools.util;
 
 import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 import javax.swing.JOptionPane;
@@ -16,6 +18,7 @@ public class WinHyperlinkListener implements HyperlinkListener {
 			} catch (Exception e1) {
 				if (u!=null) { 
 					System.out.println(u.toString());
+					e1.printStackTrace();
 				} else { 
 					System.out.println(evt.getDescription());
 				}
