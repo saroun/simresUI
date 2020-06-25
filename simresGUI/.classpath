@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry excluding="obsolete/" including="cz/" kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/JSTools"/>

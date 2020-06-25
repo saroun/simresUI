@@ -23,5 +23,8 @@ build.number
 Java3D
 dist
 
+# Eclipse specific settings
+*/.settings
 
 
+ 
