@@ -7,7 +7,10 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Vector;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -79,6 +82,16 @@ public class ProcessRunnable implements Runnable {
 		return new WriteRunnable(conOut, sendQueue);
 	}
 	
+	
+	public static void printMap(Map<String, String> mp) {
+	    Iterator<Entry<String, String>> it = mp.entrySet().iterator();
+	    while (it.hasNext()) {
+	    	Entry<String, String> pair = (Entry<String, String>)it.next(); 
+	        System.out.println(pair.getKey() + " = " + pair.getValue());
+	        it.remove(); // avoids a ConcurrentModificationException
+	    }
+	}
+	
 	/**
 	 * Starts given process using ProcessBuilder and the command defined in the provided launcher.
 	 * Then reads process output stream and distributes it to the receivers defined in the launcher
@@ -99,7 +112,10 @@ public class ProcessRunnable implements Runnable {
 		processBuilder.redirectErrorStream(true);
 		if (launcher.getWorkingDir() != null) processBuilder.directory(launcher.getWorkingDir());
 		Map<String,String> processEnv = processBuilder.environment();
+		System.out.println("Launch with environment variables:");
 		if (launcher.getEnvVariables() != null) {
+			Map<String, String> myenv = launcher.getEnvVariables();
+			printMap(myenv);
 			processEnv.putAll(launcher.getEnvVariables());
 		}
 		try {

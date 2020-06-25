@@ -99,6 +99,7 @@ public class SimresGUI extends SimresCON {
 //////////////////////////////////////////////////////////////////////////////////
 	protected SimresGUI() {
 		super(false);
+		INI_FILE_NAME = "restraxGUI.ini";
 		statusMonitor = new Timer(true);
 	}
 	

@@ -58,7 +58,7 @@ import cz.restrax.sim.xml.writer.TasConfigXmlExport;
  * SIMRES main class. The is the container for all class instances which are active
  * during program execution. Starts kernel process.
  * 
- * @author   Jan Saroun Svoboda, Jan Saroun
+ * @author   Jiri Svoboda, Jan Saroun
  * @version  <dl><dt>$Name: HEAD $</dt>
  *               <dt>$Revision: 1.55 $</dt>
  *               <dt>$Date: 2019/07/10 18:42:32 $</dt></dl>
@@ -69,7 +69,6 @@ public class SimresCON {
 	//////////////////////////////////////////////////////////////////////////////////////////
 	public static final String    PROGRAM_NAME      = "SIMRES";
 	public static final String    PROGRAM_XML_TAG   = "SIMRES";
-	public static final String    STARTUP_FILE_NAME = "restraxGUI.ini";
 	public static final String    LOG_FILE_NAME     = "%h/.simres/simres.log";  //  %h ---   Logger shortcut: user home directory
 	public static final boolean   DEF_LOG = false;	
 	
@@ -147,9 +146,11 @@ public class SimresCON {
 	protected StrainTables strainTables;
 	private SimresExecutor executor;
 	private final WorkerThread worker;
-	
+	protected String INI_FILE_NAME;
+
 
 	public SimresCON(boolean runOnce) {	
+		INI_FILE_NAME = "restraxCON.ini";
 		this.runOnce=runOnce;
 		this.version = new Version(this);
 		this.status= new SimresStatus();
@@ -314,7 +315,7 @@ public class SimresCON {
 	// construct full path to restraxCON.ini
 		String startupFileName=null;
 		try {
-			startupFileName=URLDecoder.decode(commandOptions.guiPath + File.separator + STARTUP_FILE_NAME, "UTF-8");
+			startupFileName=URLDecoder.decode(commandOptions.guiPath + File.separator + INI_FILE_NAME, "UTF-8");
 		} catch (UnsupportedEncodingException e1) {
 			e1.printStackTrace();
 		}
