@@ -6,13 +6,12 @@ import cz.jstools.classes.definitions.Utils;
 import cz.jstools.tasks.ProcessLauncher;
 import cz.jstools.tasks.ProcessRunnable;
 import cz.jstools.tasks.WriteRunnable;
-import cz.jstools.tasks.WriteRunnable.CommandsToSend;
 
 public class RestraxRunnable extends ProcessRunnable {
 	private static final boolean  __DEBUG__       = false;
 	
-	public RestraxRunnable(ProcessLauncher launcher) {
-		super(launcher);
+	public RestraxRunnable(ProcessLauncher launcher, boolean runOnce) {
+		super(launcher,runOnce);
 	}
 	
 	/**

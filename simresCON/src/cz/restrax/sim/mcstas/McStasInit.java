@@ -68,7 +68,7 @@ public class McStasInit extends TaskRunnable {
 		}
 		launcher.addProcessParameter("-h");
 		launcher.addReceiver(new Receiver());
-		ProcessRunnable p = new ProcessRunnable(launcher);
+		ProcessRunnable p = new ProcessRunnable(launcher, program.isRunOnce());
 		p.run();
 		if (p.getResult() == ProcessRunnable.RESULT_OK) {
 			if (buffer==null || buffer.size()<1) {

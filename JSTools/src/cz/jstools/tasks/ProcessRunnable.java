@@ -45,12 +45,14 @@ public class ProcessRunnable implements Runnable {
 	private final AtomicInteger result;
 	private final AtomicBoolean active;
 	private final ProcessLauncher launcher;
+	private final boolean runOnce;
 	private final LinkedBlockingQueue<String> receiveQueue;
 	protected final LinkedBlockingQueue<CommandsToSend> sendQueue;
 	
-	public ProcessRunnable(ProcessLauncher launcher) {			
+	public ProcessRunnable(ProcessLauncher launcher, boolean runOnce) {			
 		active = new AtomicBoolean(false);
 		this.launcher = launcher;
+		this.runOnce = runOnce;
 		process = null;
 		conIn = null;
 		conOut = null;
@@ -191,6 +193,10 @@ public class ProcessRunnable implements Runnable {
 			System.out.format("Process '%s' gets stuck in memory...\n",launcher.getProcessCommand().elementAt(0));
 		} else {
 			System.out.format("Process '%s' ended...\n",launcher.getProcessCommand().elementAt(0));
+			// Make sure the calling process exits if runOnce==True
+			if (runOnce) {
+				System.exit(0);
+			}
 		}
 	}
 	

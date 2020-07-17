@@ -325,9 +325,7 @@ public class ProjectList extends ArrayList<RsxProject> {
 	}
 	
 	/**
-	 * Save the list to XML file.
-	 * Use default file in home directory (HOME/.simres/current_project.xml) if fileName=null or "".
-	 * @param fileName
+	 * Save the list back to XML file.
 	 */
 	public void saveAll() {
 		if (projectListFile!=null && projectListFile.length()>0) {

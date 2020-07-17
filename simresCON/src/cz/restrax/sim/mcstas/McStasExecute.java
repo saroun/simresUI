@@ -98,7 +98,7 @@ public class McStasExecute extends TaskRunnable {
 		if (receiver != null) {
 			launcher.addReceiver(receiver);
 		}
-		proc = new ProcessRunnable(launcher);
+		proc = new ProcessRunnable(launcher, program.isRunOnce());
 		if (cleanOutdir) {
 			cleanDesination();
 		}

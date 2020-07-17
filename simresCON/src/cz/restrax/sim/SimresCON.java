@@ -123,7 +123,7 @@ public class SimresCON {
 // list of PGPLOT devices (provided by kernel)
 	protected GraphicsDevices	graphicsDevices    = null;
 // status variables	
-	protected final boolean runOnce;	
+	private final boolean runOnce;	
 	
 	/*
 	protected volatile boolean isMCRunning=false;
@@ -808,7 +808,7 @@ public class SimresCON {
 		restraxParser = new RestraxParser(this);
 		restraxLauncher.addReceiver(restraxParser);
 	// create RestraxRunnable
-		restraxProcess = new RestraxRunnable(restraxLauncher);
+		restraxProcess = new RestraxRunnable(restraxLauncher, runOnce);
 		
 	// not yet ready - must wait for handshake (VERSION info from RESTRAX)
 		status.setPhase(Phase.Starting);
