@@ -21,7 +21,7 @@ import cz.restrax.sim.SimresStatus.Phase;
  *               <dt>$Date: 2019/07/10 18:42:32 $</dt></dl>
  */
 public class RsxdumpExh implements CallBackInterface {
-	public static final boolean  __DEBUG__ = true;
+	public static final boolean  __DEBUG__ = false;
 	public static final String  ENAME = "RSXDUMP";
 	protected XmlUtils    xml     = null;
 	protected SimresCON  program = null;
