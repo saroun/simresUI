@@ -7,8 +7,8 @@ import java.util.jar.Attributes;
 import java.util.jar.Manifest;
 
 public class Version {	
-	public  static String    VERSION           = "6.5.0";
-	public  static String    BUILD             = "$Date: 2019/12/06 17:58:11 $";
+	public  static String    VERSION           = "6.5.3";
+	public  static String    BUILD             = "$Date: 2021/05/31 18:28:00 $";
 	// RESTRAX versions  compatible with this  GUI 
 	public static final String[] RESVERSIONS =  {"6"};
 
