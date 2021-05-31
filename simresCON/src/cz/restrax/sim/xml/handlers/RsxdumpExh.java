@@ -21,7 +21,7 @@ import cz.restrax.sim.SimresStatus.Phase;
  *               <dt>$Date: 2019/07/10 18:42:32 $</dt></dl>
  */
 public class RsxdumpExh implements CallBackInterface {
-	public static final boolean  __DEBUG__ = false;
+	public static final boolean  __DEBUG__ = true;
 	public static final String  ENAME = "RSXDUMP";
 	protected XmlUtils    xml     = null;
 	protected SimresCON  program = null;
@@ -126,10 +126,12 @@ public class RsxdumpExh implements CallBackInterface {
 				program.getStatus().setPhase(Phase.Closing);
 			} else if (status.equalsIgnoreCase("RUNNING")) {
 				if (__DEBUG__) System.out.println("received "+status+" "+key);
-				program.getStatus().setRunningMC(true);
+				//program.getStatus().setRunningMC(true);
+				program.getStatus().setPhase(Phase.Running);
 			} else if (status.equalsIgnoreCase("READY")) {
 				if (__DEBUG__) System.out.println("received "+status+" "+key);
-				program.getStatus().setRunningMC(false);				
+				//program.getStatus().setRunningMC(false);
+				program.getStatus().setPhase(Phase.Ready);
 			} else if (status.equalsIgnoreCase("NOTIFY")) {
 				if (__DEBUG__) System.out.println("received "+status+" "+key);
 				if (key != null) {

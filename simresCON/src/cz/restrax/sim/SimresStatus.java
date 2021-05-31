@@ -102,16 +102,15 @@ public class SimresStatus {
 	public void setRunningMC(boolean runningMC) {
 		if (this.runningMC.compareAndSet(! runningMC, runningMC)) {
 			changed = true;
-			if (this.runningMC.get()) {
-				phase.set(Phase.Running);
-			}
+			//System.out.format("setRunningMC=%s\n",this.runningMC.get());
+			//if (this.runningMC.get()) {	phase.set(Phase.Running);}
 		}
 	}
 	
 	public void setPhase(Phase phase) {
+		// System.out.format("setPhase=%s\n",phase);
 		Phase p = this.phase.get();
 		if (p != phase) {
-			//System.out.format("Set stauts=%s\n",phase);
 			this.phase.set(phase);
 			changed = true;
 			this.restraxReady.set(
