@@ -25,7 +25,6 @@ import cz.jstools.classes.definitions.IniFile;
 import cz.jstools.classes.definitions.Utils;
 import cz.jstools.classes.xml.ClassesHandler;
 import cz.jstools.tasks.ProcessLauncher;
-import cz.jstools.tasks.ProcessRunnable;
 import cz.jstools.tasks.TaskExecutor;
 import cz.jstools.tasks.TaskRunnable;
 import cz.jstools.util.ConsoleMessages;
@@ -38,7 +37,6 @@ import cz.restrax.sim.SimresStatus.Phase;
 import cz.restrax.sim.commands.Commands;
 import cz.restrax.sim.mcstas.McStas;
 import cz.restrax.sim.opt.SwarmOptimizer;
-//import cz.restrax.sim.proc.RestraxLauncher1;
 import cz.restrax.sim.proc.RestraxParser;
 import cz.restrax.sim.proc.RestraxRunnable;
 import cz.restrax.sim.proc.WorkerThread;
@@ -187,6 +185,7 @@ public class SimresCON {
 		public String htmlLog=null;
 		public String fileLog=null;
 		public String options=null;
+		public Integer test=-1;
 		
 		
 		public CmdLineOptions() {
@@ -228,6 +227,9 @@ public class SimresCON {
 					if (argv[i].equals("-o") && i<argv.length-1) {
 						htmlLog = argv[i+1];
 					}
+					if (argv[i].equals("-test") && i<argv.length-1) {
+						test = Integer.parseInt(argv[i+1]);
+					}
 					if (argv[i].equals("-seed") && i<argv.length-1) {
 						seed = Integer.parseInt(argv[i+1]);
 					}
@@ -245,11 +247,13 @@ public class SimresCON {
 			String out="";
 			out += "Process command line arguments:\n";
 			out += "-g [program config. path]      ; directory with restraxCON.ini file\n";
-			out += "-p [Project config. file]      ; XML file with current project description\n";
+			out += "-p [Project config. file]      ; XML file with current project data (must be in "+FileTools.userSimresHome+")\n";
 			out += "-s [Script]                    ; Script file to be executed on startup\n";
 			out += "-c [Instrument config. file]   ; Instrument config. file in XML format\n";
 			out += "-e [command]                   ; Command to be executed\n";
 			out += "-o [filename]                  ; Results output file in HTML format\n";
+			out += "-seed [int]                    ; Explicit seed for the random number generator\n";
+			out += "-test [int]                    ; Run a test from the list defined in ./tests/test_projects.xml\n";
 			out += "-q                             ; quiet (no console output)\n";
 			out += "-log [filename]                ; print console output to the given file\n";
 			System.out.print(out);
@@ -288,10 +292,12 @@ public class SimresCON {
 	 * -c [Instrument config. file]     ; Instrument config. file in XML format <BR />
 	 * -e [command]                     ; Command to be executed <BR />
 	 * -o [filename]                    ; Results output file in HTML format<BR />
+	 * -seed [int]                    ; Explicit seed for the random number generator<BR />
 	 * -q                             ; quiet (no console output<BR />
 	 * -log [filename]                ; print console output to the given file<BR />
+	 * @throws Exception 
 	 */
-	protected void processCommandLine() {
+	protected void processCommandLine() throws Exception {
 // get GUI installation path and ini file
 		//String guiPath = null;
 		//String projFile=null;
@@ -306,9 +312,9 @@ public class SimresCON {
 		
 		printGreetings();
 	// set values not defined by command line options
-		if (commandOptions.guiPath == null ) commandOptions.guiPath = getInstallationDir();
+		if (commandOptions.guiPath == null ) commandOptions.guiPath = getGUIInstallationDir();
 		if (commandOptions.projFile == null ) {
-			commandOptions.projFile = FileTools.userProjectsFilename;
+			commandOptions.projFile = FileTools.userProjectsList;
 		} else {
 			commandOptions.projFile = FileTools.userSimresHome+File.separator+commandOptions.projFile;
 		}
@@ -323,14 +329,29 @@ public class SimresCON {
 		iniFile = new IniFile(startupFileName);		
 // create FileTools class using data from iniFile
 		String prgPath = iniFile.getNonNullValueOrDie("restrax", "install_dir");
-		fileTools=new FileTools(commandOptions.guiPath,new File(prgPath).getPath());			
-// set default project configuration from demos		
-		getProjectList().addAsCurrent(getDemoProjectList().getCurrentProject());
-// read user project list
-		// for backward compatibility ...
-		getProjectList().readProjectList(FileTools.currentProjectFilename, true);
-		// this will override previous, if projFile exists
-		getProjectList().readProjectList(commandOptions.projFile, true);		
+		fileTools=new FileTools(commandOptions.guiPath, new File(prgPath).getPath());
+		
+		
+// test option was set:
+// load the project list from tests directory and set the chosen test as current
+		if (commandOptions.test>=0) {
+			projectList = createTestProjectList();
+			try {
+				RsxProject proj = projectList.get(commandOptions.test);
+				projectList.setAsCurrent(proj);
+			} catch (Exception e) {
+				throw new Exception("Requested test number not defined in "+projectList.getProjectListFile());
+			}
+		} else {
+// define standard project list 
+	// set default project configuration from demos		
+			getProjectList().addAsCurrent(getDemoProjectList().getCurrentProject());
+	// read user project list
+			// for backward compatibility ... tries to load current_project.xml from user home/.simres
+			getProjectList().readProjectList(FileTools.currentProjectsList, true);
+			// this will override previous, if projFile exists
+			getProjectList().readProjectList(commandOptions.projFile, true);
+		}
 // set valid output file for loggers (use current project output path)
 		if (commandOptions.fileLog!=null) {
 			String fname = getProjectList().getFullPath(ProjectList.PROJ_OUT, commandOptions.fileLog);
@@ -372,15 +393,21 @@ public class SimresCON {
 		getResultsLog().setEcho(false);
 // create Messages logger
 		messages = new ConsoleMessages(getResultsLog(),false);
-// process command line parameters
-// also creates iniFile and fileTools
-		processCommandLine();	
-// read classes definitions
-		readClasses();
-// create and read default Options and Commands		
-		readDefaultCommands();					
-// create default components
-		readDefaultComponents();	
+		try {
+			// process command line parameters
+			// also creates iniFile and fileTools
+			processCommandLine();
+			// read classes definitions
+			readClasses();
+			// create and read default Options and Commands		
+			readDefaultCommands();					
+			// create default components
+			readDefaultComponents();	
+		} catch (Exception e) {
+			getMessages().errorMessage("Initialization error:\n"+e.getMessage(), "high", "SimresCON");
+			System.err.print("Initialization error:\n"+e.getMessage());
+		    Terminate();
+		}
 // create Instrument data
 		spectrometer  = new Instrument(this);
 		spectrometer.loadXmlOrDie(getProjectList().getCurrentFileConfig());
@@ -563,10 +590,10 @@ public class SimresCON {
 
 		
 	/**
-	 * Get the absolute path name to the executable class (or jar file)
+	 * Get the absolute path to the directory which contains the executable class (or jar file)
 	 * @return
 	 */
-	protected String getInstallationDir() {
+	protected String getGUIInstallationDir() {
 		String loc = this.getClass().getResource(this.getClass().getSimpleName()+".class").toString();
 		getMessages().debugMessage("installation dir = %s",new Object[]{loc});
 		File f = null;
@@ -1151,6 +1178,10 @@ public class SimresCON {
 		return options;
 	}
 
+	public CmdLineOptions getCommandOptions() {
+		return commandOptions;
+	}
+
 	public ClassDataCollection getDefaultComponents() {
 		return defaultComponents;
 	}
@@ -1222,7 +1253,7 @@ public class SimresCON {
 
 	public ProjectList getProjectList() {
 		if (projectList==null) {
-			projectList = new ProjectList(FileTools.userProjectsFilename);
+			projectList = new ProjectList(FileTools.userProjectsList, null, false);
 		}
 		return projectList;
 	}
@@ -1238,12 +1269,30 @@ public class SimresCON {
 			HashMap<String, String> map = new HashMap<String, String>();
 			map.put("~INSTALL~", FileTools.getRestraxPath());
 			map.put("~OUTPATH~", FileTools.getUserDocumets());
-			demoProjects = new ProjectList(map);
+			map.put("~TEMP~", FileTools.userSimresTemp);
+			demoProjects = new ProjectList("", map, true);
 			demoProjects.readProjectListRsc("demo_projects.xml");
 		}
 		return demoProjects;
 	}
 
+	public ProjectList createTestProjectList() throws Exception {
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("~TESTS~", FileTools.getTestPath());
+		map.put("~INSTALL~", FileTools.getRestraxPath());
+		map.put("~OUTPATH~", FileTools.getUserDocumets());
+		map.put("~TEMP~", FileTools.userSimresTemp);
+		String fname = FileTools.getTestProjects();		
+		File f = new File(fname);
+		ProjectList plist = null;
+		if (f.exists() && f.canRead()) {
+			plist = new ProjectList("", map, true);
+			plist.readProjectList(fname, false);
+		} else {
+			throw new Exception("Cannot open list of tests: "+fname);
+		}
+		return plist;
+	}
 
 	public Script getScript() {
 		if (script==null) {
@@ -1271,12 +1320,6 @@ public class SimresCON {
 	public ShutdownHook getShutdownHook() {
 		return shutdownHook;
 	}
-
-
-	public CmdLineOptions getCommandOptions() {
-		return commandOptions;
-	}
-
 
 	public SimresExecutor getExecutor() {
 		if (executor==null) {

@@ -13,16 +13,9 @@ import cz.restrax.sim.utils.FileTools;
 import cz.restrax.sim.xml.reader.ProjectsHandler;
 import cz.restrax.sim.xml.writer.ProjectXmlExport;
 
+
 /**
- * @author User
- *
- */
-/**
- * @author User
- *
- */
-/**
- * @author User
+ * List of RsxProject objects with project setting data.
  *
  */
 public class ProjectList extends ArrayList<RsxProject> {
@@ -51,29 +44,40 @@ public class ProjectList extends ArrayList<RsxProject> {
 	//private RsxProject cproj=null;
 	private int curr=-1;
 	
- 	public ProjectList() { 	
-  		this.projectListFile="";
-  	}
- 	
-  	// private final ArrayList<RsxProject>  projects;
-  	public ProjectList(String projectListFile) { 	
-  		this.projectListFile=projectListFile;
-  	}
+	private final boolean testList;
 	
-  	/**
-  	 * @param map hash map for substitution of variables in path names
-  	 */
-  	public ProjectList(HashMap<String,String> map) { 
-  		this("");
-  		this.map=map;
-  	}
+ 	
   	
   	/**
-  	 * @param map hash map for substitution of variables in path names
+  	 * 
+  	 * Set <em>projectListFile</em> empty to prevent saving in user's home/.simres directory.
+  	 * 
+  	 * @param projectListFile file name to be used for input/output
+  	 * @param map hash map for substitution of variables in path names (can be null)
+  	 * @param isTest True if the list is treated as a list of tests (does not save on exit) 
+  	 */
+  	public ProjectList(String projectListFile, HashMap<String, String> map, boolean isTest) { 
+  		this.projectListFile=projectListFile;
+  		this.map=map;
+  		this.testList = isTest;
+  	}
+  	
+  	
+  	/**
+  	 * Calls ProjectList("", null, false)
+  	 */
+ 	public ProjectList() { 	
+ 		this("", null, false);
+  	}
+  	
+  	
+  	/**
+  	 * Calls ProjectList("", null, false) and assigns provided list.
+  	 *
+  	 * @param list ProjectList to assign data from
   	 */
   	public ProjectList(ProjectList list) { 
-  		this("");
-  		this.map=list.map;
+  		this("", null, false);
   		if (list != null) assign(list);
   	}
   	
@@ -87,6 +91,7 @@ public class ProjectList extends ArrayList<RsxProject> {
   			curr=list.curr;
   			get(getCurr()).setCurrent(true);
   			projectListFile=list.projectListFile;
+  			map = list.map;
   		}  		
   	}
 	
@@ -241,11 +246,12 @@ public class ProjectList extends ArrayList<RsxProject> {
 	public void setAsCurrent(RsxProject proj) {
 		int iproj = indexOf(proj);
 		if (iproj<0 || iproj>=size()) {
-			System.err.printf("setAsCurrent, not on the list: %s\n",proj.getDescription());
+			System.err.printf("setAsCurrent, project not on the list: %s\n",proj.getDescription());
 		} else {
 			curr=iproj;
 			FileTools.createProjectPaths(proj);
-		}		
+		}
+		// make sure the current project is unique
 		for (int i=0;i<size();i++) {
 			get(i).setCurrent(i==curr);
 		}				
@@ -312,6 +318,7 @@ public class ProjectList extends ArrayList<RsxProject> {
 	 * @param fileName
 	 */
 	public void saveCurrentProject(String fileName) {
+		if (testList) {return;};
 		File f = new File(fileName);
 		RsxProject cproj=getCurrentProject();
 		if ((! f.exists() || f.canWrite()) && cproj!=null) {
@@ -328,20 +335,19 @@ public class ProjectList extends ArrayList<RsxProject> {
 	 * Save the list back to XML file.
 	 */
 	public void saveAll() {
+		if (testList) {return;};
 		if (projectListFile!=null && projectListFile.length()>0) {
-		File f = new File(projectListFile);
-		if (! f.exists() || f.canWrite()) {
-			String fileContent = ProjectXmlExport.exportListToXml(this,true);
-			try {
-				Utils.writeStringToFile(f, fileContent);
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			}				
-		}
+			File f = new File(projectListFile);
+			if (! f.exists() || f.canWrite()) {
+				String fileContent = ProjectXmlExport.exportListToXml(this,true);
+				try {
+					Utils.writeStringToFile(f, fileContent);
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}				
+			}
 		}
 	}
-	
-	
 	
 	/**
 	 * Read the list of projects from a file. Current list is discarded.
@@ -405,6 +411,11 @@ public class ProjectList extends ArrayList<RsxProject> {
 
 	public String getProjectListFile() {
 		return projectListFile;
+	}
+
+
+	public boolean isTestList() {
+		return testList;
 	}
 
 

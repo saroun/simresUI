@@ -37,7 +37,7 @@ public class ProjectsExh implements CallBackInterface {
 
 	public void startElement(String name, Attributes atts) throws SAXParseException {
 		if (name.equals(ProjectsExh.ENAME)) {
-			mylist=new ProjectList(plist.getProjectListFile());
+			mylist=new ProjectList(plist.getProjectListFile(), plist.getMap(), plist.isTestList());
 		}
 		else if (name.equals("PROJECT")) {
 			xml.forwardToHandler(new ProjectExh(), name, atts);
@@ -64,6 +64,16 @@ public class ProjectsExh implements CallBackInterface {
 	/*"***************************************************************************************
 	*                                    PROJECT HANDLER                                      *
 	*****************************************************************************************/
+	/**
+	 * Handles XML input for a single project settings.
+	 * <p>Attributes:
+	 * <ul>
+	 * <li>	 current [yes|no]: is the current project -> sets the 'current' attribute if setCurrent==true
+	 * <li>	 system [yes|no]: (optional) is a system project -> SIMRES does not create project paths
+	 * <li>	 test [yes|no]: (optional) is a test project -> SIMRES creates only temporary output path
+	 * </ul>
+	 *
+	 */
 	private class ProjectExh implements CallBackInterface {
 
 		private RsxProject prj; // local copy
@@ -74,16 +84,23 @@ public class ProjectsExh implements CallBackInterface {
 		}
 		public void startElement(String name, Attributes atts) throws SAXParseException {		
 			if (name.equals("PROJECT")) {
-				String[]  attNames = {"system","current"};
-				xml.testAttributes(atts, 1, attNames);
+				String sys="no";
+				String test="no";
 				String[]  validVals = {"yes","no"};
-				xml.testAttributes(atts, "system", validVals);
 				xml.testAttributes(atts, "current", validVals);
-				String sys=atts.getValue("system");
 				String cur=atts.getValue("current");
-				current=cur.equals("yes") && setCurrent;
+				current = cur.equals("yes") && setCurrent;
+				if (xml.hasAttribute(atts, "system")) {
+					xml.testAttributes(atts, "system", validVals);
+					sys=atts.getValue("system");
+				}
+				if (xml.hasAttribute(atts, "test")) {
+					xml.testAttributes(atts, "test", validVals);
+					test=atts.getValue("test");
+				}
 				prj = new RsxProject();
 				prj.setSystem(sys.equals("yes"));
+				prj.setTest(test.equals("yes"));
 			}
 			else if (name.equals("CFGPATH") ||
 					name.equals("DATPATH") ||

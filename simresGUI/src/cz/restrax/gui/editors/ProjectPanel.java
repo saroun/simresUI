@@ -323,7 +323,7 @@ public void reset() {
  * Validates input in the project panel. Show error message of not OK.
  * @return true if OK
  */
-public boolean validateInput() {
+protected boolean validateInput() {
 	RsxProject prj = createFromPanel();
 	FileTools.createProjectPaths(prj);
 	int err=prj.validate();

@@ -34,6 +34,7 @@ public class RsxProject {
 	private String description;
 	private boolean system;	
 	private boolean current;
+	private boolean test;
 	private final int uniqueID;
 	private static int ordNum=0;
 	
@@ -41,6 +42,7 @@ public class RsxProject {
 		super();
 		system=false;
 		current=false;
+		test=false;
 		description="New project";
 		ordNum++;
 		uniqueID=ordNum;
@@ -89,7 +91,8 @@ public class RsxProject {
 		this.fileConfig=src.fileConfig;
 		this.description=src.description;	
 		this.system = src.system;
-		this.pathData=src.pathData;		
+		this.pathData=src.pathData;	
+		this.test=src.test;	
 		}
 	}		
 	
@@ -226,6 +229,18 @@ public class RsxProject {
 		res = res &&  (this.pathProject == proj.pathProject);
 		res = res &&  (this.fileConfig == proj.fileConfig);
 		return res;
+	}
+
+
+
+	public boolean isTest() {
+		return test;
+	}
+
+
+
+	public void setTest(boolean test) {
+		this.test = test;
 	}
 	
 	

@@ -227,7 +227,12 @@ public class SimresGUI extends SimresCON {
 	
 	@Override
 	protected void processCommandLine() {
-		super.processCommandLine();
+		try {
+			super.processCommandLine();
+		} catch (Exception e) {
+			System.err.print(e.getMessage());
+			Terminate();
+		}
 //      Look and feel and locale settings
 		String themeStr=iniFile.getValue("gui", "theme");
 		setTheme(RestraxTheme.getThemeFromName(themeStr));

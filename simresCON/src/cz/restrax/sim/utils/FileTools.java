@@ -32,30 +32,39 @@ public class FileTools {
 	private static int IUNI = 10;
 
   	/**
-  	 * filename with default repository = repository.xml
+  	 * file with default repository = repository.xml
   	 */
   	public static final String repositoryFile = "repository.xml";
   	/**
-  	 * filename with project settings = project.xml
+  	 * file with current project settings = project.xml in the project directory
   	 */
   	public static final String projectSettingsFile = "project.xml";  	
+    /**
+     * file with test projects settings = test_projects.xml
+     */
+    public static final  String testListFile="test_projects.xml"; 
   	/**
-  	 * filename with project settings folder (rel. to config path)
+  	 * file with project settings folder (rel. to config path)
   	 */
   	public static final String projectSettingsFolder = ".simres";    	
   	/**
-  	 * users home path (e.g. /home/username/.simres
+  	 * users home path (e.g. /home/username/.simres)
   	 */
   	public static final String userSimresHome=System.getProperty("user.home")+File.separator+".simres";
+  	/**
+  	 * users temporary directory =  (anything returned by java.io.tmpdir)/simres 
+  	 */
+  	public static final String userSimresTemp=System.getProperty("java.io.tmpdir")+File.separator+"simres";  	
     /**
-     * default file with current project parameters 
+     * file with user projects list (obsolete, use userProjectsSettings)
      */
-    public static final  String currentProjectFilename=userSimresHome+File.separator+"current_project.xml"; 
+    public static final  String currentProjectsList=userSimresHome+File.separator+"current_project.xml"; 
     /**
-     * default file with user projects list
+     * file with user projects list
      */
-    public static final  String userProjectsFilename=userSimresHome+File.separator+"user_projects.xml"; 
- 
+    public static final  String userProjectsList=userSimresHome+File.separator+"user_projects.xml"; 
+
+    
   	/**
   	 * Default user's Documents folder, such as C:/users/name/My Documents on Windows
   	 */
@@ -73,8 +82,7 @@ public class FileTools {
   		if (userDocuments==null) {
   			JFileChooser fileChooser = new JFileChooser();
   			userDocuments=fileChooser.getFileSystemView().getDefaultDirectory().toString();
-  			
-  			// userDocuments=fileChooser.getCurrentDirectory().getAbsolutePath();
+  			userDocuments += File.pathSeparator + "simres";
   		}
   		return userDocuments;
   	}
@@ -166,26 +174,38 @@ public class FileTools {
   	 */
   	public static boolean createProjectPaths(RsxProject prj) { 
   		boolean res=true;
-  		if (! prj.isSystem()) {
-  		try {
-  			File f = new File(prj.getPathProject());
-  			if (! f.exists()) f.mkdirs();
-  			f = new File(prj.getPathData());
-  			if (! f.exists()) f.mkdirs();
-  			f = new File(prj.getPathComponent());
-  			if (! f.exists()) f.mkdirs();
-  			f = new File(prj.getPathTables());
-  			if (! f.exists()) f.mkdirs();
-  			f = new File(getFullPath(prj.getPathProject(),projectSettingsFolder));
-  			if (! f.exists()) f.mkdirs();
-  			if (! f.isHidden()) {
-  				Path path = Paths.get(f.getPath());
-  		        //set hidden attribute
-  		        Files.setAttribute(path, "dos:hidden", true, LinkOption.NOFOLLOW_LINKS);
-  			}
-  		} catch (Exception e) {
-  			res = false;
+  		// test project: only create output directory
+  		if (prj.isTest()) {
+			try {
+	  			File f = new File(prj.getPathOutput());
+	  			if (! f.exists()) f.mkdirs();
+	 		} catch (Exception e) {
+	  			res = false;
+	  		}
   		}
+  		// otherwise, create all directories for non-system projects
+  		else if (! prj.isSystem()) {
+	  		try {
+	  			File f = new File(prj.getPathProject());
+	  			if (! f.exists()) f.mkdirs();
+	  			f = new File(prj.getPathData());
+	  			if (! f.exists()) f.mkdirs();
+	  			f = new File(prj.getPathOutput());
+	  			if (! f.exists()) f.mkdirs();
+	  			f = new File(prj.getPathComponent());
+	  			if (! f.exists()) f.mkdirs();
+	  			f = new File(prj.getPathTables());
+	  			if (! f.exists()) f.mkdirs();
+	  			f = new File(getFullPath(prj.getPathProject(),projectSettingsFolder));
+	  			if (! f.exists()) f.mkdirs();
+	  			if (! f.isHidden()) {
+	  				Path path = Paths.get(f.getPath());
+	  		        //set hidden attribute
+	  		        Files.setAttribute(path, "dos:hidden", true, LinkOption.NOFOLLOW_LINKS);
+	  			}
+	  		} catch (Exception e) {
+	  			res = false;
+	  		}
   		}
   		return res;
   	}
@@ -251,10 +271,24 @@ public class FileTools {
 	}
 
 	/**
-	 *  File with project settings, relative to the project path
+	 * Full path to the tests directory
+	 */
+	public static String getTestPath() {
+		return restraxPath+File.separator+"tests";
+	}
+	
+	/**
+	 *  File with current project settings, relative to the project path
 	 */
 	public static String getProjectSettings() {
 		return projectSettingsFolder+File.separator+projectSettingsFile;
+	}	
+	
+	/**
+	 *  File with test projects list
+	 */
+	public static String getTestProjects() {
+		return restraxPath+File.separator+"tests"+File.separator+testListFile;
 	}	
 	
 	/**

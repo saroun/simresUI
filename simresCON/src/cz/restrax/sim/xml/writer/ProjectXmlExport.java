@@ -17,6 +17,15 @@ public class ProjectXmlExport {
 	//////////////////////////////////////////////////////////////////////////////////////////
 	//                                  OTHER METHODS                                       //
 	//////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	
+	/**
+	 * Generate XML content for a  project list with only the current project.
+	 * @param proj
+	 * @param current Set the 'current' attribute to 'yes'
+	 * @return
+	 */
 	public static String exportToXml(RsxProject proj, boolean current) {
 		String output   = null;
 		output  = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
@@ -28,19 +37,22 @@ public class ProjectXmlExport {
 
 	/**
 	 * Generate XML content for the project list. Puts the current project first. 
-	 * Excludes system projects if required.  
-	 * @param proj
-	 * @return
+	 * Excludes test projects.
+	 * Excludes system projects if required. 
+	 * @return XML content for export. 
 	 */
 	public static String exportListToXml(ProjectList proj, boolean excludeSystem) {
 		String output   = null;
 		output  = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 		output += "<SIMRES version=\""+Version.VERSION+"\">\n";
+		// put the current project first
 		output += getProjectXml(proj.getCurrentProject(),true);
 		for (int i=0;i<proj.size();i++) {
-			if (! proj.get(i).isSystem() || ! excludeSystem) {
-				if (proj.get(i)!=null && proj.get(i)!=proj.getCurrentProject()) {
-					output += getProjectXml(proj.get(i),false);
+			if (! proj.get(i).isTest()) {
+				if (! proj.get(i).isSystem() || ! excludeSystem) {
+					if (proj.get(i)!=null && proj.get(i)!=proj.getCurrentProject()) {
+						output += getProjectXml(proj.get(i),false);
+					}
 				}
 			}
 		}

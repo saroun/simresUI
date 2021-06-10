@@ -507,7 +507,7 @@ public class ProjectDialog extends JInternalFrame  {
 	    			newp = new RsxProject(prj);
 	    			newp.setDescription("New project");
 	    			newp.setPathProject(pdir.getPath());
-	    			newp.setPathOutput(pdir.getPath());
+	    			newp.setPathOutput(FileTools.getUserDocumets());
 	    			newp.setPathData(pdir.getPath());
 	    			newp.setFileConfig("");
 	    			newp.setSystem(false);
@@ -521,7 +521,7 @@ public class ProjectDialog extends JInternalFrame  {
 		}
 	}
 
-	public RsxProject loadSimresProject(File file) {
+	protected RsxProject loadSimresProject(File file) {
 		ProjectList plist = new ProjectList();
 		plist.readProjectList(file.getPath(), false);
 		RsxProject prj = plist.get(0);
