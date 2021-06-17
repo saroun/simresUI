@@ -199,46 +199,41 @@ public class SimresCON {
 		 * Read from Args
 		 */
 		public void read() {
-			// back compatibility : 1 argument means GUI path
-			if (argv.length == 1) {
-				guiPath = new File(argv[0]).getPath();		
-			} else {
 		// read line parameters if any
-				for (int i=0;i<argv.length;i++) {
-					if (argv[i].equals("-h")) {
-						printHelp();
-						Terminate();
-					}
-					if (argv[i].equals("-g") && i<argv.length-1) {
-						guiPath = argv[i+1];
-					}
-					if (argv[i].equals("-p") && i<argv.length-1) {
-						projFile = argv[i+1];
-					}
-					if (argv[i].equals("-s") && i<argv.length-1) {
-						scriptFile = argv[i+1];
-					}
-					if (argv[i].equals("-c") && i<argv.length-1) {
-						defConfig = argv[i+1];
-					}
-					if (argv[i].equals("-e") && i<argv.length-1) {
-						pendingCommand = argv[i+1];
-					}
-					if (argv[i].equals("-o") && i<argv.length-1) {
-						htmlLog = argv[i+1];
-					}
-					if (argv[i].equals("-test") && i<argv.length-1) {
-						test = Integer.parseInt(argv[i+1]);
-					}
-					if (argv[i].equals("-seed") && i<argv.length-1) {
-						seed = Integer.parseInt(argv[i+1]);
-					}
-					if (argv[i].equals("-q")) {
-						getConsoleLog().setEcho(false);
-					}
-					if (argv[i].equals("-log") && i<argv.length-1) {
-						fileLog=argv[i+1];					
-					}
+			for (int i=0;i<argv.length;i++) {
+				if (argv[i].equals("-h")) {
+					printHelp();
+					Terminate();
+				}
+				if (argv[i].equals("-g") && i<argv.length-1) {
+					guiPath = argv[i+1];
+				}
+				if (argv[i].equals("-p") && i<argv.length-1) {
+					projFile = argv[i+1];
+				}
+				if (argv[i].equals("-s") && i<argv.length-1) {
+					scriptFile = argv[i+1];
+				}
+				if (argv[i].equals("-c") && i<argv.length-1) {
+					defConfig = argv[i+1];
+				}
+				if (argv[i].equals("-e") && i<argv.length-1) {
+					pendingCommand = argv[i+1];
+				}
+				if (argv[i].equals("-o") && i<argv.length-1) {
+					htmlLog = argv[i+1];
+				}
+				if (argv[i].equals("-test") && i<argv.length-1) {
+					test = Integer.parseInt(argv[i+1]);
+				}
+				if (argv[i].equals("-seed") && i<argv.length-1) {
+					seed = Integer.parseInt(argv[i+1]);
+				}
+				if (argv[i].equals("-q")) {
+					getConsoleLog().setEcho(false);
+				}
+				if (argv[i].equals("-log") && i<argv.length-1) {
+					fileLog=argv[i+1];					
 				}
 			}
 		}
