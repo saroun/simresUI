@@ -1,20 +1,45 @@
-*** SIMRES version 6.5.0, Wed Feb 12 13:00:02 2020 ***
-homepage: http://neutron.ujf.cas.cz/restrax
-source: https://github.com/saroun/simres
-see "doc/simres-release-notes.pdf" for the list of changes, bug fixes etc..
-see "doc/simres-guide.pdf" for documentation to the current release
+*** SIMRES - ray-tracing simulations of neutron scattering instruments ***
+version:	6.5.3
+homepage:	http://neutron.ujf.cas.cz/restrax
+source code:	https://github.com/saroun/simres
 
-===============
-version 6.5
-===============
+------------------------
+update 6.5.3, 17/6/2021
+------------------------
+- updated crystal.tab by adding incoherent scattering cross-sections
+- increased peak position precision on output
+- added REPSA command to print information about polycrystalline sample
+- bug fix: program stays in "non ready" state after SCAN1D or FMERIT commands
+- added Python script for generating the sample tables from NCrystal (https://github.com/mctools/ncrystal)
+- polycrystal sample tables replaced by those generated using NCrystal
+- updated manual
+
+------------------------
+update 6.5.1, 17/7/2020
+------------------------
+- added REPBM console command to print beamline geometry report
+- source code cleanup (centralized coordinate transformation handling, 
+- UI erase added to the clean targets in makefile
+- fixed #6: ray-tracing hangs 
+- fixed problems with running SIMRES as console command
+
+========================
+version 6.5, 20/2/2020
+========================
 As of version 6.5, SIMRES source code is distributed via GitHub. 
 With the move to git repositories, the structure of the binary and source 
 packages has changed significantly. The functionality remains the same 
-as for version 6.4.
+as for version 6.4. 
+A new PGPLOT graphics driver for Windows (similar to pgxwin_server on Linux) 
+has been developed and added as a submodule to SIMRES. 
+The user interface (written in Java) is now also added as a submodule and includes Ant
+builder scripts. 
+The SIMRES core can now be compiled using the GNU gcc/gfortran suite (using the
+mingw-w64 tools on Windows)
 
-===============
-version 6.4
-===============
+=======================
+version 6.4, 6/9/2019
+=======================
 - Improved MCPL functionality (import/export neutrons)
 - Binding with McStas using MCPL (see doc/simres-guide.pdf)
 - Export of sample scattering events (see demo/STRESSPEC)
@@ -54,7 +79,7 @@ version 6.2
 		manual or automatic (elliptic, parabolic) shape setting 
   MONITOR: beam monitor with mask area, shows successful rays at any place
 	         various modes of 2D mask in x,y,kx,... useful for instr. optimization
-- strain gradients for polycrytsalline samples			 
+- strain gradients for polycrystalline samples			 
 - choice of beam monitor to be used with BEAM1D,BEAM2D commands
 - list of mirror tables located in home/.simres/tables
 - without table, mirror reflectivity for SGUIDE is analytical (parameters are given in sguide dialog)
