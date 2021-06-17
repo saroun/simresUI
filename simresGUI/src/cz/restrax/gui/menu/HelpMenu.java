@@ -4,6 +4,7 @@ import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.net.URI;
 import java.net.URL;
 
 import javax.swing.JMenu;
@@ -54,13 +55,14 @@ public class HelpMenu extends JMenu {
 			mitHelp.setText("Help");
 			mitHelp.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					String instdir = "file://"+FileTools.getRestraxPath()+"/doc/simres-guide.pdf";
+					String instdir = "file:///"+FileTools.getRestraxPath()+"/doc/simres-guide.pdf";
 					instdir = instdir.replace(File.separator, "/");
 					try {
 						URL u = new URL(instdir);
-						Desktop.getDesktop().browse(u.toURI());
+						URI ur = u.toURI();
+						Desktop.getDesktop().browse(ur);
 					} catch (Exception e1) {
-						JOptionPane.showMessageDialog(null, "Can''t open " + instdir, "Error", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Can''t open " + instdir + "\n" + e1.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 			});
