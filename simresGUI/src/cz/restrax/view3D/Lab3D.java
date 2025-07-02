@@ -20,7 +20,7 @@ import org.jogamp.vecmath.Point3f;
 import org.jogamp.vecmath.Vector3d;
 import org.jogamp.vecmath.Vector3f;
 
-//import org.jogamp.java3d.utils.behaviors.vp.OrbitBehavior;
+import org.jogamp.java3d.utils.behaviors.vp.OrbitBehavior;
 import org.jogamp.java3d.utils.behaviors.vp.ViewPlatformBehavior;
 import org.jogamp.java3d.utils.universe.SimpleUniverse;
 
@@ -32,7 +32,6 @@ import cz.restrax.view3D.components.Floor;
 import cz.restrax.view3D.components.Frame3D;
 import cz.restrax.view3D.components.FrameShape;
 import cz.restrax.view3D.components.Trajectory;
-import cz.restrax.view3D.OrbitBehavior;
 
 public class Lab3D {
 	public static final int STYLE_LAYOUT=1;
@@ -42,8 +41,7 @@ public class Lab3D {
     private SimpleUniverse universe = null;
     private OrbitBehavior orbit = null;  // for 3D navigation
     private OrbitBehavior travel = null; 
-   // private ScreenScaleBehavior scaling = null; // for 2D layout
-	private OrbitBehavior scaling = null; // for 2D layout
+    private ScreenScaleBehavior scaling = null; // for 2D layout
     private Canvas3D canvas = null;
     private BranchGroup scene = null;
     private BranchGroup axesBranch = null;
@@ -320,9 +318,9 @@ public class Lab3D {
 		return travel ;
 	}
 
-	protected OrbitBehavior getScaling() {
+	protected ScreenScaleBehavior getScaling() {
 		if (scaling == null) {
-			scaling  = new OrbitBehavior(canvas,
+			scaling  = new ScreenScaleBehavior(canvas,
 					OrbitBehavior.REVERSE_ALL | 
 					OrbitBehavior.DISABLE_ROTATE);
 			scaling .setZoomFactor(0.2);	    	

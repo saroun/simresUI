@@ -13,17 +13,10 @@
 	
     <target name="init" depends="osinfo">
 		<path id="j3d.classpath">
-		<!--
 			<pathelement location="${j3d}/j3dcore.jar"/>
 			<pathelement location="${j3d}/vecmath.jar"/>
 			<pathelement location="${j3d}/j3dutils.jar"/>
 			<pathelement location="${j3d}/jogamp-fat.jar"/>
-		-->	
-			<pathelement location="${j3d}/java3d-core.jar"/>
-			<pathelement location="${j3d}/vecmath.jar"/>
-			<pathelement location="${j3d}/java3d-utils.jar"/>
-			<pathelement location="${j3d}/jogamp-fat.jar"/>			
-			<pathelement location="${j3d}/jogl-fonts-p0.jar"/>
 		</path>		
 		<path id="simresGUI.classpath">
 			<pathelement location="${simresGUI.location}/bin"/>
@@ -53,7 +46,7 @@
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
 		<echo message="javac options: ${javac_options}"/>
-		<javac encoding="UTF-8" debug="true" debuglevel="${debuglevel}" destdir="${simresGUI.location}/bin" includeantruntime="false" release="${release}">
+        <javac encoding="UTF-8"  debug="true" debuglevel="${debuglevel}" destdir="${simresGUI.location}/bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="${simresGUI.location}/src"/>
 			<compilerarg line="${javac_options}" />
             <exclude name="obsolete/"/>

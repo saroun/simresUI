@@ -32,7 +32,7 @@
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
 		<echo message="javac options: ${javac_options}"/>
-		<javac encoding="UTF-8" debug="true" debuglevel="${debuglevel}" destdir="${simresCON.location}/bin" includeantruntime="false" release="${release}">
+        <javac encoding="UTF-8" debug="true" debuglevel="${debuglevel}" destdir="${simresCON.location}/bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="${simresCON.location}/src"/>
 			<compilerarg line="${javac_options}" />
             <include name="Jama/"/>
