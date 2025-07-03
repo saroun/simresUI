@@ -1,15 +1,13 @@
 # simresUI - the user interface for SIMRES
 
-`simresUI` is a Java based user interface for the Monte Carlo neutron ray-tracing progrem SIMRES - https://github.com/saroun/simres. It includes three packages:
+`simresUI` is a Java based user interface for the Monte Carlo neutron ray-tracing progrem SIMRES. It includes three packages:
 
 - `JSTools`: Common library of classes representing various data entities, property editors, file manipulation tools and xml parsers used by simresUI. This library is not designed specifically for SIMRES and can be used to build Java GUI's for other applications as well.  
 - `simresCON`: Console user interface for SIMRES providing functions for launching and communicating with the SIMRES core application, setting up the simulation projects, scripting and top level control of the simulation process. The SIMRES core application is executed as a process which communicates with `simresCON` through the console IO. This package encapsulates all non-graphical functions of the Simres user interface.  
 - `simresGUI`: An extension of `simresCON`, which adds graphical user interface, including property editors, script editor, 3D instrument viewer (using the Java3D library), project editor, simulation control and command editors, etc.
 
 *See also*:  
-SIMRES repository: https://github.com/saroun/simres  
-SIMRES homepage: http://neutron.ujf.cas.cz/restrax  
-SIMRES user guide: http://neutron.ujf.cas.cz/restrax/download/simres-guide.pdf
+SIMRES repository: https://github.com/saroun/simres 
 
 ---------------------------
 
