@@ -55,11 +55,11 @@ public class HelpMenu extends JMenu {
 			mitHelp.setText("Help");
 			mitHelp.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					String instdir = "file:///"+FileTools.getRestraxPath()+"/doc/simres-guide.pdf";
+					String instdir = FileTools.getRestraxPath()+"/doc/simres-guide.pdf";
 					instdir = instdir.replace(File.separator, "/");
 					try {
-						URL u = new URL(instdir);
-						URI ur = u.toURI();
+						URL u = new URL("file:///"+ instdir);
+						URI ur = new File(u.getFile()).toURI();
 						Desktop.getDesktop().browse(ur);
 					} catch (Exception e1) {
 						JOptionPane.showMessageDialog(null, "Can''t open " + instdir + "\n" + e1.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
